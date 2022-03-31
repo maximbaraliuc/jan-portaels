@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-  <script src="main-script.js"></script>
+  <script src="main-script.js" defer></script>
   <title>Landing Page</title>
 </head>
 
@@ -72,11 +72,15 @@
         <div class="menu-item"><a href="#">Schrijf in</a>
         </div>
       </li>
-      <li>
-        <div class="menu-item">
-          <a href="#" class="material-icon"><img src="images/search_black.svg" alt="search icon"></a>
-        </div>
-      </li>
+
+      <div class="menu-item">
+        <a href="#" class="material-icon"><img src="images/search_black.svg" alt="search icon"></a>
+      </div>
+      <div class="burger burger-inactive">
+        <span id="burger-first-line"></span>
+        <span id="burger-middle-line"></span>
+        <span id="burger-last-line"></span>
+      </div>
 
     </ul>
   </nav>

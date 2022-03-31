@@ -103,3 +103,34 @@ nav {
     visibility: hidden;
   }
 }
+
+/* =========================================================== */
+/* BURGER */
+/* =========================================================== */
+.burger {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+.burger span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  transition-duration: 0.5s;
+}
+.burger-active #burger-first-line {
+  width: 20px;
+  transform-origin: 100% 0%;
+  transform: translateX(5px) translateY(11px) rotate(45deg);
+}
+.burger-active #burger-middle-line {
+  transform: translateX(-5px) rotate(180deg);
+}
+.burger-active #burger-last-line {
+  width: 20px;
+  transform-origin: 100% 100%;
+  transform: translateX(5px) translateY(-11px) rotate(-45deg);
+}
+/* =========================================================== */
+/* =========================================================== */
