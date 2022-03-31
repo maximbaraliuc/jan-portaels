@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+}
+.burger {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: black;
+}
+.burger-active {
+  /* transition: 2sec ease-in-out; */
+}
+.burger-active #burger-first-line {
+  background-color: dodgerblue;
+  width: 15px;
+  transform-origin: 100% 100%;
+  transform: rotate(-45deg);
+}
+
+.burger-active #burger-middle-line {
+  background-color: salmon;
+}
+
+.burger-active #burger-last-line {
+  background-color: blueviolet;
+  width: 15px;
+  transform: rotate(45deg);
+}

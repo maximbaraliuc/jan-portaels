@@ -93,3 +93,13 @@ nav {
 .dropdown-content {
   visibility: hidden;
 }
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: salmon;
+  }
+  .menu-buttons-container {
+    position: absolute;
+    visibility: hidden;
+  }
+}
