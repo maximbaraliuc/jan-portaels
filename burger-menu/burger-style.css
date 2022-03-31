@@ -1,12 +1,9 @@
-body {
-  display: flex;
-  justify-content: center;
-  background-color: aqua;
-}
 .burger {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
+
+  transition-duration: 0.5s;
 }
 
 .burger span {
@@ -14,10 +11,13 @@ body {
   width: 25px;
   height: 4px;
   background-color: black;
-}
-.burger-active span {
   transition-duration: 0.5s;
 }
+
+/* .burger-active span {
+  transition-duration: 0.5s;
+} */
+
 .burger-active #burger-first-line {
   /* background-color: dodgerblue; */
   width: 20px;
