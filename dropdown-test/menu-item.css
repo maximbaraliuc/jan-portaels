@@ -1,0 +1,57 @@
+body {
+  /* box-sizing: border-box; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+hr {
+  width: 50px;
+  border-color: crimson;
+}
+
+.container {
+  position: relative;
+  border: 1px solid crimson;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.menu-item {
+  background-color: crimson;
+  padding: 10px;
+
+  font-weight: bolder;
+  color: white;
+}
+
+.dropdown {
+  position: absolute;
+  color: pink;
+  visibility: hidden;
+}
+
+.container:hover .dropdown {
+  /* position: relative; */
+  border: 1px solid pink;
+  top: 30px;
+  visibility: visible;
+}
+
+.container:hover {
+  border-color: black;
+}
+.menu-item:hover {
+  background-color: black;
+}
+
+.dropdown:hover .menu-item {
+  color: black;
+}
