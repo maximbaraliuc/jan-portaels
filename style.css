@@ -116,6 +116,9 @@ nav {
     visibility: hidden;
   }
 }
+.dropdown-button:hover .dropdown-content {
+  visibility: visible;
+}
 
 .on {
   background-color: cadetblue;

@@ -39,9 +39,9 @@ hr {
 }
 
 .container:hover .dropdown {
-  /* position: relative; */
+  position: relative;
   border: 1px solid pink;
-  top: 30px;
+  /* top: 30px; */
   visibility: visible;
 }
 
@@ -50,8 +50,4 @@ hr {
 }
 .menu-item:hover {
   background-color: black;
-}
-
-.dropdown:hover .menu-item {
-  color: black;
 }

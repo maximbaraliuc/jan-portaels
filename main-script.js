@@ -16,7 +16,7 @@ burgerMenu.addEventListener("click", changeBurger);
 //
 // Clicked menu buttons to remain active if not clicked elsewhere
 
-let menuLinks = document.querySelectorAll(".off");
+/* let menuLinks = document.querySelectorAll(".off");
 // menuLinks.forEach((text) => console.log(text));
 // menuLinks.forEach((text) => (text.className = "on"));
 // menuLinks.forEach((text) => console.log(text));
@@ -29,4 +29,4 @@ let keepActive = function () {
   console.log(this);
 };
 
-menuLinks.forEach((item) => item.addEventListener("click", keepActive));
+menuLinks.forEach((item) => item.addEventListener("click", keepActive)); */
