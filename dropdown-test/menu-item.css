@@ -28,7 +28,7 @@ hr {
 .menu-item {
   background-color: crimson;
   padding: 10px;
-
+  cursor: pointer;
   font-weight: bolder;
   color: white;
 }
@@ -37,22 +37,22 @@ hr {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  border: 1px solid pink;
   border-radius: 3px;
   position: absolute;
+  background-color: #fff;
   color: pink;
   visibility: hidden;
 }
 
-.container:hover .dropdown {
-  position: relative;
-  border: 1px solid pink;
-  /* top: 30px; */
+.on {
   visibility: visible;
 }
 
+/*
 .container:hover {
   border-color: black;
 }
 .menu-item:hover {
   background-color: black;
-}
+} */
