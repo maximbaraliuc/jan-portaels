@@ -9,7 +9,8 @@ body {
 
 ul {
   list-style: none;
-  padding: 0;
+  padding: 5px;
+  margin: 5px 0 0 0;
 }
 
 hr {
@@ -33,6 +34,10 @@ hr {
 }
 
 .dropdown {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border-radius: 3px;
   position: absolute;
   color: pink;
   visibility: hidden;
