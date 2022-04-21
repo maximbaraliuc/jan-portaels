@@ -6,152 +6,18 @@
   --menu-button-pad-block: 15px;
   --menu-button-pad-inline: 15px;
 }
-
 body {
   display: flex;
   flex-flow: column wrap;
   align-content: center;
   /* width: var(--main-width); */
-  border: 1px solid black;
+  border: 1px solid rgb(255, 0, 234);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 auto;
 }
-
 ul,
 li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-.top-bar a {
-  text-decoration: none;
-  color: #333;
-}
-
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: var(--top-bar-height);
-  font-size: 0.8rem;
-}
-.link-left,
-.link-right {
-  display: flex;
-  column-gap: var(--menu-button-gap);
-}
-
-nav {
-  display: flex;
-  /* flex-flow: row wrap; */
-  justify-content: space-between;
-  align-items: center;
-  /* width: var(--main-width); */
-  border: 1px solid rgb(26, 212, 57);
-}
-
-.logo {
-  border: 1px solid black;
-  width: 300px;
-}
-
-.menu-buttons-container {
-  display: flex;
-  /* flex-flow: row wrap; */
-  /* column-gap: 5px; */
-  border: 1px solid rgb(5, 217, 255);
-}
-.menu-buttons-container li {
-  display: flex;
-  align-items: center;
-}
-
-.menu-item {
-  display: flex;
-  /* use wrap around the link to reflects all the flexbox settings */
-  flex-wrap: wrap;
-}
-.menu-item a {
-  padding-inline: var(--menu-button-pad-inline);
-  padding-block: var(--menu-button-pad-block);
-  /* background-color: aquamarine; */
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.menu-item a:hover {
-  border-radius: 10px;
-  background-color: rgb(252, 236, 239);
-  color: crimson;
-}
-
-.menu-item .material-icon {
-  padding-inline: 0px;
-  padding-block: 0px;
-}
-
-.dropdown-button {
-  position: relative;
-}
-
-.dropdown-content {
-  background-color: blanchedalmond;
-  position: absolute;
-  top: 60px;
-  border: 1px solid red;
-  visibility: hidden;
-}
-/* .menu-item:target .dropdown-content,
-.menu-item:active .dropdown-content {
-  visibility: visible;
-} */
-
-@media screen and (max-width: 480px) {
-  body {
-    background-color: salmon;
-  }
-  .menu-buttons-container {
-    position: absolute;
-    visibility: hidden;
-  }
-}
-.dropdown-button:hover .dropdown-content {
-  visibility: visible;
-}
-
-.on {
-  background-color: cadetblue;
-  color: azure;
-}
-
-/* =========================================================== */
-/* BURGER */
-/* =========================================================== */
-.burger {
-  display: flex;
-  flex-direction: column;
-  row-gap: 5px;
-}
-.burger span {
-  display: block;
-  width: 25px;
-  height: 4px;
-  background-color: black;
-  transition: all 0.5s;
-}
-.burger-active #burger-first-line {
-  width: 20px;
-  transform-origin: 100% 0%;
-  transform: translateX(5px) translateY(11px) rotate(45deg);
-}
-.burger-active #burger-middle-line {
-  transform: translateX(-5px) rotate(180deg);
-}
-.burger-active #burger-last-line {
-  width: 20px;
-  transform-origin: 100% 100%;
-  transform: translateX(5px) translateY(-11px) rotate(-45deg);
-}
-/* =========================================================== */
-/* =========================================================== */
