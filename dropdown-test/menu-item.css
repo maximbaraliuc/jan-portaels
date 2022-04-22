@@ -37,11 +37,11 @@ hr {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  border: 1px solid pink;
+  border: 1px solid blue;
   border-radius: 3px;
   position: absolute;
   background-color: #fff;
-  color: pink;
+  color: blue;
   visibility: hidden;
 }
 
