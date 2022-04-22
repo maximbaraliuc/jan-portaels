@@ -11,13 +11,64 @@ body {
   flex-flow: column wrap;
   align-content: center;
   /* width: var(--main-width); */
-  border: 1px solid rgb(255, 0, 234);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* border: 1px solid rgb(255, 0, 234); */
   margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 ul,
 li {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+/**
+ * #.# Navigation Menu
+ *
+ * Menu setup with dropdown menus for desktop and smartphone mode.
+ */
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* column-gap: 10px; */
+}
+
+.menu-item {
+  position: relative;
+}
+
+.menu-item > span {
+  display: block;
+  padding: 5px 20px 5px 20px;
+  background-color: lightcoral;
+  color: white;
+}
+
+.dropdown-list {
+  /* display: none; */
+  position: absolute;
+  visibility: hidden;
+}
+.on {
+  visibility: visible;
+}
+
+.menu-item > span:hover {
+  background-color: lightsalmon;
+  cursor: pointer;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: #ddd;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    background-color: #aaa;
+  }
 }
