@@ -1,3 +1,5 @@
+"use strict";
+
 // ===========================================================================
 // Burger Menu Setup
 // ===========================================================================
@@ -15,45 +17,34 @@ burgerMenu.addEventListener("click", changeBurger); */
 // ===========================================================================
 // Navigation Menu
 // ===========================================================================
+let dropdownActive = false;
+let navigationButtons = document.querySelectorAll(".js-menu-item > span");
+let dropdownMenus = document.querySelectorAll(".js-dropdown-list");
 
-let navigationItems = document.querySelectorAll(".menu-item > span");
-let dropdownMenus = document.querySelectorAll(".dropdown-list");
-dropdownMenus.forEach((item) => item.classList.add("off"));
-// dropdownMenus.classList.add("off");
+let toggleOnOff = function (e) {
+  // Stop the propagation to exclude conflicts with viewportClickToOnOff()
+  e.stopPropagation();
 
-let toggleOnOff = function () {
-  let dropdownList = this.nextElementSibling;
-  console.log(this);
-  console.log(dropdownList);
-
-  if (dropdownList.classList.contains("off")) {
-    dropdownList.classList.replace("off", "on");
-    console.log("on");
-  } else {
-    dropdownList.classList.replace("on", "off");
-    console.log("off");
+  let dropdownCurrent = this.nextElementSibling;
+  if ((dropdownActive = true)) {
+    dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
+    dropdownActive = false;
   }
+  if (dropdownCurrent.classList.contains("off")) {
+    dropdownCurrent.classList.replace("off", "on");
+    dropdownActive = true;
+  }
+  console.log("click button");
 };
 
-navigationItems.forEach((item) => item.addEventListener("click", toggleOnOff));
-
-// navigationItems.addEventListener("click", toggleOnOff);
-
-//
-//
-// Clicked menu buttons to remain active if not clicked elsewhere
-
-/* let menuLinks = document.querySelectorAll(".off");
-// menuLinks.forEach((text) => console.log(text));
-// menuLinks.forEach((text) => (text.className = "on"));
-// menuLinks.forEach((text) => console.log(text));
-
-let keepActive = function () {
-  menuLinks.forEach((item) => item.classList.replace("on", "off"));
-  if (this.classList.contains("off")) {
-    this.classList.replace("off", "on");
+let viewportClickToOnOff = function () {
+  if ((dropdownActive = true)) {
+    dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
+    dropdownActive = false;
   }
-  console.log(this);
+  console.log("click viewport");
 };
 
-menuLinks.forEach((item) => item.addEventListener("click", keepActive)); */
+// Toggle the dropdown menu on click
+document.addEventListener("click", viewportClickToOnOff);
+navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff));

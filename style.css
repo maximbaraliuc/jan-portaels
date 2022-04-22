@@ -34,11 +34,11 @@ li {
   /* column-gap: 10px; */
 }
 
-.menu-item {
+.js-menu-item {
   position: relative;
 }
 
-.menu-item > span {
+.js-menu-item > span {
   display: block;
   padding: 5px 20px 5px 20px;
   background-color: lightcoral;
@@ -46,16 +46,17 @@ li {
   user-select: none;
 }
 
-.dropdown-list {
+.js-dropdown-list {
   /* display: none; */
   position: absolute;
   visibility: hidden;
+  background-color: pink;
 }
 .on {
   visibility: visible;
 }
 
-.menu-item > span:hover {
+.js-menu-item > span:hover {
   background-color: lightsalmon;
   cursor: pointer;
 }
