@@ -16,17 +16,21 @@ burgerMenu.addEventListener("click", changeBurger); */
 // Navigation Menu
 // ===========================================================================
 
-let navigationItems = document.querySelector(".menu-item > span");
-let dropdownMenus = document.querySelector(".dropdown-list");
-// dropdownMenus.forEach((item) => item.classList.add("off"));
+let navigationItems = document.querySelectorAll(".menu-item > span");
+let dropdownMenus = document.querySelectorAll(".dropdown-list");
+dropdownMenus.forEach((item) => item.classList.add("off"));
+// dropdownMenus.classList.add("off");
 
 let toggleOnOff = function () {
-  console.log("start");
-  if (dropdownMenus.classList.contains("off")) {
-    dropdownMenus.classList.replace("off", "on");
+  let dropdownList = this.nextElementSibling;
+  console.log(this);
+  console.log(dropdownList);
+
+  if (dropdownList.classList.contains("off")) {
+    dropdownList.classList.replace("off", "on");
     console.log("on");
   } else {
-    dropdownMenus.classList.replace("on", "off");
+    dropdownList.classList.replace("on", "off");
     console.log("off");
   }
 };
@@ -34,7 +38,6 @@ let toggleOnOff = function () {
 navigationItems.forEach((item) => item.addEventListener("click", toggleOnOff));
 
 // navigationItems.addEventListener("click", toggleOnOff);
-// navigationItem.forEach((item) => item.addEventListener("click", toggleOpen));
 
 //
 //
