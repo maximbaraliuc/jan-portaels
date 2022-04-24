@@ -56,21 +56,35 @@ li {
   visibility: visible;
 }
 
-.js-menu-item > span:hover {
+/* .js-menu-item > span:hover {
   background-color: lightsalmon;
   cursor: pointer;
-}
+} */
 
+.js-active {
+  background-color: crimson;
+  cursor: pointer;
+}
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-  body {
+  /* body {
     background-color: #ddd;
+  } */
+  .js-active {
+    background-color: darkcyan;
   }
 }
 
 @media screen and (max-width: 767px) {
-  body {
+  /* body {
     background-color: #aaa;
+  } */
+  .js-active {
+    background-color: deeppink;
   }
+}
+
+h1 {
+  color: lightblue;
 }

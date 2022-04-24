@@ -21,8 +21,9 @@ let dropdownActive = false;
 let navigationButtons = document.querySelectorAll(".js-menu-item > span");
 let dropdownMenus = document.querySelectorAll(".js-dropdown-list");
 
+// Toggle the dropdown menu visibility
 let toggleOnOff = function (e) {
-  // Stop the propagation to exclude conflicts with viewportClickToOnOff()
+  // Stop the propagation to exclude conflicts with anywhereClickOnOff()
   e.stopPropagation();
 
   let dropdownCurrent = this.nextElementSibling;
@@ -37,7 +38,8 @@ let toggleOnOff = function (e) {
   console.log("click button");
 };
 
-let viewportClickToOnOff = function () {
+// Hides all the dropdown menus when clicked anywhere.
+let anywhereClickOnOff = function () {
   if ((dropdownActive = true)) {
     dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
     dropdownActive = false;
@@ -45,6 +47,26 @@ let viewportClickToOnOff = function () {
   console.log("click viewport");
 };
 
-// Toggle the dropdown menu on click
-document.addEventListener("click", viewportClickToOnOff);
+let hoverActivate = function () {
+  console.log("hover work in progress");
+};
+// Events initialization.
+document.addEventListener("click", anywhereClickOnOff);
 navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff));
+navigationButtons.forEach((item) => item.addEventListener("click", hoverActivate));
+
+// Display some data about the screen width.
+let headerText = document.querySelector("h1");
+let widthHeader = function () {
+  if (window.screen.width >= 1024) {
+    headerText.innerHTML = "Screen width is >=1024px";
+    console.log("Screen width is >1024px");
+  } else if (window.screen.width < 1024 && window.screen.width >= 768) {
+    headerText.innerHTML = "Screen width is between 768px and 1024px";
+    console.log("Screen width is between 768px and 1024px");
+  } else {
+    headerText.innerHTML = "Screen width is <768px";
+    console.log("Screen width is <768px");
+  }
+};
+window.addEventListener("resize", widthHeader);
