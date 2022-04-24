@@ -18,7 +18,7 @@ burgerMenu.addEventListener("click", changeBurger); */
 // Navigation Menu
 // ===========================================================================
 let dropdownActive = false;
-let navigationButtons = document.querySelectorAll(".menu-button");
+let navigationButtons = document.querySelectorAll(".js-menu-button");
 let dropdownMenus = document.querySelectorAll(".js-dropdown-list");
 
 // Toggle the dropdown menu visibility
