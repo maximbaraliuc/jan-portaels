@@ -38,28 +38,32 @@ li {
   position: relative;
 }
 
-.js-menu-item > span {
+.menu-button {
   display: block;
   padding: 5px 20px 5px 20px;
   background-color: lightcoral;
   color: white;
+  font-weight: bolder;
   user-select: none;
+  transition: background-color 0.3s ease-in-out;
 }
+/* .menu-button:focus {
+  background-color: black;
+} */
 
 .js-dropdown-list {
   /* display: none; */
   position: absolute;
+  top: 50px;
   visibility: hidden;
   background-color: pink;
+  transition: all 0.2s ease-in-out 0.2s;
 }
 .on {
+  top: 35px;
   visibility: visible;
+  /* transition: all 0.2s ease-in-out 0.2s; */
 }
-
-/* .js-menu-item > span:hover {
-  background-color: lightsalmon;
-  cursor: pointer;
-} */
 
 .js-active {
   background-color: crimson;

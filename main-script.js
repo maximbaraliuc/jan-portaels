@@ -18,7 +18,7 @@ burgerMenu.addEventListener("click", changeBurger); */
 // Navigation Menu
 // ===========================================================================
 let dropdownActive = false;
-let navigationButtons = document.querySelectorAll(".js-menu-item > span");
+let navigationButtons = document.querySelectorAll(".menu-button");
 let dropdownMenus = document.querySelectorAll(".js-dropdown-list");
 
 // Toggle the dropdown menu visibility
@@ -29,9 +29,13 @@ let toggleOnOff = function (e) {
   let dropdownCurrent = this.nextElementSibling;
   if ((dropdownActive = true)) {
     dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
+    navigationButtons.forEach((elem) => elem.classList.replace("js-active", "js-not-active"));
     dropdownActive = false;
   }
   if (dropdownCurrent.classList.contains("off")) {
+    // Change the button style
+    this.classList.replace("js-not-active", "js-active");
+    // Change the dropdown visibility
     dropdownCurrent.classList.replace("off", "on");
     dropdownActive = true;
   }
@@ -42,18 +46,25 @@ let toggleOnOff = function (e) {
 let anywhereClickOnOff = function () {
   if ((dropdownActive = true)) {
     dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
+    navigationButtons.forEach((elem) => elem.classList.replace("js-active", "js-not-active"));
     dropdownActive = false;
   }
   console.log("click viewport");
 };
 
-let hoverActivate = function () {
-  console.log("hover work in progress");
+let mouseenterOn = function () {
+  console.log("mouseenter work in progress");
 };
+
+let mouseleaveOff = function () {
+  console.log("mouseleave work in progress");
+};
+
 // Events initialization.
 document.addEventListener("click", anywhereClickOnOff);
 navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff));
-navigationButtons.forEach((item) => item.addEventListener("click", hoverActivate));
+navigationButtons.forEach((item) => item.addEventListener("mouseenter", toggleOnOff));
+dropdownMenus.forEach((item) => item.addEventListener("mouseleave", anywhereClickOnOff));
 
 // Display some data about the screen width.
 let headerText = document.querySelector("h1");
