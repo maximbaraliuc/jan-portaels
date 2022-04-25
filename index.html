@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <script src="main-script.js" defer></script>
+  <script async src="https://cse.google.com/cse.js?cx=d20c7617745ff8bb3"></script>
   <title>Landing Page</title>
 </head>
 
@@ -30,7 +31,8 @@
   </div> -->
 
   <nav>
-    <!-- <a href="#" target=""><img class="logo" src="images/logo-text-form-jp.png" alt="logo in text form"></a> -->
+    <a href="index.html" title="go to home page"><img class="logo" src="images/logo-circle-text.png"
+        alt="logo in text form"></a>
     <ul class="menu-container">
       <li class="js-menu-item">
         <span class="js-menu-button js-not-active">Activiteiten</span>
@@ -91,20 +93,37 @@
           <li><a href="schrijf-in.html">Schrijf in online</a></li>
         </ul>
       </li>
+    </ul>
 
-      <!-- <div class="js-menu-item">
-        <a href="#" class="material-icon"><img src="images/search_black.svg" alt="search icon"></a>
+
+    <form action="https://www.google.com/search" class="searchform js-search-container js-search-inactive" method="get"
+      name="searchform" target="_blank">
+      <div class="search-button">
+        <div id="search-circle"></div>
+        <div id="search-first-bar"></div>
+        <div id="search-second-bar"></div>
       </div>
-      <div class="burger burger-inactive">
+      <button class="button search" type="submit">&#10157;</button>
+      <input autocomplete="on" class="form-control search" id="js-site-search" name="q" placeholder="Zoeken..."
+        type="text">
+      <!-- Code removed from the above input:  required="required" -->
+      <input name="sitesearch" type="hidden" value="www.academiebeeldendekunstenvilvoorde.be">
+    </form>
+
+    <!-- <div class="js-menu-item">
+      <a href="#" class="material-icon"><img src="images/search_black.svg" alt="search icon"></a>
+    </div> -->
+
+    <!-- <div class="burger burger-inactive">
         <span class="js-menu-button js-not-active" id="burger-first-line"></span>
         <span class="js-menu-button js-not-active" id="burger-middle-line"></span>
         <span class="js-menu-button js-not-active" id="burger-last-line"></span>
       </div> -->
-
-    </ul>
   </nav>
 
+
   <h1></h1>
+
 
 </body>
 
