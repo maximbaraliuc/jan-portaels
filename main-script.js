@@ -28,15 +28,15 @@ let toggleOnOff = function (e) {
 
   let dropdownCurrent = this.nextElementSibling;
   if ((dropdownActive = true)) {
-    dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
+    dropdownMenus.forEach((elem) => elem.classList.replace("js-dropdown-on", "js-dropdown-off"));
     navigationButtons.forEach((elem) => elem.classList.replace("js-menu-active", "js-menu-inactive"));
     dropdownActive = false;
   }
-  if (dropdownCurrent.classList.contains("off")) {
+  if (dropdownCurrent.classList.contains("js-dropdown-off")) {
     // Change the button style
     this.classList.replace("js-menu-inactive", "js-menu-active");
     // Change the dropdown visibility
-    dropdownCurrent.classList.replace("off", "on");
+    dropdownCurrent.classList.replace("js-dropdown-off", "js-dropdown-on");
     dropdownActive = true;
   }
   console.log("click button");
@@ -45,7 +45,7 @@ let toggleOnOff = function (e) {
 // Hides all the dropdown menus when clicked anywhere.
 let anywhereClickOnOff = function () {
   if ((dropdownActive = true)) {
-    dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
+    dropdownMenus.forEach((elem) => elem.classList.replace("js-dropdown-on", "js-dropdown-off"));
     navigationButtons.forEach((elem) => elem.classList.replace("js-menu-active", "js-menu-inactive"));
     dropdownActive = false;
   }

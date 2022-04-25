@@ -22,8 +22,8 @@ body {
   /* margin: 0 auto; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-ul,
-li {
+nav ul,
+nav li {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -60,47 +60,121 @@ nav {
 
 .js-menu-button {
   display: block;
+  box-sizing: content-box;
   padding: 5px 20px 5px 20px;
-  background-color: lightcoral;
-  color: white;
+  color: var(--color-home);
+  font-size: 1.2rem;
   font-weight: bolder;
   user-select: none;
   transition: background-color 0.3s ease-in-out;
 }
-/* .menu-button:focus {
-  background-color: black;
-} */
-
-.js-dropdown-list {
-  /* display: none; */
-  position: absolute;
-  top: 50px;
-  visibility: hidden;
-  background-color: pink;
-  transition: all 0.2s ease-in-out 0.2s;
-}
-.on {
-  top: 35px;
-  visibility: visible;
-  /* transition: all 0.2s ease-in-out 0.2s; */
-}
-
 .js-menu-active {
-  background-color: crimson;
   cursor: pointer;
 }
-/* Media Queries */
-
-@media screen and (max-width: 1024px) {
-  .js-menu-active {
-    background-color: darkcyan;
-  }
+/* Menu Items on hover and when the page is active and also logo settings. */
+.js-menu-active.menu-activiteiten {
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--color-activiteiten);
+  color: var(--color-activiteiten);
+}
+.js-menu-active.menu-ateliers {
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--color-ateliers);
+  color: var(--color-ateliers);
+}
+.js-menu-active.menu-kunsttheorie {
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--color-kunsttheorie);
+  color: var(--color-kunsttheorie);
+}
+.js-menu-active.menu-weten {
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--color-goed-om-weten);
+  color: var(--color-goed-om-weten);
+}
+.js-menu-active.menu-contact {
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--color-contact);
+  color: var(--color-contact);
+}
+.js-menu-active.menu-inschrijven {
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--color-schrijf-in);
+  color: var(--color-schrijf-in);
 }
 
-@media screen and (max-width: 767px) {
-  .js-menu-active {
-    background-color: deeppink;
-  }
+/* Current page */
+#activiteiten {
+  color: var(--color-activiteiten);
+}
+#ateliers {
+  color: var(--color-ateliers);
+}
+#kunsttheorie {
+  color: var(--color-kunsttheorie);
+}
+#weten {
+  color: var(--color-goed-om-weten);
+}
+#contact {
+  color: var(--color-contact);
+}
+#inschrijven {
+  color: var(--color-schrijf-in);
+}
+/* Logo on current page */
+.logo-home {
+}
+.logo-activiteiten {
+  color: var(--color-activiteiten);
+}
+.logo-ateliers {
+  color: var(--color-ateliers);
+}
+.logo-#kunsttheorie {
+  color: var(--color-kunsttheorie);
+}
+.logo-weten {
+  color: var(--color-goed-om-weten);
+}
+.logo-contact {
+  color: var(--color-contact);
+}
+.logo-inschrijven {
+  color: var(--color-schrijf-in);
+}
+
+/* Dropdown styling */
+.js-dropdown-list {
+  visibility: hidden;
+  position: absolute;
+  top: 100px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 10px #ddd;
+  transition: all 0.2s ease-in-out 0.2s;
+}
+.js-dropdown-on {
+  top: 50px;
+  visibility: visible;
+}
+
+.js-dropdown-list a {
+  display: block;
+  padding-inline: 20px;
+  padding-block: 8px;
+  margin: 5px;
+
+  text-decoration: none;
+  color: var(--color-home);
+  white-space: nowrap;
+}
+.js-dropdown-list a:hover {
+  background-color: #d5dadf;
+  border-radius: 3px;
+}
+.js-dropdown-list li {
 }
 
 /**
@@ -223,4 +297,18 @@ button.search {
 
 .js-search-active button.search {
   visibility: visible;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1024px) {
+  .js-menu-active {
+    background-color: darkcyan;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .js-menu-active {
+    background-color: deeppink;
+  }
 }
