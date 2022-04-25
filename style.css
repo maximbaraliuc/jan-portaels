@@ -40,7 +40,7 @@ h1 {
 */
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
 }
 
@@ -52,6 +52,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   /* column-gap: 10px; */
+  margin-left: 50px;
 }
 
 .js-menu-item {
@@ -61,7 +62,9 @@ nav {
 .js-menu-button {
   display: block;
   box-sizing: content-box;
-  padding: 5px 20px 5px 20px;
+  /* padding: 5px 20px 5px 20px; */
+  padding-bottom: 3px;
+  margin: 5px 20px 5px 20px;
   color: var(--color-home);
   font-size: 1.2rem;
   font-weight: bolder;
@@ -73,32 +76,32 @@ nav {
 }
 /* Menu Items on hover and when the page is active and also logo settings. */
 .js-menu-active.menu-activiteiten {
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   border-bottom: 3px solid var(--color-activiteiten);
   color: var(--color-activiteiten);
 }
 .js-menu-active.menu-ateliers {
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   border-bottom: 3px solid var(--color-ateliers);
   color: var(--color-ateliers);
 }
 .js-menu-active.menu-kunsttheorie {
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   border-bottom: 3px solid var(--color-kunsttheorie);
   color: var(--color-kunsttheorie);
 }
 .js-menu-active.menu-weten {
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   border-bottom: 3px solid var(--color-goed-om-weten);
   color: var(--color-goed-om-weten);
 }
 .js-menu-active.menu-contact {
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   border-bottom: 3px solid var(--color-contact);
   color: var(--color-contact);
 }
 .js-menu-active.menu-inschrijven {
-  padding-bottom: 2px;
+  padding-bottom: 0px;
   border-bottom: 3px solid var(--color-schrijf-in);
   color: var(--color-schrijf-in);
 }
@@ -124,24 +127,32 @@ nav {
 }
 /* Logo on current page */
 .logo-home {
+  background-image: url("images/logo-circle-text-home.png");
+  background-size: cover;
 }
 .logo-activiteiten {
-  color: var(--color-activiteiten);
+  background-image: url("images/logo-circle-text-blue.png");
+  background-size: cover;
 }
 .logo-ateliers {
-  color: var(--color-ateliers);
+  background-image: url("images/logo-circle-text-green.png");
+  background-size: cover;
 }
-.logo-#kunsttheorie {
-  color: var(--color-kunsttheorie);
+.logo-kunsttheorie {
+  background-image: url("images/logo-circle-text-orange.png");
+  background-size: cover;
 }
 .logo-weten {
-  color: var(--color-goed-om-weten);
+  background-image: url("images/logo-circle-text-gold.png");
+  background-size: cover;
 }
 .logo-contact {
-  color: var(--color-contact);
+  background-image: url("images/logo-circle-text-purple.png");
+  background-size: cover;
 }
 .logo-inschrijven {
-  color: var(--color-schrijf-in);
+  background-image: url("images/logo-circle-text-red.png");
+  background-size: cover;
 }
 
 /* Dropdown styling */
@@ -165,16 +176,32 @@ nav {
   padding-inline: 20px;
   padding-block: 8px;
   margin: 5px;
-
+  border-radius: 3px;
   text-decoration: none;
   color: var(--color-home);
   white-space: nowrap;
 }
-.js-dropdown-list a:hover {
+/* .js-dropdown-list a:hover {
   background-color: #d5dadf;
   border-radius: 3px;
+} */
+.js-menu-active.menu-activiteiten + ul a:hover {
+  background-color: #227ec233;
 }
-.js-dropdown-list li {
+.js-menu-active.menu-ateliers + ul a:hover {
+  background-color: #548f4333;
+}
+.js-menu-active.menu-kunsttheorie + ul a:hover {
+  background-color: #f9942733;
+}
+.js-menu-active.menu-weten + ul a:hover {
+  background-color: #fdc33333;
+}
+.js-menu-active.menu-contact + ul a:hover {
+  background-color: #a856a933;
+}
+.js-menu-active.menu-inschrijven + ul a:hover {
+  background-color: #e7524f33;
 }
 
 /**
