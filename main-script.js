@@ -29,12 +29,12 @@ let toggleOnOff = function (e) {
   let dropdownCurrent = this.nextElementSibling;
   if ((dropdownActive = true)) {
     dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
-    navigationButtons.forEach((elem) => elem.classList.replace("js-active", "js-not-active"));
+    navigationButtons.forEach((elem) => elem.classList.replace("js-menu-active", "js-menu-inactive"));
     dropdownActive = false;
   }
   if (dropdownCurrent.classList.contains("off")) {
     // Change the button style
-    this.classList.replace("js-not-active", "js-active");
+    this.classList.replace("js-menu-inactive", "js-menu-active");
     // Change the dropdown visibility
     dropdownCurrent.classList.replace("off", "on");
     dropdownActive = true;
@@ -46,7 +46,7 @@ let toggleOnOff = function (e) {
 let anywhereClickOnOff = function () {
   if ((dropdownActive = true)) {
     dropdownMenus.forEach((elem) => elem.classList.replace("on", "off"));
-    navigationButtons.forEach((elem) => elem.classList.replace("js-active", "js-not-active"));
+    navigationButtons.forEach((elem) => elem.classList.replace("js-menu-active", "js-menu-inactive"));
     dropdownActive = false;
   }
   console.log("click viewport");

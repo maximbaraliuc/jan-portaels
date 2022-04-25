@@ -85,20 +85,20 @@ nav {
   /* transition: all 0.2s ease-in-out 0.2s; */
 }
 
-.js-active {
+.js-menu-active {
   background-color: crimson;
   cursor: pointer;
 }
 /* Media Queries */
 
 @media screen and (max-width: 1024px) {
-  .js-active {
+  .js-menu-active {
     background-color: darkcyan;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .js-active {
+  .js-menu-active {
     background-color: deeppink;
   }
 }
