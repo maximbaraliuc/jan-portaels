@@ -5,11 +5,16 @@
 // ===========================================================================
 
 let burgerMenu = document.querySelector(".burger-menu");
+let navigation = document.querySelector("nav");
+
 let changeBurger = function () {
-  if (burgerMenu.classList.contains("burger-inactive")) {
-    burgerMenu.classList.replace("burger-inactive", "burger-active");
+  if (burgerMenu.classList.contains("js-burger-inactive")) {
+    burgerMenu.classList.replace("js-burger-inactive", "js-burger-active");
+    navigation.classList.replace("nav-elements-hidden", "nav-elements-visible");
+    console.log(navigation.classList);
   } else {
-    burgerMenu.classList.replace("burger-active", "burger-inactive");
+    burgerMenu.classList.replace("js-burger-active", "js-burger-inactive");
+    navigation.classList.replace("nav-elements-visible", "nav-elements-hidden");
   }
 };
 burgerMenu.addEventListener("click", changeBurger);

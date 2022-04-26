@@ -296,12 +296,13 @@ nav {
 * Menu setup with dropdown menus for desktop and smartphone mode.
 */
 .burger-menu {
+  visibility: hidden;
+  position: absolute;
+  right: 20px;
   display: flex;
   flex-flow: column wrap;
   border: 1px dotted orange;
   row-gap: 5px;
-  width: 25px;
-  height: 22px;
 }
 .burger-menu span {
   display: block;
@@ -310,15 +311,15 @@ nav {
   background-color: black;
   transition-duration: 0.5s;
 }
-.burger-active #burger-first-line {
+.js-burger-active #burger-first-line {
   width: 20px;
   transform-origin: 100% 0%;
   transform: translateX(10px) translateY(11px) rotate(45deg);
 }
-.burger-active #burger-middle-line {
+.js-burger-active #burger-middle-line {
   transform: rotate(180deg);
 }
-.burger-active #burger-last-line {
+.js-burger-active #burger-last-line {
   width: 20px;
   transform-origin: 100% 100%;
   transform: translateX(10px) translateY(-11px) rotate(-45deg);
@@ -358,4 +359,26 @@ nav {
 }
 
 @media screen and (max-width: 767px) {
+  .burger-menu {
+    visibility: visible;
+  }
+  .nav-elements-hidden .menu-container,
+  .nav-elements-hidden .js-search-container {
+    visibility: hidden;
+  }
+  .nav-elements-visible .menu-container,
+  .nav-elements-visible .js-search-container {
+    visibility: visible;
+  }
+
+  .menu-container {
+    display: flex;
+    flex-flow: column wrap;
+    order: 7;
+    flex-grow: 1;
+  }
+  .js-search-container {
+    order: 8;
+    flex-grow: 1;
+  }
 }
