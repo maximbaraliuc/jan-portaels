@@ -1,12 +1,17 @@
 /* =========================================================== */
 /* BURGER */
 /* =========================================================== */
-.burger {
+.burger-menu {
+  position: absolute;
+  border: 1px dotted orange;
+  flex-wrap: nowrap;
+}
+.burger-menu {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   row-gap: 5px;
 }
-.burger span {
+.burger-menu span {
   display: block;
   width: 25px;
   height: 4px;

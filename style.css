@@ -1,8 +1,8 @@
 :root {
-  --main-width: 1200px;
+  /* --main-width: 1200px; */
   --top-bar-height: 30px;
   --menu-button-gap: 10px;
-  --logo-width: 300px;
+  /* --logo-width: 300px; */
   --menu-button-pad-block: 15px;
   --menu-button-pad-inline: 15px;
   --color-activiteiten: #227ec2;
@@ -42,17 +42,20 @@ nav {
   display: flex;
   justify-content: left;
   align-items: center;
+  margin-inline: 20px;
 }
 
 .logo {
-  height: 80px;
+  height: 64px;
 }
 
 .menu-container {
   display: flex;
-  flex-wrap: wrap;
+  /* The menu will not wrap/break into element on new lines */
+  /* flex-wrap: nowrap; */
   /* column-gap: 10px; */
-  margin-left: 50px;
+
+  border: 1px dotted pink;
 }
 
 .js-menu-item {
@@ -61,10 +64,12 @@ nav {
 
 .js-menu-button {
   display: block;
+
   box-sizing: content-box;
   /* padding: 5px 20px 5px 20px; */
   padding-bottom: 3px;
   margin: 5px 20px 5px 20px;
+  white-space: nowrap;
   color: var(--color-home);
   font-size: 1.2rem;
   font-weight: bolder;
@@ -216,12 +221,13 @@ nav {
 }
 
 .js-search-container {
+  position: relative;
   display: flex;
   justify-content: right;
   align-items: center;
-  position: absolute;
-  right: 50px;
-  /* border: 1px dotted pink; */
+  margin-left: auto;
+
+  border: 1px dotted pink;
   width: 130px;
   height: 40px;
   transition: all 0.3s ease-in-out;
@@ -236,6 +242,7 @@ nav {
   color: var(--search-main-color);
   height: 80%;
   aspect-ratio: 1 / 1;
+  cursor: pointer;
 }
 .js-close-button {
   visibility: hidden;
@@ -248,6 +255,7 @@ nav {
   height: 80%;
   aspect-ratio: 1 / 1;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 .js-search-button:hover,
 .js-close-button:hover {
@@ -274,23 +282,80 @@ nav {
 }
 
 .js-search-active {
-  width: 300px;
+  /* width: 50%; */
+  flex-grow: 1;
 }
 
 .js-search-active .js-close-button {
   visibility: visible;
 }
 
-/* MEDIA QUERY */
+/**
+* #.# Burgermenu
+*
+* Menu setup with dropdown menus for desktop and smartphone mode.
+*/
+.burger-menu {
+  display: flex;
+  flex-flow: column wrap;
+  border: 1px dotted orange;
+  row-gap: 5px;
+  width: 25px;
+  height: 22px;
+}
+.burger-menu span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  transition-duration: 0.5s;
+}
+.burger-active #burger-first-line {
+  width: 20px;
+  transform-origin: 100% 0%;
+  transform: translateX(10px) translateY(11px) rotate(45deg);
+}
+.burger-active #burger-middle-line {
+  transform: rotate(180deg);
+}
+.burger-active #burger-last-line {
+  width: 20px;
+  transform-origin: 100% 100%;
+  transform: translateX(10px) translateY(-11px) rotate(-45deg);
+}
 
-@media screen and (max-width: 1024px) {
-  .js-menu-active {
-    background-color: darkcyan;
+/* MEDIA QUERY */
+@media screen and (max-width: 1499px) {
+  nav {
+    margin-inline: 10px;
+  }
+  .logo {
+    height: 40px;
+  }
+  .js-menu-button {
+    margin: 5px 10px 5px 10px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  nav {
+    flex-wrap: wrap;
+    margin-inline: 10px;
+  }
+  .menu-container {
+    order: 5;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  .logo {
+    height: 64px;
+  }
+  .js-menu-button {
+    margin: 5px 10px 5px 10px;
+    font-size: 1.2rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .js-menu-active {
-    background-color: deeppink;
-  }
 }

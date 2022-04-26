@@ -4,7 +4,7 @@
 // Burger Menu Setup
 // ===========================================================================
 
-/* let burgerMenu = document.querySelector(".burger");
+let burgerMenu = document.querySelector(".burger-menu");
 let changeBurger = function () {
   if (burgerMenu.classList.contains("burger-inactive")) {
     burgerMenu.classList.replace("burger-inactive", "burger-active");
@@ -12,7 +12,7 @@ let changeBurger = function () {
     burgerMenu.classList.replace("burger-active", "burger-inactive");
   }
 };
-burgerMenu.addEventListener("click", changeBurger); */
+burgerMenu.addEventListener("click", changeBurger);
 
 // ===========================================================================
 // Navigation Menu
@@ -43,11 +43,17 @@ let toggleOnOff = function (e) {
 };
 
 // Hides all the dropdown menus when clicked anywhere.
+// Refers also to the searchbar
 let anywhereClickOnOff = function () {
   if ((dropdownActive = true)) {
     dropdownMenus.forEach((elem) => elem.classList.replace("js-dropdown-on", "js-dropdown-off"));
     navigationButtons.forEach((elem) => elem.classList.replace("js-menu-active", "js-menu-inactive"));
     dropdownActive = false;
+  }
+
+  if ((searchActive = true)) {
+    searchForm.classList.replace("js-search-active", "js-search-inactive");
+    searchActive = false;
   }
   console.log("click viewport");
 };
@@ -89,10 +95,14 @@ window.addEventListener("resize", widthHeader);
 let searchForm = document.querySelector(".js-search-container");
 let closeButton = document.querySelector(".js-close-button");
 let searchButton = document.querySelector(".js-search-button");
+let inputArea = document.querySelector(".search-input");
+let searchActive = false;
 
 let searchInputActive = function (e) {
+  e.stopPropagation();
   if (searchForm.classList.contains("js-search-inactive")) {
     searchForm.classList.replace("js-search-inactive", "js-search-active");
+    searchActive = true;
     console.log("search active");
   }
 };
@@ -100,6 +110,8 @@ let closeSearch = function (e) {
   e.stopPropagation();
   if (searchForm.classList.contains("js-search-active")) {
     searchForm.classList.replace("js-search-active", "js-search-inactive");
+    inputArea.value = "";
+    searchActive = false;
     console.log("search inactive");
   }
 };
@@ -107,6 +119,7 @@ let closeSearch = function (e) {
 closeButton.addEventListener("click", closeSearch);
 searchButton.addEventListener("click", closeSearch);
 searchForm.addEventListener("click", searchInputActive);
+searchForm.addEventListener("input", searchInputActive);
 
 // ===========================================================================
 // ...

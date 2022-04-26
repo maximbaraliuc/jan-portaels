@@ -1,4 +1,4 @@
-let burgerMenu = document.querySelector(".burger");
+let burgerMenu = document.querySelector(".burger-menu");
 let changeBurger = function () {
   if (burgerMenu.classList.contains("burger-inactive")) {
     burgerMenu.classList.replace("burger-inactive", "burger-active");
