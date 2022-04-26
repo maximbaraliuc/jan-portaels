@@ -210,8 +210,8 @@ nav {
 * Menu setup with dropdown menus for desktop and smartphone mode.
 */
 :root {
-  --search-icon-color: #333;
-  --search-main-color: #aaa;
+  --search-icon-color: #666;
+  --search-main-color: #222;
   --search-accent-color: #eee;
 }
 
@@ -233,7 +233,7 @@ nav {
   border: none;
   border-radius: 15px;
   background-color: transparent;
-  color: var(--search-icon-color);
+  color: var(--search-main-color);
   height: 80%;
   aspect-ratio: 1 / 1;
 }
@@ -270,7 +270,7 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 .js-search-active .search-input {
-  /* box-shadow: 0px 0px 5px #bbb; */
+  box-shadow: 0px 0px 5px #bbb;
 }
 
 .js-search-active {
