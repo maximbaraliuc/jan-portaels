@@ -1,5 +1,3 @@
-"use strict";
-
 // ===========================================================================
 // Searchbar
 // ===========================================================================
@@ -7,21 +5,31 @@
 let searchForm = document.querySelector(".js-search-container");
 let closeButton = document.querySelector(".js-close-button");
 let searchButton = document.querySelector(".js-search-button");
+let inputArea = document.querySelector(".js-search-input");
 
-let searchInputActive = function (e) {
+let searchbarActivate = function () {
   if (searchForm.classList.contains("js-search-inactive")) {
     searchForm.classList.replace("js-search-inactive", "js-search-active");
     console.log("search active");
   }
 };
-let closeSearch = function (e) {
+let searchbarClose = function (e) {
   e.stopPropagation();
+  if (inputArea.value !== "") {
+    inputArea.value = "";
+  }
+  console.log("input is cleared");
+  searchDeactivate();
+};
+
+let searchDeactivate = function () {
   if (searchForm.classList.contains("js-search-active")) {
     searchForm.classList.replace("js-search-active", "js-search-inactive");
     console.log("search inactive");
   }
 };
 
-closeButton.addEventListener("click", closeSearch);
-searchButton.addEventListener("click", closeSearch);
-searchForm.addEventListener("click", searchInputActive);
+closeButton.addEventListener("click", searchbarClose);
+searchButton.addEventListener("click", searchbarActivate);
+inputArea.addEventListener("click", searchbarActivate);
+inputArea.addEventListener("input", searchbarActivate);

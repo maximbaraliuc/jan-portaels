@@ -1,75 +1,122 @@
-:root {
-  --search-icon-color: #aaa;
-  --search-main-color: #aaa;
-  --search-accent-color: #eee;
-}
 body {
-  display: flex;
-  justify-content: right;
-  margin: 50px 200px;
+  margin: 0;
+}
+nav {
+  background-color: white;
+  height: var(--navigation-height);
+  padding: 5px;
+}
+main {
+  background-color: lightseagreen;
+  height: 400px;
+}
+
+/**
+* #.# Search bar
+*
+* Menu setup with dropdown menus for desktop and smartphone mode.
+*/
+:root {
+  --search-icon-01-color: #aaa;
+  --search-icon-02-color: #aaa;
+  --search-icon-color-focus: #fff;
+
+  --search-main-color: #bbb;
+  --search-main-color-focus: #222;
+  --search-accent-color: #bbb;
+  --search-bar-width: 250px;
+  --search-bar-height: 40px;
+  --search-bar-corner-rad: 10px;
+
+  --navigation-height: 70px;
 }
 
 .js-search-container {
+  position: relative;
   display: flex;
   justify-content: right;
   align-items: center;
-  position: relative;
-  /* border: 1px dotted pink; */
-  width: 130px;
-  height: 40px;
+
+  width: var(--search-bar-width);
+  height: var(--search-bar-height);
+  margin-left: auto;
+
+  /* border: 1px dotted rgb(255, 0, 43); */
   transition: all 0.3s ease-in-out;
 }
 
 .js-search-button {
-  position: absolute;
-  right: 4px;
-  border: none;
-  border-radius: 6px;
-  background-color: transparent;
-  color: var(--search-icon-color);
-  height: 80%;
+  height: 100%;
   aspect-ratio: 1 / 1;
+  border: 1px solid var(--search-main-color);
+  border-top-right-radius: var(--search-bar-corner-rad);
+  border-bottom-right-radius: var(--search-bar-corner-rad);
+  background-color: transparent;
+  color: var(--search-icon-01-color);
+  cursor: pointer;
 }
+
 .js-close-button {
   visibility: hidden;
   position: absolute;
-  right: 40px;
-  border: none;
-  border-radius: 6px;
-  background-color: transparent;
-  color: var(--search-icon-color);
-  height: 80%;
+  height: 100%;
   aspect-ratio: 1 / 1;
-  transition: all 0.2s ease-in-out;
-}
-.js-search-button:hover,
-.js-close-button:hover {
-  background-color: var(--search-accent-color);
+
+  border: 1px solid var(--search-main-color-focus);
+  border-top-right-radius: var(--search-bar-corner-rad);
+  border-bottom-right-radius: var(--search-bar-corner-rad);
+  background-color: var(--search-main-color-focus);
+  color: var(--search-icon-color-focus);
+  cursor: pointer;
 }
 
-.js-search-button:active,
-.js-close-button:active {
-  background-color: var(--search-icon-color);
-  color: var(--search-accent-color);
-}
-.search-input {
+.js-search-input {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border: 2px solid var(--search-main-color);
-  border-radius: 10px;
-  padding-left: 15px;
+  border: 1px solid var(--search-main-color);
+  border-right: none;
+  border-top-left-radius: var(--search-bar-corner-rad);
+  border-bottom-left-radius: var(--search-bar-corner-rad);
+
+  padding-inline: 15px 50px;
   outline: none;
   transition: all 0.3s ease-in-out;
 }
-.js-search-active .search-input {
-  box-shadow: 0px 0px 5px #bbb;
+
+.js-search-active .js-search-button:hover,
+.js-search-button:hover {
+  background-color: var(--search-accent-color);
+  color: var(--search-icon-color-focus);
 }
 
-.js-search-active {
-  width: 100%;
+.js-search-active .js-search-button:active,
+.js-search-active .js-close-button:active {
+  background-color: var(--search-accent-color);
+  color: var(--search-icon-color-focus);
+}
+
+.js-search-active .js-search-input {
+  border-color: var(--search-main-color-focus);
+}
+
+.js-search-active .js-search-button {
+  position: absolute;
+  right: calc(var(--search-bar-height) + 5px);
+  height: 80%;
+  border: none;
+  border-radius: calc(var(--search-bar-height) / 2);
+  background-color: transparent;
+  color: var(--search-icon-02-color);
 }
 
 .js-search-active .js-close-button {
   visibility: visible;
+  position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    background-color: lightcoral;
+  }
 }
