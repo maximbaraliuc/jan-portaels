@@ -1,10 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* font-family: 'Commissioner', sans-serif;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Roboto', sans-serif; */
+
 :root {
-  /* --main-width: 1200px; */
-  --top-bar-height: 30px;
-  --menu-button-gap: 10px;
+  --main-width: 1350px;
+  /* --top-bar-height: 30px; */
+  /* --menu-button-gap: 20px; */
   /* --logo-width: 300px; */
-  --menu-button-pad-block: 15px;
-  --menu-button-pad-inline: 15px;
+  --navigation-height: 100px;
+  --menu-button-padding-block: 15px;
+  --menu-button-padding-inline: 15px;
+
   --color-activiteiten: #227ec2;
   --color-ateliers: #548f43;
   --color-kunsttheorie: #f99427;
@@ -12,21 +20,64 @@
   --color-contact: #a856a9;
   --color-schrijf-in: #e7524f;
   --color-home: #111;
+  --bg-color-main: #eee;
+
+  --search-icon-01-color: #aaa;
+  --search-icon-02-color: #aaa;
+  --search-icon-color-focus: #fff;
+  --search-main-color: #bbb;
+  --search-main-color-focus: #222;
+  --search-accent-color: #bbb;
+  --search-bar-width: 250px;
+  --search-bar-height: 40px;
+  --search-bar-corner-rad: 10px;
 }
+
 body {
   display: flex;
   flex-flow: column wrap;
-  /* align-content: center; */
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  background-color: var(--bg-color-main);
   /* width: var(--main-width); */
   /* border: 1px solid rgb(255, 0, 234); */
   /* margin: 0 auto; */
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Commissioner", sans-serif;
 }
 nav ul,
 nav li {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+main {
+  /* width: 100vw; */
+
+  /* background-color: var(--bg-color-main); */
+  height: 100vw;
+}
+.breadcrumbs {
+  display: flex;
+  width: var(--main-width);
+  height: 40px;
+}
+
+.breadcrumbs > div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #444;
+}
+
+.breadcrumbs > div::after {
+  content: "chevron_right";
+}
+
+.horizontal-line {
+  width: 100vw;
+  height: 1px;
+  background-color: #ddd;
 }
 
 h1 {
@@ -39,10 +90,26 @@ h1 {
 * Menu setup with dropdown menus for desktop and smartphone mode.
 */
 nav {
+  width: 100vw;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+.navigation {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  margin-inline: 20px;
+  width: var(--main-width);
+  height: var(--navigation-height);
+  margin: auto;
+  background-color: white;
+  /* border: 1px dotted purple; */
+}
+
+/* Helps to keep the navigation bar centered */
+nav::before,
+nav::after {
+  content: "";
+  flex-grow: 1;
 }
 
 .logo {
@@ -55,7 +122,8 @@ nav {
   /* flex-wrap: nowrap; */
   /* column-gap: 10px; */
 
-  border: 1px dotted pink;
+  /* border: 1px dotted pink; */
+  margin-inline: 20px;
 }
 
 .js-menu-item {
@@ -72,7 +140,7 @@ nav {
   white-space: nowrap;
   color: var(--color-home);
   font-size: 1.2rem;
-  font-weight: bolder;
+  font-weight: 600;
   user-select: none;
   transition: background-color 0.3s ease-in-out;
 }
@@ -82,32 +150,32 @@ nav {
 /* Menu Items on hover and when the page is active and also logo settings. */
 .js-menu-active.menu-activiteiten {
   padding-bottom: 0px;
-  border-bottom: 3px solid var(--color-activiteiten);
+  /* border-bottom: 3px solid var(--color-activiteiten); */
   color: var(--color-activiteiten);
 }
 .js-menu-active.menu-ateliers {
   padding-bottom: 0px;
-  border-bottom: 3px solid var(--color-ateliers);
+  /* border-bottom: 3px solid var(--color-ateliers); */
   color: var(--color-ateliers);
 }
 .js-menu-active.menu-kunsttheorie {
   padding-bottom: 0px;
-  border-bottom: 3px solid var(--color-kunsttheorie);
+  /* border-bottom: 3px solid var(--color-kunsttheorie); */
   color: var(--color-kunsttheorie);
 }
 .js-menu-active.menu-weten {
   padding-bottom: 0px;
-  border-bottom: 3px solid var(--color-goed-om-weten);
+  /* border-bottom: 3px solid var(--color-goed-om-weten); */
   color: var(--color-goed-om-weten);
 }
 .js-menu-active.menu-contact {
   padding-bottom: 0px;
-  border-bottom: 3px solid var(--color-contact);
+  /* border-bottom: 3px solid var(--color-contact); */
   color: var(--color-contact);
 }
 .js-menu-active.menu-inschrijven {
   padding-bottom: 0px;
-  border-bottom: 3px solid var(--color-schrijf-in);
+  /* border-bottom: 3px solid var(--color-schrijf-in); */
   color: var(--color-schrijf-in);
 }
 
@@ -164,7 +232,7 @@ nav {
 .js-dropdown-list {
   visibility: hidden;
   position: absolute;
-  top: 100px;
+  top: 120px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
@@ -172,7 +240,7 @@ nav {
   transition: all 0.2s ease-in-out 0.2s;
 }
 .js-dropdown-on {
-  top: 50px;
+  top: 45px;
   visibility: visible;
 }
 
@@ -214,124 +282,98 @@ nav {
 *
 * Menu setup with dropdown menus for desktop and smartphone mode.
 */
-:root {
-  --search-icon-color: #666;
-  --search-main-color: #222;
-  --search-accent-color: #eee;
-}
-
 .js-search-container {
   position: relative;
   display: flex;
   justify-content: right;
   align-items: center;
+
+  width: var(--search-bar-width);
+  height: var(--search-bar-height);
   margin-left: auto;
 
-  border: 1px dotted pink;
-  width: 130px;
-  height: 40px;
-  transition: all 0.3s ease-in-out;
+  /* border: 1px dotted pink; */
+  /* transition: all 0.3s ease-in-out; */
 }
 
 .js-search-button {
-  position: absolute;
-  right: 4px;
-  border: none;
-  border-radius: 15px;
-  background-color: transparent;
-  color: var(--search-main-color);
-  height: 80%;
+  height: 100%;
   aspect-ratio: 1 / 1;
+  border: 1px solid var(--search-main-color);
+  border-top-right-radius: var(--search-bar-corner-rad);
+  border-bottom-right-radius: var(--search-bar-corner-rad);
+  background-color: transparent;
+  color: var(--search-icon-01-color);
   cursor: pointer;
 }
+
 .js-close-button {
   visibility: hidden;
   position: absolute;
-  right: 40px;
-  border: none;
-  border-radius: 15px;
-  background-color: transparent;
-  color: var(--search-icon-color);
-  height: 80%;
+  height: 100%;
   aspect-ratio: 1 / 1;
-  transition: all 0.2s ease-in-out;
+
+  border: 1px solid var(--search-main-color-focus);
+  border-top-right-radius: var(--search-bar-corner-rad);
+  border-bottom-right-radius: var(--search-bar-corner-rad);
+  background-color: var(--search-main-color-focus);
+  color: var(--search-icon-color-focus);
   cursor: pointer;
 }
-.js-search-button:hover,
-.js-close-button:hover {
-  background-color: var(--search-accent-color);
-}
 
-.js-search-button:active,
-.js-close-button:active {
-  background-color: var(--search-icon-color);
-  color: var(--search-accent-color);
-}
-.search-input {
+.js-search-input {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   border: 1px solid var(--search-main-color);
-  border-radius: 20px;
-  padding-left: 15px;
+  border-right: none;
+  border-top-left-radius: var(--search-bar-corner-rad);
+  border-bottom-left-radius: var(--search-bar-corner-rad);
+
+  padding-inline: 15px 50px;
   outline: none;
-  transition: all 0.3s ease-in-out;
-}
-.js-search-active .search-input {
-  box-shadow: 0px 0px 5px #bbb;
+  /* transition: all 0.3s ease-in-out; */
 }
 
-.js-search-active {
-  /* width: 50%; */
-  flex-grow: 1;
+.js-search-active .js-search-button:hover,
+.js-search-button:hover {
+  border-color: var(--search-accent-color);
+  background-color: var(--search-accent-color);
+  color: var(--search-icon-color-focus);
+}
+
+.js-search-active .js-search-button:active,
+.js-search-active .js-close-button:active {
+  background-color: var(--search-main-color-focus);
+  color: var(--search-icon-color-focus);
+}
+
+.js-search-active .js-search-input {
+  border-color: var(--search-main-color-focus);
+}
+
+.js-search-active .js-search-button {
+  position: absolute;
+  right: calc(var(--search-bar-height) + 5px);
+  height: 80%;
+  border: none;
+  border-radius: calc(var(--search-bar-height) / 2);
+  background-color: transparent;
+  color: var(--search-icon-02-color);
 }
 
 .js-search-active .js-close-button {
   visibility: visible;
-}
-
-/**
-* #.# Burgermenu
-*
-* Menu setup with dropdown menus for desktop and smartphone mode.
-*/
-.burger-menu {
-  visibility: hidden;
-  position: absolute;
-  right: 20px;
-  display: flex;
-  flex-flow: column wrap;
-  border: 1px dotted orange;
-  row-gap: 5px;
-}
-.burger-menu span {
-  display: block;
-  width: 25px;
-  height: 4px;
-  background-color: black;
-  transition-duration: 0.5s;
-}
-.js-burger-active #burger-first-line {
-  width: 20px;
-  transform-origin: 100% 0%;
-  transform: translateX(10px) translateY(11px) rotate(45deg);
-}
-.js-burger-active #burger-middle-line {
-  transform: rotate(180deg);
-}
-.js-burger-active #burger-last-line {
-  width: 20px;
-  transform-origin: 100% 100%;
-  transform: translateX(10px) translateY(-11px) rotate(-45deg);
+  position: relative;
 }
 
 /* MEDIA QUERY */
-@media screen and (max-width: 1499px) {
+@media screen and (max-width: 1365px) {
   nav {
     margin-inline: 10px;
   }
   .logo {
-    height: 40px;
+    height: 50px;
   }
   .js-menu-button {
     margin: 5px 10px 5px 10px;
