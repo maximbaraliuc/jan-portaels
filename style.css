@@ -113,7 +113,7 @@ nav::after {
 }
 
 .logo {
-  height: 64px;
+  height: calc(var(--navigation-height) - 30px);
 }
 
 .menu-container {
