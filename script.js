@@ -3,18 +3,18 @@
 // ===========================================================================
 // Burger Menu Setup
 // ===========================================================================
-
+let navigationBar = document.querySelector(".navigation");
 let burgerMenu = document.querySelector(".burger-menu");
-let navigation = document.querySelector("nav");
 
 let changeBurger = function () {
-  if (burgerMenu.classList.contains("js-burger-inactive")) {
-    burgerMenu.classList.replace("js-burger-inactive", "js-burger-active");
-    navigation.classList.replace("nav-elements-hidden", "nav-elements-visible");
-    console.log(navigation.classList);
+  if (burgerMenu.classList.contains("burger-inactive")) {
+    burgerMenu.classList.replace("burger-inactive", "burger-active");
+    navigationBar.classList.replace("nav-elements-hidden", "nav-elements-visible");
+    console.log("burger active");
   } else {
-    burgerMenu.classList.replace("js-burger-active", "js-burger-inactive");
-    navigation.classList.replace("nav-elements-visible", "nav-elements-hidden");
+    burgerMenu.classList.replace("burger-active", "burger-inactive");
+    navigationBar.classList.replace("nav-elements-visible", "nav-elements-hidden");
+    console.log("burger inactive");
   }
 };
 burgerMenu.addEventListener("click", changeBurger);
@@ -70,8 +70,11 @@ let mouseleaveOff = function () {
 
 // Events initialization.
 document.addEventListener("click", anywhereClickOnOff);
+
 navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff));
+
 navigationButtons.forEach((item) => item.addEventListener("mouseenter", toggleOnOff));
+
 dropdownMenus.forEach((item) => item.addEventListener("mouseleave", anywhereClickOnOff));
 
 // ===========================================================================

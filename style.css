@@ -44,7 +44,6 @@ body {
   /* border: 1px solid rgb(255, 0, 234); */
   /* margin: 0 auto; */
   font-family: "Commissioner", sans-serif;
-  overflow-x: hidden;
 }
 nav ul,
 nav li {
@@ -59,6 +58,7 @@ main {
   height: 100vw;
 }
 .breadcrumbs {
+  box-sizing: border-box;
   display: flex;
   width: var(--main-width);
   height: 40px;
@@ -92,6 +92,7 @@ h1 {
 * Menu setup with dropdown menus for desktop and smartphone mode.
 */
 nav {
+  /* position: relative; */
   width: 100vw;
   background-color: white;
   border-bottom: 1px solid #ddd;
@@ -108,11 +109,11 @@ nav {
 }
 
 /* Helps to keep the navigation bar centered */
-nav::before,
+/* nav::before,
 nav::after {
   content: "";
   flex-grow: 1;
-}
+} */
 
 .logo {
   height: calc(var(--navigation-height) - 30px);
@@ -235,7 +236,6 @@ nav::after {
   visibility: hidden;
   position: absolute;
   top: 120px;
-  /* margin-right: auto; */
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
@@ -371,6 +371,45 @@ nav::after {
   position: relative;
 }
 
+/* =========================================================== */
+/* BURGER */
+/* =========================================================== */
+
+.burger-menu {
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px dotted orange;
+  flex-wrap: nowrap;
+  user-select: none;
+}
+.burger-menu {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 5px;
+}
+.burger-menu span {
+  display: block;
+  width: 25px;
+  height: 4px;
+  background-color: black;
+  transition-duration: 0.5s;
+}
+.burger-active #burger-first-line {
+  width: 20px;
+  transform-origin: 100% 0%;
+  transform: translateX(10px) translateY(11px) rotate(45deg);
+}
+.burger-active #burger-middle-line {
+  transform: rotate(180deg);
+}
+.burger-active #burger-last-line {
+  width: 20px;
+  transform-origin: 100% 100%;
+  transform: translateX(10px) translateY(-11px) rotate(-45deg);
+}
+
 /* MEDIA QUERY */
 
 /* Screen size between: 1024 - 1366 */
@@ -390,16 +429,22 @@ nav::after {
 /* Screen size between: 768 - 1024 */
 @media screen and (max-width: 1023px) {
   :root {
-    --main-width: 1023;
+    --main-width: 1000px;
     --navigation-height: 100px;
     --search-bar-width: 250px;
     --search-bar-height: 40px;
   }
+  nav {
+    width: 100vw;
+  }
   .navigation {
-    max-width: var(--main-width);
+    /* max-width: var(--main-width); */
+    width: unset;
+    height: unset;
     flex-wrap: wrap;
     height: auto;
     margin: 10px;
+    /* margin-left: auto; */
   }
   .menu-container {
     order: 3;
@@ -408,30 +453,47 @@ nav::after {
   .js-menu-button {
     margin: 5px 15px 5px 15px;
   }
+  /* Changes just the last dropdown */
+  .menu-container .js-menu-item:last-child .js-dropdown-list {
+    right: -50px;
+  }
+  .breadcrumbs {
+    width: 100vw;
+    padding-inline: 10px;
+  }
 }
 
 /* Screen size between: 0 - 768 */
-/* @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .burger-menu {
     visibility: visible;
   }
+
   .nav-elements-hidden .menu-container,
   .nav-elements-hidden .js-search-container {
     visibility: hidden;
   }
+
   .nav-elements-visible .menu-container,
   .nav-elements-visible .js-search-container {
     visibility: visible;
   }
 
+  .navigation {
+    justify-content: left;
+    /* flex-flow: column; */
+  }
   .menu-container {
-    display: flex;
-    flex-flow: column wrap;
-    order: 7;
-    flex-grow: 1;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    flex-flow: column;
+    background-color: white;
+    width: 100vw;
+    margin: 0;
   }
+
   .js-search-container {
-    order: 8;
-    flex-grow: 1;
+    position: absolute;
   }
-} */
+}
