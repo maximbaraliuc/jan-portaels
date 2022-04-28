@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.breadcrumbs {
+  box-sizing: border-box;
+  display: flex;
+  width: var(--main-width);
+  height: 40px;
+}
+
+.breadcrumbs > div {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #444;
+}
+
+.breadcrumbs > div::after {
+  content: "chevron_right";
+}
