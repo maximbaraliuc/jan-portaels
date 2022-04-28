@@ -74,11 +74,17 @@ navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff))
 navigationButtons.forEach((item) => item.addEventListener("mouseenter", toggleOnOff));
 dropdownMenus.forEach((item) => item.addEventListener("mouseleave", anywhereClickOnOff));
 
+// ===========================================================================
 // Display some data about the screen width.
+// ===========================================================================
+
 let headerText = document.querySelector("h1");
 let widthHeader = function () {
-  if (window.screen.width >= 1024) {
-    headerText.innerHTML = "Screen width is >=1024px";
+  if (window.screen.width >= 1366) {
+    headerText.innerHTML = "Screen width is >1366px";
+    console.log("Screen width is >1366px");
+  } else if (window.screen.width >= 1024) {
+    headerText.innerHTML = "Screen width is >1024px";
     console.log("Screen width is >1024px");
   } else if (window.screen.width < 1024 && window.screen.width >= 768) {
     headerText.innerHTML = "Screen width is between 768px and 1024px";

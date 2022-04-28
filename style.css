@@ -5,7 +5,7 @@ font-family: 'Libre Baskerville', serif;
 font-family: 'Roboto', sans-serif; */
 
 :root {
-  --main-width: 1350px;
+  --main-width: 1300px;
   /* --top-bar-height: 30px; */
   /* --menu-button-gap: 20px; */
   /* --logo-width: 300px; */
@@ -44,6 +44,7 @@ body {
   /* border: 1px solid rgb(255, 0, 234); */
   /* margin: 0 auto; */
   font-family: "Commissioner", sans-serif;
+  overflow-x: hidden;
 }
 nav ul,
 nav li {
@@ -81,7 +82,8 @@ main {
 }
 
 h1 {
-  color: lightblue;
+  color: dodgerblue;
+  font-family: "Libre Baskerville", serif;
 }
 
 /**
@@ -233,6 +235,7 @@ nav::after {
   visibility: hidden;
   position: absolute;
   top: 120px;
+  /* margin-right: auto; */
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
@@ -241,6 +244,7 @@ nav::after {
 }
 .js-dropdown-on {
   top: 45px;
+
   visibility: visible;
 }
 
@@ -368,39 +372,46 @@ nav::after {
 }
 
 /* MEDIA QUERY */
+
+/* Screen size between: 1024 - 1366 */
 @media screen and (max-width: 1365px) {
-  nav {
-    margin-inline: 10px;
-  }
-  .logo {
-    height: 50px;
+  :root {
+    --main-width: 1000px;
+    --navigation-height: 80px;
+    --search-bar-width: 180px;
+    --search-bar-height: 40px;
   }
   .js-menu-button {
     margin: 5px 10px 5px 10px;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
+/* Screen size between: 768 - 1024 */
 @media screen and (max-width: 1023px) {
-  nav {
+  :root {
+    --main-width: 1023;
+    --navigation-height: 100px;
+    --search-bar-width: 250px;
+    --search-bar-height: 40px;
+  }
+  .navigation {
+    max-width: var(--main-width);
     flex-wrap: wrap;
-    margin-inline: 10px;
+    height: auto;
+    margin: 10px;
   }
   .menu-container {
-    order: 5;
-    justify-content: space-between;
-    flex-grow: 1;
-  }
-  .logo {
-    height: 64px;
+    order: 3;
+    justify-content: center;
   }
   .js-menu-button {
-    margin: 5px 10px 5px 10px;
-    font-size: 1.2rem;
+    margin: 5px 15px 5px 15px;
   }
 }
 
-@media screen and (max-width: 767px) {
+/* Screen size between: 0 - 768 */
+/* @media screen and (max-width: 767px) {
   .burger-menu {
     visibility: visible;
   }
@@ -423,4 +434,4 @@ nav::after {
     order: 8;
     flex-grow: 1;
   }
-}
+} */
