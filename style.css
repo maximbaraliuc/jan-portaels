@@ -135,7 +135,6 @@ nav::after {
 
 .js-menu-button {
   display: block;
-
   box-sizing: content-box;
   /* padding: 5px 20px 5px 20px; */
   padding-bottom: 3px;
@@ -244,7 +243,6 @@ nav::after {
 }
 .js-dropdown-on {
   top: 45px;
-
   visibility: visible;
 }
 
@@ -258,10 +256,12 @@ nav::after {
   color: var(--color-home);
   white-space: nowrap;
 }
-/* .js-dropdown-list a:hover {
-  background-color: #d5dadf;
-  border-radius: 3px;
-} */
+.js-dropdown-list li {
+  border-bottom: 1px solid #eee;
+}
+.js-dropdown-list li:last-child {
+  border-bottom: none;
+}
 .js-menu-active.menu-activiteiten + ul a:hover {
   background-color: #227ec233;
 }
@@ -306,7 +306,7 @@ nav::after {
   border: 1px solid var(--search-main-color);
   border-top-right-radius: var(--search-bar-corner-rad);
   border-bottom-right-radius: var(--search-bar-corner-rad);
-  background-color: transparent;
+  background-color: white;
   color: var(--search-icon-01-color);
   cursor: pointer;
 }
@@ -359,7 +359,7 @@ nav::after {
 .js-search-active .js-search-button {
   position: absolute;
   right: calc(var(--search-bar-height) + 5px);
-  height: 80%;
+  height: calc(var(--search-bar-height)) * 0.8;
   border: none;
   border-radius: calc(var(--search-bar-height) / 2);
   background-color: transparent;
@@ -378,9 +378,9 @@ nav::after {
 .burger-menu {
   visibility: hidden;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  border: 1px dotted orange;
+  top: 15px;
+  right: 20px;
+  /* border: 1px dotted orange; */
   flex-wrap: nowrap;
   user-select: none;
 }
@@ -393,6 +393,7 @@ nav::after {
   display: block;
   width: 25px;
   height: 4px;
+  border-radius: 2px;
   background-color: black;
   transition-duration: 0.5s;
 }
@@ -429,7 +430,7 @@ nav::after {
 /* Screen size between: 768 - 1024 */
 @media screen and (max-width: 1023px) {
   :root {
-    --main-width: 1000px;
+    --main-width: 998px;
     --navigation-height: 100px;
     --search-bar-width: 250px;
     --search-bar-height: 40px;
@@ -465,6 +466,11 @@ nav::after {
 
 /* Screen size between: 0 - 768 */
 @media screen and (max-width: 767px) {
+  :root {
+    --navigation-height: 80px;
+    --search-bar-width: 250px;
+    --search-bar-height: 40px;
+  }
   .burger-menu {
     visibility: visible;
   }
@@ -472,28 +478,99 @@ nav::after {
   .nav-elements-hidden .menu-container,
   .nav-elements-hidden .js-search-container {
     visibility: hidden;
+    transform-origin: 100% 50%;
+    transform: scaleX(0%);
+    transition: all 0.3s ease-in;
   }
 
   .nav-elements-visible .menu-container,
   .nav-elements-visible .js-search-container {
     visibility: visible;
+    transform: scaleX(100%);
+    transition: all 0.3s ease-in;
   }
 
   .navigation {
     justify-content: left;
-    /* flex-flow: column; */
   }
   .menu-container {
-    top: 0px;
-    right: 0px;
     position: absolute;
+    top: var(--navigation-height);
+    right: 0px;
     flex-flow: column;
+    /* align-items: flex-end; */
     background-color: white;
     width: 100vw;
     margin: 0;
+    padding-top: 20px;
+  }
+  .js-menu-button {
+    margin-left: 40px;
+    margin-block: 10px;
+    padding-bottom: 10px;
+    /* border-bottom: 1px solid #ddd; */
+  }
+
+  .js-dropdown-list {
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    border: none;
+    box-shadow: none;
+    transform-origin: 0% 0%;
+    transform: scaleY(0%);
+    transition: all 0s ease-in;
+  }
+  .js-dropdown-list a {
+    margin-left: 40px;
+  }
+  .js-dropdown-on {
+    position: unset;
+    transition: all 0.3s ease-in;
+    transform: scaleY(100%);
+  }
+  .js-dropdown-list li:last-child {
+    border-bottom: 1px solid #eee;
   }
 
   .js-search-container {
+    box-sizing: border-box;
     position: absolute;
+    background-color: #eee;
+    top: 0px;
+    height: var(--navigation-height);
+    right: 0px;
+    width: 100vw;
+
+    padding-inline: 40px 80px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .js-search-input,
+  .js-close-button,
+  .js-search-button {
+    height: var(--search-bar-height);
+  }
+  .js-search-active .js-search-button {
+    margin-right: calc(var(--search-bar-height) * 2);
   }
 }
+
+/* Animation Example */
+/* selector {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+} */
