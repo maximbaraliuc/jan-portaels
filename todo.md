@@ -1,10 +1,7 @@
-MOODBOARD and ADOBE XD
+# TODO
 
 Responsive Design
-
 SEO Ruleset
 Social Media Setup
-
 Custom variables
-
 Aware of SVG dimensions
