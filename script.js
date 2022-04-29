@@ -73,7 +73,7 @@ document.addEventListener("click", anywhereClickOnOff);
 
 navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff, false));
 
-navigationButtons.forEach((item) => item.addEventListener("pointerenter", toggleOnOff, false));
+// navigationButtons.forEach((item) => item.addEventListener("pointerenter", toggleOnOff, false));
 
 dropdownMenus.forEach((item) => item.addEventListener("pointerleave", anywhereClickOnOff, false));
 
