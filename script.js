@@ -71,11 +71,11 @@ let pointerleaveOff = function () {
 // Events initialization.
 document.addEventListener("click", anywhereClickOnOff);
 
-navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff));
+navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff, false));
 
-navigationButtons.forEach((item) => item.addEventListener("pointerenter", toggleOnOff));
+navigationButtons.forEach((item) => item.addEventListener("pointerenter", toggleOnOff, false));
 
-dropdownMenus.forEach((item) => item.addEventListener("pointerleave", anywhereClickOnOff));
+dropdownMenus.forEach((item) => item.addEventListener("pointerleave", anywhereClickOnOff, false));
 
 // ===========================================================================
 // Display some data about the screen width.
