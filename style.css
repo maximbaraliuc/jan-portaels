@@ -52,6 +52,7 @@ nav li {
   list-style: none;
 }
 main {
+  width: var(--main-width);
   /* width: 100vw; */
 
   /* background-color: var(--bg-color-main); */
@@ -437,6 +438,11 @@ nav::after {
   }
   nav {
     width: 100vw;
+  }
+  main {
+    box-sizing: border-box;
+    width: 100vw;
+    padding-inline: 15px;
   }
   .navigation {
     /* max-width: var(--main-width); */

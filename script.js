@@ -60,12 +60,12 @@ let anywhereClickOnOff = function () {
   console.log("click viewport");
 };
 
-let mouseenterOn = function () {
-  console.log("mouseenter work in progress");
+let pointerenterOn = function () {
+  console.log("pointerenter work in progress");
 };
 
-let mouseleaveOff = function () {
-  console.log("mouseleave work in progress");
+let pointerleaveOff = function () {
+  console.log("pointerleave work in progress");
 };
 
 // Events initialization.
@@ -73,9 +73,9 @@ document.addEventListener("click", anywhereClickOnOff);
 
 navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff));
 
-navigationButtons.forEach((item) => item.addEventListener("mouseenter", toggleOnOff));
+navigationButtons.forEach((item) => item.addEventListener("pointerenter", toggleOnOff));
 
-dropdownMenus.forEach((item) => item.addEventListener("mouseleave", anywhereClickOnOff));
+dropdownMenus.forEach((item) => item.addEventListener("pointerleave", anywhereClickOnOff));
 
 // ===========================================================================
 // Display some data about the screen width.
@@ -87,11 +87,11 @@ let widthHeader = function () {
     headerText.innerHTML = "Screen width is >1366px";
     console.log("Screen width is >1366px");
   } else if (window.screen.width >= 1024) {
-    headerText.innerHTML = "Screen width is >1024px";
-    console.log("Screen width is >1024px");
+    headerText.innerHTML = "Screen width is >1024px & <1366px";
+    console.log("Screen width is >1024px & <1366px");
   } else if (window.screen.width < 1024 && window.screen.width >= 768) {
-    headerText.innerHTML = "Screen width is between 768px and 1024px";
-    console.log("Screen width is between 768px and 1024px");
+    headerText.innerHTML = "Screen width is >768px & <1024px";
+    console.log("Screen width is >768px & <1024px");
   } else {
     headerText.innerHTML = "Screen width is <768px";
     console.log("Screen width is <768px");
