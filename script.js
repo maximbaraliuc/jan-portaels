@@ -42,6 +42,9 @@ let deactivateMenuItem = function (e) {
 };
 
 let clickExceptMenuItem = function (e) {
+  if (window.screen.width < 768) {
+    return;
+  }
   menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
 };
 
