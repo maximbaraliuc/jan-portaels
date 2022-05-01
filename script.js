@@ -47,14 +47,12 @@ let clickExceptMenuItem = function (e) {
 
 // Activate
 
-if (window.screen.width < 768) {
-  menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
-} else {
-  menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
-  // Deactivate
-  menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
-  document.addEventListener("click", clickExceptMenuItem);
-}
+menuItem.forEach((item) => item.addEventListener("mouseup", activateMenuItem));
+
+menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
+// Deactivate
+menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
+document.addEventListener("mouseup", clickExceptMenuItem);
 
 // Refers also to the searchbar
 // searchDeactivate();
