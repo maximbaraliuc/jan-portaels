@@ -15,6 +15,7 @@ font-family: 'Roboto', sans-serif; */
   --search-bar-height: 40px;
   --search-bar-corner-rad: 5px;
   --main-margin-width: 15px;
+  --logo-margin-top: 5px;
 
   --color-home: hsl(0, 0%, 5%);
   --color-activiteiten: hsl(206, 70%, 45%);
@@ -411,7 +412,7 @@ h6 {
     margin-inline: var(--main-margin-width);
   }
   .logo {
-    margin-top: 5px;
+    margin-top: var(--logo-margin-top);
   }
   .navigation {
     flex-wrap: wrap;
@@ -475,10 +476,10 @@ h6 {
     position: absolute;
     flex-flow: column;
     /* justify-content: flex-start; */
-    top: var(--navigation-height);
+    top: calc(var(--navigation-height) + var(--logo-margin-top));
     right: 0px;
     width: 100vw;
-    min-height: calc(100vh - var(--navigation-height));
+    min-height: calc(100vh - var(--navigation-height) + var(--logo-margin-top));
     margin: 0;
     padding-top: 20px;
     background-color: white;
@@ -524,7 +525,7 @@ h6 {
     position: absolute;
     top: 0px;
     right: 0px;
-    height: var(--navigation-height);
+    height: calc(var(--navigation-height) + var(--logo-margin-top));
     width: 100vw;
     padding-inline: 40px 80px;
     background-color: #eee;
