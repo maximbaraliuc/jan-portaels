@@ -3,26 +3,58 @@
 // ===========================================================================
 // Burger Menu Setup
 // ===========================================================================
+
 let navigationBar = document.querySelector(".navigation");
 let burgerMenu = document.querySelector(".burger-menu");
 
-let changeBurger = function () {
-  if (burgerMenu.classList.contains("burger-inactive")) {
-    burgerMenu.classList.replace("burger-inactive", "burger-active");
-    navigationBar.classList.replace("nav-elements-hidden", "nav-elements-visible");
+let toggleBurgerState = function () {
+  if (burgerMenu.classList.contains("js-off")) {
+    burgerMenu.classList.replace("js-off", "js-on");
+    navigationBar.classList.replace("js-off", "js-on");
     console.log("burger active");
   } else {
-    burgerMenu.classList.replace("burger-active", "burger-inactive");
-    navigationBar.classList.replace("nav-elements-visible", "nav-elements-hidden");
+    burgerMenu.classList.replace("js-on", "js-off");
+    navigationBar.classList.replace("js-on", "js-off");
     console.log("burger inactive");
   }
 };
-burgerMenu.addEventListener("click", changeBurger);
+
+burgerMenu.addEventListener("click", toggleBurgerState);
 
 // ===========================================================================
 // Navigation Menu
 // ===========================================================================
-let dropdownActive = false;
+
+let menuItem = document.querySelectorAll(".js-menu-item");
+let menuButtons = document.querySelectorAll(".menu-button");
+
+let activateMenuItem = function (e) {
+  e.stopPropagation();
+  menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
+  this.classList.replace("js-off", "js-on");
+  console.log("activate - this, e:", this, e);
+};
+
+let deactivateMenuItem = function (e) {
+  e.stopPropagation();
+  this.classList.replace("js-on", "js-off");
+  console.log("deactivate - this, e:", this, e);
+};
+
+let clickExceptMenuItem = function (e) {
+  menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
+};
+
+// Activate
+menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
+menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
+// Deactivate
+menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
+document.addEventListener("click", clickExceptMenuItem);
+
+// menuButtons.forEach((item) => item.removeEventListener("click", activateMenuItem));
+
+/* let dropdownActive = false;
 let navigationButtons = document.querySelectorAll(".js-menu-button");
 let dropdownMenus = document.querySelectorAll(".js-dropdown-list");
 
@@ -56,8 +88,8 @@ let anywhereClickOnOff = function () {
   }
 
   // Refers also to the searchbar
-  searchDeactivate();
-  console.log("click viewport");
+  // searchDeactivate();
+  // console.log("click viewport");
 };
 
 let pointerenterOn = function () {
@@ -73,9 +105,9 @@ document.addEventListener("click", anywhereClickOnOff);
 
 navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff, false));
 
-// navigationButtons.forEach((item) => item.addEventListener("pointerenter", toggleOnOff, false));
+navigationButtons.forEach((item) => item.addEventListener("pointerenter", toggleOnOff, false));
 
-dropdownMenus.forEach((item) => item.addEventListener("pointerleave", anywhereClickOnOff, false));
+dropdownMenus.forEach((item) => item.addEventListener("pointerleave", anywhereClickOnOff, false)); */
 
 // ===========================================================================
 // Display some data about the screen width.
@@ -103,38 +135,38 @@ window.addEventListener("resize", widthHeader);
 // Searchbar
 // ===========================================================================
 
-let searchForm = document.querySelector(".js-search-container");
-let closeButton = document.querySelector(".js-close-button");
-let searchButton = document.querySelector(".js-search-button");
-let inputArea = document.querySelector(".js-search-input");
+// let searchForm = document.querySelector(".js-search-container");
+// let closeButton = document.querySelector(".js-close-button");
+// let searchButton = document.querySelector(".js-search-button");
+// let inputArea = document.querySelector(".js-search-input");
 
-let searchbarActivate = function (e) {
-  e.stopPropagation();
-  if (searchForm.classList.contains("js-search-inactive")) {
-    searchForm.classList.replace("js-search-inactive", "js-search-active");
-    console.log("search active");
-  }
-};
-let searchbarClose = function (e) {
-  e.stopPropagation();
-  if (inputArea.value !== "") {
-    inputArea.value = "";
-  }
-  console.log("input is cleared");
-  searchDeactivate(this);
-};
+// let searchbarActivate = function (e) {
+//   e.stopPropagation();
+//   if (searchForm.classList.contains("js-search-inactive")) {
+//     searchForm.classList.replace("js-search-inactive", "js-search-active");
+//     console.log("search active");
+//   }
+// };
+// let searchbarClose = function (e) {
+//   e.stopPropagation();
+//   if (inputArea.value !== "") {
+//     inputArea.value = "";
+//   }
+//   console.log("input is cleared");
+//   searchDeactivate(this);
+// };
 
-let searchDeactivate = function () {
-  if (searchForm.classList.contains("js-search-active")) {
-    searchForm.classList.replace("js-search-active", "js-search-inactive");
-    console.log("search inactive");
-  }
-};
+// let searchDeactivate = function () {
+//   if (searchForm.classList.contains("js-search-active")) {
+//     searchForm.classList.replace("js-search-active", "js-search-inactive");
+//     console.log("search inactive");
+//   }
+// };
 
-closeButton.addEventListener("click", searchbarClose);
-searchButton.addEventListener("click", searchbarActivate);
-inputArea.addEventListener("click", searchbarActivate);
-inputArea.addEventListener("input", searchbarActivate);
+// closeButton.addEventListener("click", searchbarClose);
+// searchButton.addEventListener("click", searchbarActivate);
+// inputArea.addEventListener("click", searchbarActivate);
+// inputArea.addEventListener("input", searchbarActivate);
 
 // ===========================================================================
 // ...

@@ -4,22 +4,26 @@
 /* font-family: 'Commissioner', sans-serif;
 font-family: 'Libre Baskerville', serif;
 font-family: 'Roboto', sans-serif; */
+
 :root {
   --main-width: 1300px;
-  /* --top-bar-height: 30px; */
-  /* --menu-button-gap: 20px; */
-  /* --logo-width: 300px; */
   --navigation-height: 100px;
+  --js-menu-button-height: 50px;
   --menu-button-padding-block: 15px;
-  --menu-button-padding-inline: 15px;
+  --menu-button-padding-inline: 20px;
+  --search-bar-width: 250px;
+  --search-bar-height: 40px;
+  --search-bar-corner-rad: 10px;
+  --main-margin-width: 15px;
 
-  --color-activiteiten: #227ec2;
-  --color-ateliers: #548f43;
-  --color-kunsttheorie: #f99427;
-  --color-goed-om-weten: #fdc333;
-  --color-contact: #a856a9;
-  --color-schrijf-in: #e7524f;
-  --color-home: #111;
+  --color-home: hsl(0, 0%, 5%);
+  --color-activiteiten: hsl(206, 70%, 45%);
+  --color-ateliers: hsl(107, 36%, 41%);
+  --color-kunsttheorie: hsl(31, 95%, 56%);
+  --color-info: hsl(43, 98%, 60%);
+  --color-contact: hsl(299, 33%, 50%);
+  --color-inschrijven: hsl(1, 76%, 61%);
+
   --bg-color-main: #eee;
 
   --search-icon-01-color: #aaa;
@@ -28,9 +32,29 @@ font-family: 'Roboto', sans-serif; */
   --search-main-color: #bbb;
   --search-main-color-focus: #222;
   --search-accent-color: #bbb;
-  --search-bar-width: 250px;
-  --search-bar-height: 40px;
-  --search-bar-corner-rad: 10px;
+}
+
+/* Current page main color accent */
+.home-section {
+  --main-accent-color: var(--color-home);
+}
+.activiteiten-section {
+  --main-accent-color: var(--color-activiteiten);
+}
+.ateliers-section {
+  --main-accent-color: var(--color-ateliers);
+}
+.kunsttheorie-section {
+  --main-accent-color: var(--color-kunsttheorie);
+}
+.info-section {
+  --main-accent-color: var(--color-info);
+}
+.contact-section {
+  --main-accent-color: var(--color-contact);
+}
+.inschrijven-section {
+  --main-accent-color: var(--color-inschrijven);
 }
 
 body {
@@ -38,14 +62,14 @@ body {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  min-height: 100vh;
   padding: 0;
   margin: 0;
   background-color: var(--bg-color-main);
-  /* min-width: var(--main-width); */
-  min-height: 100vh;
-  border: 1px solid rgb(255, 0, 234);
-  /* margin: 0 auto; */
+  color: var(--color-home);
   font-family: "Commissioner", sans-serif;
+
+  /* border: 1px solid rgb(255, 0, 234); */
 }
 nav ul,
 nav li {
@@ -53,20 +77,30 @@ nav li {
   margin: 0;
   list-style: none;
 }
+header {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
 main {
   max-width: var(--main-width);
   flex: 1;
+  /* border: 1px dotted dodgerblue; */
 }
-
-h1 {
-  color: dodgerblue;
-  font-family: "Libre Baskerville", serif;
-}
-
 footer {
   height: 200px;
   width: 100%;
   background-color: #ccc;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: dodgerblue;
+  /* color: var(--main-accent-color); */
+  font-family: "Libre Baskerville", serif;
 }
 
 /* .breadcrumbs {
@@ -84,12 +118,6 @@ footer {
 * Menu setup with dropdown menus for desktop and smartphone mode.
 */
 
-header {
-  /* position: relative; */
-  width: 100%;
-  background-color: white;
-  border-bottom: 1px solid #ddd;
-}
 .navigation {
   display: flex;
   justify-content: center;
@@ -98,7 +126,9 @@ header {
   height: var(--navigation-height);
   margin: auto;
   background-color: white;
+
   /* border: 1px dotted purple; */
+  /* overflow-y: hidden; */
 }
 
 /* Helps to keep the navigation bar centered */
@@ -114,164 +144,143 @@ nav::after {
 
 .menu-container {
   display: flex;
-  /* The menu will not wrap/break into element on new lines */
-  /* flex-wrap: nowrap; */
-  /* column-gap: 10px; */
-
-  /* border: 1px dotted pink; */
   margin-inline: 20px;
+  /* border: 1px dashed rgb(253, 0, 42); */
 }
 
 .js-menu-item {
   position: relative;
+  display: flex;
+  align-items: center;
+  /* Also affects the dropdown menu */
+  justify-content: left;
+  /* border: 1px dotted green; */
 }
 
-.js-menu-button {
+.menu-button {
   display: block;
-  box-sizing: content-box;
-  /* padding: 5px 20px 5px 20px; */
-  padding-bottom: 3px;
-  margin: 5px 20px 5px 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: var(--js-menu-button-height);
+  padding-inline: var(--menu-button-padding-inline);
   white-space: nowrap;
   color: var(--color-home);
   font-size: 1.2rem;
   font-weight: 600;
   user-select: none;
   transition: background-color 0.3s ease-in-out;
+
+  /* border: 1px dotted deeppink; */
 }
-.js-menu-active {
-  /* background-color: cadetblue; */
+.js-menu-item.js-on {
   cursor: pointer;
 }
 /* Menu Items on hover and when the page is active and also logo settings. */
-.js-menu-active.menu-activiteiten {
-  padding-bottom: 0px;
-  /* border-bottom: 3px solid var(--color-activiteiten); */
+.js-menu-item.js-on .activiteiten {
   color: var(--color-activiteiten);
 }
-.js-menu-active.menu-ateliers {
-  padding-bottom: 0px;
-  /* border-bottom: 3px solid var(--color-ateliers); */
+.js-menu-item.js-on .ateliers {
   color: var(--color-ateliers);
 }
-.js-menu-active.menu-kunsttheorie {
-  padding-bottom: 0px;
-  /* border-bottom: 3px solid var(--color-kunsttheorie); */
+.js-menu-item.js-on .kunsttheorie {
   color: var(--color-kunsttheorie);
 }
-.js-menu-active.menu-weten {
-  padding-bottom: 0px;
-  /* border-bottom: 3px solid var(--color-goed-om-weten); */
-  color: var(--color-goed-om-weten);
+.js-menu-item.js-on .info {
+  color: var(--color-info);
 }
-.js-menu-active.menu-contact {
-  padding-bottom: 0px;
-  /* border-bottom: 3px solid var(--color-contact); */
+.js-menu-item.js-on .contact {
   color: var(--color-contact);
 }
-.js-menu-active.menu-inschrijven {
-  padding-bottom: 0px;
-  /* border-bottom: 3px solid var(--color-schrijf-in); */
-  color: var(--color-schrijf-in);
+.js-menu-item.js-on .inschrijven {
+  color: var(--color-inschrijven);
 }
 
-/* Current page */
-#activiteiten {
-  color: var(--color-activiteiten);
-}
-#ateliers {
-  color: var(--color-ateliers);
-}
-#kunsttheorie {
-  color: var(--color-kunsttheorie);
-}
-#weten {
-  color: var(--color-goed-om-weten);
-}
-#contact {
-  color: var(--color-contact);
-}
-#inschrijven {
-  color: var(--color-schrijf-in);
-}
 /* Logo on current page */
-.logo-home {
+.home-section .logo {
   background-image: url("images/logo-home.png");
   background-size: cover;
 }
-.logo-activiteiten {
+.activiteiten-section .logo {
   background-image: url("images/logo-blue.png");
   background-size: cover;
 }
-.logo-ateliers {
+.ateliers-section .logo {
   background-image: url("images/logo-green.png");
   background-size: cover;
 }
-.logo-kunsttheorie {
+.kunsttheorie-section .logo {
   background-image: url("images/logo-orange.png");
   background-size: cover;
 }
-.logo-weten {
+.info-section .logo {
   background-image: url("images/logo-gold.png");
   background-size: cover;
 }
-.logo-contact {
+.contact-section .logo {
   background-image: url("images/logo-purple.png");
   background-size: cover;
 }
-.logo-inschrijven {
+.inschrijven-section .logo {
   background-image: url("images/logo-red.png");
   background-size: cover;
 }
 
 /* Dropdown styling */
-.js-dropdown-list {
+.dropdown-list {
   visibility: hidden;
   position: absolute;
-  top: 120px;
+  top: 80px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
   box-shadow: 0px 0px 10px #ddd;
   transition: all 0.2s ease-in-out 0.2s;
+
+  /* border: 1px dotted mediumblue; */
 }
-.js-dropdown-on {
-  top: 45px;
+.js-menu-item.js-on .dropdown-list {
+  /* top: 0px; */
+  top: var(--js-menu-button-height);
   visibility: visible;
 }
 
-.js-dropdown-list a {
+.dropdown-list a {
   display: block;
   padding-inline: 20px;
-  padding-block: 8px;
-  margin: 5px;
-  border-radius: 3px;
+  padding-block: 15px;
   text-decoration: none;
   color: var(--color-home);
   white-space: nowrap;
 }
-.js-dropdown-list li {
+.dropdown-list li {
   border-bottom: 1px solid #eee;
 }
-.js-dropdown-list li:last-child {
+.dropdown-list li:last-child {
   border-bottom: none;
 }
-.js-menu-active.menu-activiteiten + ul a:hover {
+.js-menu-item.js-on .activiteiten + ul a:hover,
+.js-menu-item.js-on .activiteiten + ul a:active {
   background-color: #227ec233;
 }
-.js-menu-active.menu-ateliers + ul a:hover {
+.js-menu-item.js-on .ateliers + ul a:hover,
+.js-menu-item.js-on .ateliers + ul a:active {
   background-color: #548f4333;
 }
-.js-menu-active.menu-kunsttheorie + ul a:hover {
+.js-menu-item.js-on .kunsttheorie + ul a:hover,
+.js-menu-item.js-on .kunsttheorie + ul a:active {
   background-color: #f9942733;
 }
-.js-menu-active.menu-weten + ul a:hover {
+.js-menu-item.js-on .info + ul a:hover,
+.js-menu-item.js-on .info + ul a:active {
   background-color: #fdc33333;
 }
-.js-menu-active.menu-contact + ul a:hover {
+.js-menu-item.js-on .contact + ul a:hover,
+.js-menu-item.js-on .contact + ul a:active {
   background-color: #a856a933;
 }
-.js-menu-active.menu-inschrijven + ul a:hover {
+.js-menu-item.js-on .inschrijven + ul a:hover,
+.js-menu-item.js-on .inschrijven + ul a:active {
   background-color: #e7524f33;
 }
 
@@ -370,36 +379,35 @@ nav::after {
 /* =========================================================== */
 
 .burger-menu {
-  visibility: hidden;
   position: absolute;
-  top: 15px;
-  right: 20px;
-  /* border: 1px dotted orange; */
-  flex-wrap: nowrap;
-  user-select: none;
-}
-.burger-menu {
+  visibility: hidden;
   display: flex;
   flex-flow: column wrap;
   row-gap: 5px;
+
+  top: 15px;
+  right: 20px;
+  /* border: 1px dotted orange; */
+  user-select: none;
 }
+
 .burger-menu span {
   display: block;
-  width: 25px;
-  height: 4px;
-  border-radius: 2px;
+  width: 30px;
+  height: 5px;
+  border-radius: 5px;
   background-color: black;
   transition-duration: 0.5s;
 }
-.burger-active #burger-first-line {
+.burger-menu.js-on #burger-first-line {
   width: 20px;
   transform-origin: 100% 0%;
   transform: translateX(10px) translateY(11px) rotate(45deg);
 }
-.burger-active #burger-middle-line {
+.burger-menu.js-on #burger-middle-line {
   transform: rotate(180deg);
 }
-.burger-active #burger-last-line {
+.burger-menu.js-on #burger-last-line {
   width: 20px;
   transform-origin: 100% 100%;
   transform: translateX(10px) translateY(-11px) rotate(-45deg);
@@ -412,11 +420,11 @@ nav::after {
   :root {
     --main-width: 1000px;
     --navigation-height: 80px;
-    --search-bar-width: 180px;
+    /* --search-bar-width: 160px; */
     --search-bar-height: 40px;
+    --menu-button-padding-inline: 10px;
   }
-  .js-menu-button {
-    margin: 5px 10px 5px 10px;
+  .menu-button {
     font-size: 1.1rem;
   }
 }
@@ -424,132 +432,132 @@ nav::after {
 /* Screen size between: 768 - 1024 */
 @media screen and (max-width: 1023px) {
   :root {
-    --main-width: 998px;
+    /* --main-width: 998px; */
     --navigation-height: 100px;
     --search-bar-width: 250px;
     --search-bar-height: 40px;
+    --menu-button-padding-inline: 20px;
   }
-  body {
-    /* width: 800px; */
-  }
-  header {
-    /* width: 100vw; */
-  }
+
   main {
-    box-sizing: border-box;
-    /* width: 100vw; */
-    padding-inline: 15px;
+    margin-inline: var(--main-margin-width);
   }
 
   .navigation {
-    /* max-width: var(--main-width); */
-    width: unset;
-    height: unset;
     flex-wrap: wrap;
+    width: auto;
     height: auto;
-    margin: 10px;
-    /* margin-left: auto; */
+    margin-inline: var(--main-margin-width);
   }
   .menu-container {
     order: 3;
     justify-content: center;
   }
-  .js-menu-button {
-    margin: 5px 15px 5px 15px;
-  }
-
   /* Changes just the last dropdown */
-  .menu-container .js-menu-item:last-child .js-dropdown-list {
-    right: -50px;
+  .menu-container .js-menu-item:last-child .dropdown-list {
+    right: -15px;
   }
-  .breadcrumbs {
+  /* .breadcrumbs {
     width: 100vw;
     padding-inline: 10px;
-  }
+  } */
 }
 
 /* Screen size between: 0 - 768 */
 @media screen and (max-width: 767px) {
   :root {
-    --navigation-height: 80px;
-    --search-bar-width: 250px;
+    --navigation-height: 65px;
+    /* --search-bar-width: 250px; */
     --search-bar-height: 40px;
+    --main-margin-width: 10px;
   }
   .burger-menu {
     visibility: visible;
   }
 
-  .nav-elements-hidden .menu-container,
-  .nav-elements-hidden .js-search-container {
-    visibility: hidden;
-    transform-origin: 100% 50%;
-    transform: translateX(100%);
-    transition: all 0.3s ease-in;
+  nav.js-off .menu-container,
+  nav.js-off .js-search-container {
+    display: none;
+    /* visibility: hidden; */
+    /* transform-origin: 100% 50%; */
+    /* transform: translateX(100%); */
+    /* transform: scaleX(0%); */
+    /* transition: all 0.2s ease-in; */
   }
 
-  .nav-elements-visible .menu-container,
-  .nav-elements-visible .js-search-container {
+  nav.js-on .menu-container,
+  nav.js-on .js-search-container {
     visibility: visible;
-    transform: translateX(0%);
-    transition: all 0.3s ease-in;
+    /* transform: translateX(0%); */
+    /* transform: scaleX(100%); */
+    /* transition: all 0.2s ease-in; */
   }
 
   .navigation {
     justify-content: left;
   }
+
+  .logo {
+    height: var(--navigation-height);
+  }
+
   .menu-container {
     position: absolute;
+    flex-flow: column;
+    /* justify-content: flex-start; */
     top: var(--navigation-height);
     right: 0px;
-    flex-flow: column;
-    /* align-items: flex-end; */
-    background-color: white;
     width: 100vw;
+    min-height: calc(100vh - var(--navigation-height));
     margin: 0;
     padding-top: 20px;
+    background-color: white;
   }
-  .js-menu-button {
-    margin-left: 40px;
-    margin-block: 10px;
-    padding-bottom: 10px;
-    /* border-bottom: 1px solid #ddd; */
+  .menu-container::after {
+    content: "";
+    flex: 1;
+  }
+  .menu-button {
+    margin-left: 20px;
+    /* border-left: 3px solid #ccc; */
+  }
+  .js-menu-item {
+    flex-flow: column;
+    align-items: flex-start;
   }
 
-  .js-dropdown-list {
-    top: 0;
-    left: 0;
+  .dropdown-list {
     width: 100%;
-
-    border: none;
+    top: 0;
+    border: unset;
     box-shadow: none;
     transform-origin: 0% 0%;
-    transform: scaleY(0%);
-    transition: all 0s ease-in;
+    transform: scaleX(70%);
+    transition: all 0s;
   }
-  .js-dropdown-list a {
+  .dropdown-list a {
     margin-left: 40px;
   }
-  .js-dropdown-on {
-    position: unset;
+  .js-menu-item.js-on .dropdown-list {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: scaleX(100%);
     transition: all 0.3s ease-in;
-    transform: scaleY(100%);
   }
-  .js-dropdown-list li:last-child {
+  .dropdown-list li:last-child {
     border-bottom: 1px solid #eee;
   }
 
   .js-search-container {
     box-sizing: border-box;
     position: absolute;
-    background-color: #eee;
     top: 0px;
-    height: var(--navigation-height);
     right: 0px;
+    height: var(--navigation-height);
     width: 100vw;
-
     padding-inline: 40px 80px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    background-color: #eee;
   }
   .js-search-input,
   .js-close-button,
@@ -557,7 +565,7 @@ nav::after {
     height: var(--search-bar-height);
   }
   .js-search-active .js-search-button {
-    margin-right: calc(var(--search-bar-height) * 2);
+    margin-right: 40px;
   }
 }
 
