@@ -42,18 +42,19 @@ let deactivateMenuItem = function (e) {
 };
 
 let clickExceptMenuItem = function (e) {
-  if (window.screen.width < 768) {
-    return;
-  }
   menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
 };
 
 // Activate
-menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
-menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
-// Deactivate
-menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
-document.addEventListener("click", clickExceptMenuItem);
+
+if (window.screen.width < 768) {
+  menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
+} else {
+  menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
+  // Deactivate
+  menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
+  document.addEventListener("click", clickExceptMenuItem);
+}
 
 // Refers also to the searchbar
 // searchDeactivate();
