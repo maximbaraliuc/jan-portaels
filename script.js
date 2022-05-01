@@ -52,68 +52,16 @@ menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem))
 menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
 document.addEventListener("click", clickExceptMenuItem);
 
-// menuButtons.forEach((item) => item.removeEventListener("click", activateMenuItem));
-
-/* let dropdownActive = false;
-let navigationButtons = document.querySelectorAll(".js-menu-button");
-let dropdownMenus = document.querySelectorAll(".js-dropdown-list");
-
-// Toggle the dropdown menu visibility
-let toggleOnOff = function (e) {
-  // Stop the propagation to exclude conflicts with anywhereClickOnOff()
-  e.stopPropagation();
-
-  let dropdownCurrent = this.nextElementSibling;
-  if ((dropdownActive = true)) {
-    dropdownMenus.forEach((elem) => elem.classList.replace("js-dropdown-on", "js-dropdown-off"));
-    navigationButtons.forEach((elem) => elem.classList.replace("js-menu-active", "js-menu-inactive"));
-    dropdownActive = false;
-  }
-  if (dropdownCurrent.classList.contains("js-dropdown-off")) {
-    // Change the button style
-    this.classList.replace("js-menu-inactive", "js-menu-active");
-    // Change the dropdown visibility
-    dropdownCurrent.classList.replace("js-dropdown-off", "js-dropdown-on");
-    dropdownActive = true;
-  }
-  console.log("click button");
-};
-
-// Hides all the dropdown menus when clicked anywhere.
-let anywhereClickOnOff = function () {
-  if ((dropdownActive = true)) {
-    dropdownMenus.forEach((elem) => elem.classList.replace("js-dropdown-on", "js-dropdown-off"));
-    navigationButtons.forEach((elem) => elem.classList.replace("js-menu-active", "js-menu-inactive"));
-    dropdownActive = false;
-  }
-
-  // Refers also to the searchbar
-  // searchDeactivate();
-  // console.log("click viewport");
-};
-
-let pointerenterOn = function () {
-  console.log("pointerenter work in progress");
-};
-
-let pointerleaveOff = function () {
-  console.log("pointerleave work in progress");
-};
-
-// Events initialization.
-document.addEventListener("click", anywhereClickOnOff);
-
-navigationButtons.forEach((item) => item.addEventListener("click", toggleOnOff, false));
-
-navigationButtons.forEach((item) => item.addEventListener("pointerenter", toggleOnOff, false));
-
-dropdownMenus.forEach((item) => item.addEventListener("pointerleave", anywhereClickOnOff, false)); */
+// Refers also to the searchbar
+// searchDeactivate();
+// console.log("click viewport");
 
 // ===========================================================================
 // Display some data about the screen width.
 // ===========================================================================
 
 let headerText = document.querySelector("h1");
+headerText.innerHTML = `Screen width is ${window.screen.width}px`;
 let widthHeader = function () {
   if (window.screen.width >= 1366) {
     headerText.innerHTML = "Screen width is >1366px";
@@ -135,38 +83,34 @@ window.addEventListener("resize", widthHeader);
 // Searchbar
 // ===========================================================================
 
-// let searchForm = document.querySelector(".js-search-container");
-// let closeButton = document.querySelector(".js-close-button");
-// let searchButton = document.querySelector(".js-search-button");
-// let inputArea = document.querySelector(".js-search-input");
+let searchForm = document.querySelector(".js-search-container");
+let closeButton = document.querySelector(".js-close-button");
+let searchButton = document.querySelector(".js-search-button");
+let searchInput = document.querySelector(".js-search-input");
 
-// let searchbarActivate = function (e) {
-//   e.stopPropagation();
-//   if (searchForm.classList.contains("js-search-inactive")) {
-//     searchForm.classList.replace("js-search-inactive", "js-search-active");
-//     console.log("search active");
-//   }
-// };
-// let searchbarClose = function (e) {
-//   e.stopPropagation();
-//   if (inputArea.value !== "") {
-//     inputArea.value = "";
-//   }
-//   console.log("input is cleared");
-//   searchDeactivate(this);
-// };
+let searchbarActivate = function (e) {
+  e.stopPropagation();
+  if (searchForm.classList.contains("js-off")) {
+    searchForm.classList.replace("js-off", "js-on");
+    console.log("search active");
+  }
+};
+let searchbarClose = function (e) {
+  e.stopPropagation();
+  if (searchInput.value !== "") {
+    searchInput.value = "";
+    console.log("input is cleared");
+  }
+  if (searchForm.classList.contains("js-on")) {
+    searchForm.classList.replace("js-on", "js-off");
+    console.log("search inactive");
+  }
+};
 
-// let searchDeactivate = function () {
-//   if (searchForm.classList.contains("js-search-active")) {
-//     searchForm.classList.replace("js-search-active", "js-search-inactive");
-//     console.log("search inactive");
-//   }
-// };
-
-// closeButton.addEventListener("click", searchbarClose);
-// searchButton.addEventListener("click", searchbarActivate);
-// inputArea.addEventListener("click", searchbarActivate);
-// inputArea.addEventListener("input", searchbarActivate);
+closeButton.addEventListener("click", searchbarClose);
+searchButton.addEventListener("click", searchbarActivate);
+searchInput.addEventListener("click", searchbarActivate);
+searchInput.addEventListener("input", searchbarActivate);
 
 // ===========================================================================
 // ...

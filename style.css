@@ -13,7 +13,7 @@ font-family: 'Roboto', sans-serif; */
   --menu-button-padding-inline: 20px;
   --search-bar-width: 250px;
   --search-bar-height: 40px;
-  --search-bar-corner-rad: 10px;
+  --search-bar-corner-rad: 5px;
   --main-margin-width: 15px;
 
   --color-home: hsl(0, 0%, 5%);
@@ -24,14 +24,13 @@ font-family: 'Roboto', sans-serif; */
   --color-contact: hsl(299, 33%, 50%);
   --color-inschrijven: hsl(1, 76%, 61%);
 
-  --bg-color-main: #eee;
+  --main-background-color: hsl(0, 0%, 90%);
 
-  --search-icon-01-color: #aaa;
-  --search-icon-02-color: #aaa;
-  --search-icon-color-focus: #fff;
-  --search-main-color: #bbb;
-  --search-main-color-focus: #222;
-  --search-accent-color: #bbb;
+  --search-icon-color: hsl(0, 0%, 65%);
+  --search-icon-color-focus: hsl(0, 0%, 100%);
+  --search-main-color: hsl(0, 0%, 75%);
+  --search-main-color-active: hsl(0, 0%, 10%);
+  --search-accent-color: hsl(0, 0%, 75%);
 }
 
 /* Current page main color accent */
@@ -65,10 +64,9 @@ body {
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: var(--bg-color-main);
+  background-color: var(--main-background-color);
   color: var(--color-home);
   font-family: "Commissioner", sans-serif;
-
   /* border: 1px solid rgb(255, 0, 234); */
 }
 nav ul,
@@ -103,15 +101,6 @@ h6 {
   font-family: "Libre Baskerville", serif;
 }
 
-/* .breadcrumbs {
-}
-
-.horizontal-line {
-  width: 100%;
-  height: 1px;
-  background-color: #ddd;
-} */
-
 /**
 * #.# Navigation Menu
 *
@@ -126,28 +115,16 @@ h6 {
   height: var(--navigation-height);
   margin: auto;
   background-color: white;
-
   /* border: 1px dotted purple; */
-  /* overflow-y: hidden; */
 }
-
-/* Helps to keep the navigation bar centered */
-/* nav::before,
-nav::after {
-  content: "";
-  flex-grow: 1;
-} */
-
 .logo {
   height: calc(var(--navigation-height) - 30px);
 }
-
 .menu-container {
   display: flex;
   margin-inline: 20px;
   /* border: 1px dashed rgb(253, 0, 42); */
 }
-
 .js-menu-item {
   position: relative;
   display: flex;
@@ -156,7 +133,6 @@ nav::after {
   justify-content: left;
   /* border: 1px dotted green; */
 }
-
 .menu-button {
   display: block;
   box-sizing: border-box;
@@ -170,7 +146,6 @@ nav::after {
   font-weight: 600;
   user-select: none;
   transition: background-color 0.3s ease-in-out;
-
   /* border: 1px dotted deeppink; */
 }
 .js-menu-item.js-on {
@@ -195,7 +170,6 @@ nav::after {
 .js-menu-item.js-on .inschrijven {
   color: var(--color-inschrijven);
 }
-
 /* Logo on current page */
 .home-section .logo {
   background-image: url("images/logo-home.png");
@@ -294,15 +268,12 @@ nav::after {
   display: flex;
   justify-content: right;
   align-items: center;
-
   width: var(--search-bar-width);
   height: var(--search-bar-height);
   margin-left: auto;
-
-  /* border: 1px dotted pink; */
+  /* border: 1px dotted dodgerblue; */
   /* transition: all 0.3s ease-in-out; */
 }
-
 .js-search-button {
   height: 100%;
   aspect-ratio: 1 / 1;
@@ -310,24 +281,21 @@ nav::after {
   border-top-right-radius: var(--search-bar-corner-rad);
   border-bottom-right-radius: var(--search-bar-corner-rad);
   background-color: white;
-  color: var(--search-icon-01-color);
+  color: var(--search-icon-color);
   cursor: pointer;
 }
-
 .js-close-button {
-  visibility: hidden;
+  display: none;
   position: absolute;
   height: 100%;
   aspect-ratio: 1 / 1;
-
-  border: 1px solid var(--search-main-color-focus);
+  border: 1px solid var(--main-accent-color);
   border-top-right-radius: var(--search-bar-corner-rad);
   border-bottom-right-radius: var(--search-bar-corner-rad);
-  background-color: var(--search-main-color-focus);
+  background-color: var(--main-accent-color);
   color: var(--search-icon-color-focus);
   cursor: pointer;
 }
-
 .js-search-input {
   box-sizing: border-box;
   width: 100%;
@@ -336,41 +304,41 @@ nav::after {
   border-right: none;
   border-top-left-radius: var(--search-bar-corner-rad);
   border-bottom-left-radius: var(--search-bar-corner-rad);
-
-  padding-inline: 15px 50px;
+  padding-inline: 15px 45px;
   outline: none;
-  /* transition: all 0.3s ease-in-out; */
 }
-
-.js-search-active .js-search-button:hover,
 .js-search-button:hover {
   border-color: var(--search-accent-color);
   background-color: var(--search-accent-color);
   color: var(--search-icon-color-focus);
+  transition: all 0.3s ease-in-out;
 }
-
-.js-search-active .js-search-button:active,
-.js-search-active .js-close-button:active {
-  background-color: var(--search-main-color-focus);
+.js-search-container.js-on .js-search-button:hover {
+  border-color: var(--main-accent-color);
+  background-color: var(--main-accent-color);
   color: var(--search-icon-color-focus);
 }
 
-.js-search-active .js-search-input {
-  border-color: var(--search-main-color-focus);
+.js-search-container.js-on .js-search-button:active,
+.js-search-container.js-on .js-close-button:active {
+  background-color: hsl(0, 0%, 10%);
+  color: var(--search-icon-color-focus);
 }
-
-.js-search-active .js-search-button {
+.js-search-container.js-on .js-search-input {
+  border-color: var(--main-accent-color);
+}
+.js-search-container.js-on .js-search-button {
   position: absolute;
   right: calc(var(--search-bar-height) + 5px);
   height: calc(var(--search-bar-height)) * 0.8;
   border: none;
   border-radius: calc(var(--search-bar-height) / 2);
   background-color: transparent;
-  color: var(--search-icon-02-color);
+  color: var(--search-icon-color);
 }
 
-.js-search-active .js-close-button {
-  visibility: visible;
+.js-search-container.js-on .js-close-button {
+  display: block;
   position: relative;
 }
 
@@ -396,7 +364,7 @@ nav::after {
   width: 30px;
   height: 5px;
   border-radius: 5px;
-  background-color: black;
+  background-color: var(--main-accent-color);
   transition-duration: 0.5s;
 }
 .burger-menu.js-on #burger-first-line {
@@ -442,7 +410,9 @@ nav::after {
   main {
     margin-inline: var(--main-margin-width);
   }
-
+  .logo {
+    margin-top: 5px;
+  }
   .navigation {
     flex-wrap: wrap;
     width: auto;
@@ -564,8 +534,8 @@ nav::after {
   .js-search-button {
     height: var(--search-bar-height);
   }
-  .js-search-active .js-search-button {
-    margin-right: 40px;
+  .js-search-container.js-on .js-search-button {
+    margin-right: 80px;
   }
 }
 
