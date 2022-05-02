@@ -526,7 +526,7 @@ h6 {
     border-top: 1px solid var(--color-menu-list-separator);
   }
   .dropdown-list a {
-    margin-left: 40px;
+    padding-left: 60px;
   }
 
   .js-search-container {
