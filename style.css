@@ -259,7 +259,7 @@ h6 {
 }
 .js-menu-item.js-on .kunsttheorie + ul a:hover,
 .js-menu-item.js-on .kunsttheorie + ul a:active,
-.js-menu-item:hover .ateliers + ul a:hover {
+.js-menu-item:hover .kunsttheorie + ul a:hover {
   background-color: hsl(31, 95%, 85%);
 }
 .js-menu-item.js-on .info + ul a:hover,
@@ -269,7 +269,7 @@ h6 {
 }
 .js-menu-item.js-on .contact + ul a:hover,
 .js-menu-item.js-on .contact + ul a:active,
-.js-menu-item:hover .contact + ul a:hove {
+.js-menu-item:hover .contact + ul a:hover {
   background-color: hsl(299, 33%, 85%);
 }
 .js-menu-item.js-on .inschrijven + ul a:hover,
