@@ -26,7 +26,7 @@ font-family: 'Roboto', sans-serif; */
   --color-inschrijven: hsl(1, 76%, 61%);
   --color-menu-list-separator: hsl(0, 0%, 80%);
 
-  --main-background-color: hsl(0, 0%, 90%);
+  --main-background-color: hsl(0, 0%, 95%);
 
   --search-icon-color: hsl(0, 0%, 65%);
   --search-icon-color-focus: hsl(0, 0%, 100%);
@@ -80,7 +80,7 @@ nav li {
 header {
   width: 100%;
   background-color: white;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid hsl(0, 0%, 80%);
 }
 main {
   max-width: var(--main-width);
@@ -90,7 +90,7 @@ main {
 footer {
   height: 200px;
   width: 100%;
-  background-color: #ccc;
+  background-color: hsl(0, 0%, 65%);
 }
 h1,
 h2,
@@ -241,27 +241,28 @@ h6 {
 }
 .js-menu-item.js-on .activiteiten + ul a:hover,
 .js-menu-item.js-on .activiteiten + ul a:active {
-  background-color: #227ec233;
+  /* background-color: #227ec233; */
+  background-color: hsl(206, 70%, 85%);
 }
 .js-menu-item.js-on .ateliers + ul a:hover,
 .js-menu-item.js-on .ateliers + ul a:active {
-  background-color: #548f4333;
+  background-color: hsl(107, 36%, 85%);
 }
 .js-menu-item.js-on .kunsttheorie + ul a:hover,
 .js-menu-item.js-on .kunsttheorie + ul a:active {
-  background-color: #f9942733;
+  background-color: hsl(31, 95%, 85%);
 }
 .js-menu-item.js-on .info + ul a:hover,
 .js-menu-item.js-on .info + ul a:active {
-  background-color: #fdc33333;
+  background-color: hsl(43, 98%, 85%);
 }
 .js-menu-item.js-on .contact + ul a:hover,
 .js-menu-item.js-on .contact + ul a:active {
-  background-color: #a856a933;
+  background-color: hsl(299, 33%, 85%);
 }
 .js-menu-item.js-on .inschrijven + ul a:hover,
 .js-menu-item.js-on .inschrijven + ul a:active {
-  background-color: #e7524f33;
+  background-color: hsl(1, 76%, 85%);
 }
 
 /**
@@ -537,7 +538,7 @@ h6 {
     height: calc(var(--navigation-height) + var(--logo-margin-top));
     width: 100vw;
     padding-inline: 40px 80px;
-    background-color: #eee;
+    background-color: hsl(0, 0%, 90%);
   }
   .js-search-input,
   .js-close-button,
