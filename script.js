@@ -30,8 +30,23 @@ let menuButtons = document.querySelectorAll(".menu-button");
 
 let activateMenuItem = function (e) {
   e.stopPropagation();
-  menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
-  this.classList.replace("js-off", "js-on");
+  // Add a timeout for small screen size
+  if (window.screen.width < 768) {
+    setTimeout(() => {
+      menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
+      console.log("Delayed for 0.3 second.");
+    }, "300");
+    setTimeout(() => {
+      this.classList.replace("js-off", "js-on");
+      console.log("Delayed for 0.5 second.");
+    }, "500");
+    console.log("screen is narrower than 768px");
+  } else {
+    menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
+    this.classList.replace("js-off", "js-on");
+    console.log("screen is wider than 768px");
+  }
+
   console.log("activate - this, e:", this, e);
 };
 
@@ -46,9 +61,7 @@ let clickExceptMenuItem = function (e) {
 };
 
 // Activate
-
 menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
-
 menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
 // Deactivate
 menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));

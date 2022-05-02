@@ -454,7 +454,7 @@ h6 {
     /* transform-origin: 100% 50%; */
     /* transform: translateX(100%); */
     /* transform: scaleX(0%); */
-    transition: all 0.2s ease-in;
+    /* transition: all 0.2s ease-in; */
   }
 
   nav.js-on .menu-container,
@@ -462,7 +462,7 @@ h6 {
     visibility: visible;
     /* transform: translateX(0%); */
     /* transform: scaleX(100%); */
-    transition: all 0.2s ease-in;
+    /* transition: all 0.2s ease-in; */
   }
 
   .navigation {
@@ -507,18 +507,20 @@ h6 {
     border: unset;
     box-shadow: none;
     transform-origin: 0% 0%;
-    /* transform: scaleX(70%); */
-    transition: all 0s;
+    transform: scaleY(70%);
+    transition: all 0s ease-in;
   }
   .dropdown-list a {
+    /* opacity: 0; */
     margin-left: 40px;
   }
+
   .js-menu-item.js-on .dropdown-list {
     position: relative;
     top: 0;
     left: 0;
-    /* transform: scaleX(100%); */
-    /* transition: all 0.3s ease-in; */
+    transform: scaleY(100%);
+    transition: all 0.3s ease-in;
   }
   .dropdown-list li:last-child {
     border-bottom: 1px solid #eee;
