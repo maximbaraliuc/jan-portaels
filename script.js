@@ -35,12 +35,12 @@ let activateMenuItem = function (e) {
   if (window.screen.width < 768) {
     setTimeout(() => {
       menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
-      console.log("Delayed for 0.25 second.");
-    }, "250");
+      console.log("Delayed for 0.1 second.");
+    }, "100");
     setTimeout(() => {
       this.classList.replace("js-off", "js-on");
-      console.log("Delayed for 0.35 second.");
-    }, "350");
+      console.log("Delayed for 0.2 second.");
+    }, "200");
     console.log("screen is narrower than 768px");
   } else {
     menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
@@ -60,14 +60,15 @@ let clickExceptMenuItem = function (e) {
   menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
 };
 
-// Activate
-menuItem.forEach((item) => item.addEventListener("touchend", activateMenuItem));
-if (window.screen.width > 767) {
+if (window.screen.width < 768) {
+  // Activate
+  menuItem.forEach((item) => item.addEventListener("touchend", activateMenuItem));
+} else {
+  // Deactivate
+  menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
   menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
+  menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
 }
-
-// Deactivate
-menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
 document.addEventListener("click", clickExceptMenuItem);
 
 // Refers also to the searchbar
