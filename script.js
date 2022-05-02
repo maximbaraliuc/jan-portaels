@@ -11,11 +11,9 @@ let toggleBurgerState = function () {
   if (burgerMenu.classList.contains("js-off")) {
     burgerMenu.classList.replace("js-off", "js-on");
     navigationBar.classList.replace("js-off", "js-on");
-    console.log("burger active");
   } else {
     burgerMenu.classList.replace("js-on", "js-off");
     navigationBar.classList.replace("js-on", "js-off");
-    console.log("burger inactive");
   }
 };
 
@@ -27,48 +25,17 @@ burgerMenu.addEventListener("click", toggleBurgerState);
 
 let menuItem = document.querySelectorAll(".js-menu-item");
 let menuButtons = document.querySelectorAll(".menu-button");
-let dropDown = document.querySelectorAll(".dropdown-list");
 
 let activateMenuItem = function (e) {
   e.stopPropagation();
-  // Add a timeout for small screen size
-  if (window.screen.width < 768) {
-    setTimeout(() => {
-      menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
-      console.log("Delayed for 0.1 second.");
-    }, "100");
-    setTimeout(() => {
-      this.classList.replace("js-off", "js-on");
-      console.log("Delayed for 0.2 second.");
-    }, "200");
-    console.log("screen is narrower than 768px");
-  } else {
-    menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
-    this.classList.replace("js-off", "js-on");
-    console.log("screen is wider than 768px");
-  }
-  console.log("activate - this, e:", this, e);
+  menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
+  this.classList.replace("js-off", "js-on");
 };
 
-let deactivateMenuItem = function (e) {
-  e.stopPropagation();
-  this.classList.replace("js-on", "js-off");
-  console.log("deactivate - this, e:", this, e);
-};
-
-let clickExceptMenuItem = function (e) {
+let clickExceptMenuItem = function () {
   menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
 };
-
-if (window.screen.width < 768) {
-  // Activate
-  menuItem.forEach((item) => item.addEventListener("touchend", activateMenuItem));
-} else {
-  // Deactivate
-  menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
-  menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
-  menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
-}
+menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
 document.addEventListener("click", clickExceptMenuItem);
 
 // Refers also to the searchbar

@@ -158,22 +158,28 @@ h6 {
   transition: all 0.2s ease-in-out;
 }
 /* Menu Items on hover and when the page is active and also logo settings. */
-.js-menu-item.js-on .activiteiten {
+.js-menu-item.js-on .activiteiten,
+.js-menu-item:hover .activiteiten {
   color: var(--color-activiteiten);
 }
-.js-menu-item.js-on .ateliers {
+.js-menu-item.js-on .ateliers,
+.js-menu-item:hover .ateliers {
   color: var(--color-ateliers);
 }
-.js-menu-item.js-on .kunsttheorie {
+.js-menu-item.js-on .kunsttheorie,
+.js-menu-item:hover .kunsttheorie {
   color: var(--color-kunsttheorie);
 }
-.js-menu-item.js-on .info {
+.js-menu-item.js-on .info,
+.js-menu-item:hover .info {
   color: var(--color-info);
 }
-.js-menu-item.js-on .contact {
+.js-menu-item.js-on .contact,
+.js-menu-item:hover .contact {
   color: var(--color-contact);
 }
-.js-menu-item.js-on .inschrijven {
+.js-menu-item.js-on .inschrijven,
+.js-menu-item:hover .inschrijven {
   color: var(--color-inschrijven);
 }
 /* Logo on current page */
@@ -219,7 +225,8 @@ h6 {
 
   /* border: 1px dotted mediumblue; */
 }
-.js-menu-item.js-on .dropdown-list {
+.js-menu-item.js-on .dropdown-list,
+.js-menu-item:hover .dropdown-list {
   /* top: 0px; */
   top: var(--js-menu-button-height);
   visibility: visible;
@@ -240,28 +247,34 @@ h6 {
   border-bottom: none;
 }
 .js-menu-item.js-on .activiteiten + ul a:hover,
-.js-menu-item.js-on .activiteiten + ul a:active {
+.js-menu-item.js-on .activiteiten + ul a:active,
+.js-menu-item:hover .activiteiten + ul a:hover {
   /* background-color: #227ec233; */
   background-color: hsl(206, 70%, 85%);
 }
 .js-menu-item.js-on .ateliers + ul a:hover,
-.js-menu-item.js-on .ateliers + ul a:active {
+.js-menu-item.js-on .ateliers + ul a:active,
+.js-menu-item:hover .ateliers + ul a:hover {
   background-color: hsl(107, 36%, 85%);
 }
 .js-menu-item.js-on .kunsttheorie + ul a:hover,
-.js-menu-item.js-on .kunsttheorie + ul a:active {
+.js-menu-item.js-on .kunsttheorie + ul a:active,
+.js-menu-item:hover .ateliers + ul a:hover {
   background-color: hsl(31, 95%, 85%);
 }
 .js-menu-item.js-on .info + ul a:hover,
-.js-menu-item.js-on .info + ul a:active {
+.js-menu-item.js-on .info + ul a:active,
+.js-menu-item:hover .info + ul a:hover {
   background-color: hsl(43, 98%, 85%);
 }
 .js-menu-item.js-on .contact + ul a:hover,
-.js-menu-item.js-on .contact + ul a:active {
+.js-menu-item.js-on .contact + ul a:active,
+.js-menu-item:hover .contact + ul a:hove {
   background-color: hsl(299, 33%, 85%);
 }
 .js-menu-item.js-on .inschrijven + ul a:hover,
-.js-menu-item.js-on .inschrijven + ul a:active {
+.js-menu-item.js-on .inschrijven + ul a:active,
+.js-menu-item:hover .inschrijven + ul a:hover {
   background-color: hsl(1, 76%, 85%);
 }
 
@@ -318,7 +331,7 @@ h6 {
   border-color: var(--search-accent-color);
   background-color: var(--search-accent-color);
   color: var(--search-icon-color-focus);
-  transition: all 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
 }
 .js-search-container.js-on .js-search-button:hover {
   border-color: var(--main-accent-color);
@@ -486,15 +499,18 @@ h6 {
     top: calc(var(--navigation-height) + var(--logo-margin-top));
     right: 0px;
     width: 100vw;
-    min-height: calc(100vh - var(--navigation-height) + var(--logo-margin-top));
+    /* min-height: calc(100vh - var(--navigation-height) + var(--logo-margin-top)); */
+    /* height: 100%; */
     margin: 0;
     padding-top: 20px;
     background-color: white;
+    box-shadow: 0px 0px 80px hsl(0, 0%, 5%);
   }
-  .menu-container::after {
+  /* .menu-container::after {
     content: "";
     flex: 1;
-  }
+    background-color: rgba(0, 0, 0, 0.5);
+  } */
   .menu-container .js-menu-item:last-child .dropdown-list {
     right: unset;
   }
@@ -509,11 +525,9 @@ h6 {
 
   .dropdown-list {
     width: 100%;
-    top: 0;
     border: unset;
     box-shadow: none;
-    transform-origin: 0% 0%;
-    transform: scaleY(70%);
+    transform: scaleY(20%);
     transition: all 0s ease-in;
   }
   .js-menu-item.js-on .dropdown-list {
