@@ -147,11 +147,14 @@ h6 {
   font-weight: 600;
   text-decoration: none;
   user-select: none;
-  transition: background-color 0.3s ease-in-out;
+
   /* border: 1px dotted deeppink; */
 }
 .js-menu-item.js-on {
   cursor: pointer;
+}
+.js-menu-item.js-on .menu-button {
+  transition: all 0.2s ease-in-out;
 }
 /* Menu Items on hover and when the page is active and also logo settings. */
 .js-menu-item.js-on .activiteiten {
@@ -510,11 +513,6 @@ h6 {
     transform: scaleY(70%);
     transition: all 0s ease-in;
   }
-  .dropdown-list a {
-    /* opacity: 0; */
-    margin-left: 40px;
-  }
-
   .js-menu-item.js-on .dropdown-list {
     position: relative;
     top: 0;
@@ -524,6 +522,9 @@ h6 {
   }
   .dropdown-list li:last-child {
     border-bottom: 1px solid #eee;
+  }
+  .dropdown-list a {
+    margin-left: 40px;
   }
 
   .js-search-container {

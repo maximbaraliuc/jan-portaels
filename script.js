@@ -27,6 +27,7 @@ burgerMenu.addEventListener("click", toggleBurgerState);
 
 let menuItem = document.querySelectorAll(".js-menu-item");
 let menuButtons = document.querySelectorAll(".menu-button");
+let dropDown = document.querySelectorAll(".dropdown-list");
 
 let activateMenuItem = function (e) {
   e.stopPropagation();
@@ -34,19 +35,18 @@ let activateMenuItem = function (e) {
   if (window.screen.width < 768) {
     setTimeout(() => {
       menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
-      console.log("Delayed for 0.3 second.");
-    }, "300");
+      console.log("Delayed for 0.2 second.");
+    }, "200");
     setTimeout(() => {
       this.classList.replace("js-off", "js-on");
-      console.log("Delayed for 0.5 second.");
-    }, "500");
+      console.log("Delayed for 0.3 second.");
+    }, "300");
     console.log("screen is narrower than 768px");
   } else {
     menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
     this.classList.replace("js-off", "js-on");
     console.log("screen is wider than 768px");
   }
-
   console.log("activate - this, e:", this, e);
 };
 
