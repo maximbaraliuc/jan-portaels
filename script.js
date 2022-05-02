@@ -62,7 +62,10 @@ let clickExceptMenuItem = function (e) {
 
 // Activate
 menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
-menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
+if (window.screen.width > 767) {
+  menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
+}
+
 // Deactivate
 menuItem.forEach((item) => item.addEventListener("mouseleave", deactivateMenuItem));
 document.addEventListener("click", clickExceptMenuItem);
