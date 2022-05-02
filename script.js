@@ -35,8 +35,8 @@ let activateMenuItem = function (e) {
   if (window.screen.width < 768) {
     setTimeout(() => {
       menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
-      console.log("Delayed for 0.25 second.");
-    }, "250");
+      console.log("Delayed for 0.2 second.");
+    }, "200");
     setTimeout(() => {
       this.classList.replace("js-off", "js-on");
       console.log("Delayed for 0.3 second.");
