@@ -61,7 +61,7 @@ let clickExceptMenuItem = function (e) {
 };
 
 // Activate
-menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
+menuItem.forEach((item) => item.addEventListener("touchend", activateMenuItem));
 if (window.screen.width > 767) {
   menuItem.forEach((item) => item.addEventListener("mouseover", activateMenuItem));
 }
