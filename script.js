@@ -99,5 +99,18 @@ searchInput.addEventListener("click", searchbarActivate);
 searchInput.addEventListener("input", searchbarActivate);
 
 // ===========================================================================
-// ...
+// Gallery
 // ===========================================================================
+
+// let galleryImages = document.querySelectorAll(".landing-gallery img");
+
+// let changeImageSize = function (elem) {
+//   let imageIndex = Math.round(Math.random() * 30);
+//   console.log(imageIndex);
+//   galleryImages.forEach((item) => item.classList.remove("image-bigger"));
+//   elem.classList.add("image-bigger");
+//   // return imageIndex;
+// };
+
+// galleryImages.forEach(setTimeout(changeImageSize, 5000));
+// // setTimeout(changeImageSize, 5000);
