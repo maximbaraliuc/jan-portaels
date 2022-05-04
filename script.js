@@ -30,6 +30,7 @@ let activateMenuItem = function (e) {
   e.stopPropagation();
   menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
   this.classList.replace("js-off", "js-on");
+  console.log("turned on");
 };
 
 let clickExceptMenuItem = function () {
@@ -37,7 +38,7 @@ let clickExceptMenuItem = function () {
 };
 
 menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
-menuItem.forEach((item) => item.addEventListener("mouseleave", clickExceptMenuItem));
+// menuItem.forEach((item) => item.addEventListener("mouseleave", clickExceptMenuItem));
 document.addEventListener("click", clickExceptMenuItem);
 
 // Refers also to the searchbar
