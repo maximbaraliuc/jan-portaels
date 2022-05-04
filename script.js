@@ -138,6 +138,11 @@ let scrollTop = function (e) {
     top: 0,
     behavior: "smooth",
   });
+  // For Safari
+  document.body.scrollTop({
+    top: 0,
+    behavior: "smooth",
+  });
 };
 
 window.addEventListener("scroll", enableScrollUp);
