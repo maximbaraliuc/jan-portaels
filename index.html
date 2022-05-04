@@ -6,15 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <script src="script.js" defer></script>
-  <!-- <script async src="https://cse.google.com/cse.js?cx=d20c7617745ff8bb3"></script> -->
+  <script src="https://kit.fontawesome.com/4e41c7d293.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <meta property="og:title" content="Academie voor beeldende kunsten Vilvoorde" />
-  <!-- <meta property="og:type" content="video.movie" /> -->
   <meta property="og:url" content="https://jan-portaels.netlify.app/" />
   <meta property="og:image" content="https://jan-portaels.netlify.app/images/og-image-sov.png" />
-  <title>Landing Page</title>
+  <title>Kunst Academie</title>
 </head>
 
 <body>
@@ -51,7 +50,7 @@
           </ul>
         </li>
 
-        <li class="js-menu-item  js-off">
+        <li class="js-menu-item js-off">
           <span class="menu-button kunsttheorie">Kunsttheorie</span>
           <ul class="dropdown-list js-fade-off">
             <li><a href="kunsttheorie/kunst-en-cultuurfilosofie.html">Vrije cursus kunst- en cultuurfilosofie</a></li>
@@ -95,8 +94,9 @@
         <input autocomplete="on" required="required" class="form-control js-search-input" name="q"
           placeholder="Zoeken..." type="text">
         <!-- Code removed from the above input:  required="required" -->
-        <button class="js-close-button material-icons" type="button">close</button>
-        <button class="js-search-button material-icons" type="submit">search</button>
+        <button class="js-close-button material-icons" type="button"> <i class="fa-solid fa-xmark"></i></i></button>
+        <button class="js-search-button material-icons" type="submit"> <i
+            class="fa-solid fa-magnifying-glass"></i></button>
       </form>
     </nav>
   </header>
@@ -148,27 +148,60 @@
       <div></div>
       <div></div>
     </div> -->
+
   </main>
+
+  <!-- <div class="icon-set">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-xmark"></i>
+    <i class="fa-brands fa-facebook"></i>
+    <i class="fa-brands fa-youtube"></i>
+    <i class="fa-brands fa-instagram"></i>
+    <i class="fa-solid fa-location-dot"></i>
+    <i class="fa-solid fa-map-location-dot"></i>
+    <i class="fa-solid fa-at"></i>
+    <i class="fa-solid fa-envelope"></i>
+    <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-phone"></i>
+    <i class="fa-solid fa-circle-info"></i>
+    <i class="fa-solid fa-compass"></i>
+    <i class="fa-solid fa-earth-europe"></i>
+    <i class="fa-solid fa-address-card"></i>
+    <i class="fa-solid fa-address-book"></i>
+    <i class="fa-solid fa-clock"></i>
+    <i class="fa-solid fa-calendar-days"></i>
+    <i class="fa-solid fa-circle-arrow-up"></i>
+    <i class="fa-solid fa-chevron-up"></i>
+    <i class="fa-solid fa-chevron-right"></i>
+    <i class="fa-solid fa-circle-chevron-up"></i>
+  </div> -->
 
 
   <footer>
+    <!-- <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_ngf7x1go.json" background="transparent"
+      speed="1" style="width: 250px; height: 250px;" loop autoplay></lottie-player> -->
+
     <div class="footer-logo"><img src="images/footer-logo.png" alt=""></div>
+    <address class="footer-contact">
+      <i class="fa-solid fa-location-dot"></i>
+      Spiegelstraat 62, 1800 Vilvoorde <br>
+      <i class="fa-solid fa-phone"></i>
+      <a href="tel:+3222515151">022 51 51 51</a><br>
+      <i class="fa-solid fa-at"></i>
+      <a href="mailto:directie.academiebeeldendekunsten@sovilvoorde.be">Directie</a> <br>
+      <i class="fa-solid fa-at"></i>
+      <a href="mailto:secretariaat.academiebeeldendekunsten@sovilvoorde.be">Secretariaat</a><br>
+    </address>
     <div class="footer-openingsuren">
+      <i class="fa-solid fa-clock"></i><span>Openingsuren</span>
       <table>
-        <caption>Openingsuren school</caption>
+        <caption>School</caption>
         <colgroup>
           <col>
           <col>
           <col>
         </colgroup>
 
-        <thead>
-          <tr>
-            <td>&nbsp;</td>
-            <th scope="col">van</th>
-            <th scope="col">tot</th>
-          </tr>
-        </thead>
 
         <tbody>
           <tr>
@@ -208,22 +241,13 @@
           </tr>
         </tbody>
       </table>
-
       <table>
-        <caption>Openingsuren secretariaat</caption>
+        <caption>Secretariaat</caption>
         <colgroup>
           <col>
           <col>
           <col>
         </colgroup>
-
-        <thead>
-          <tr>
-            <td>&nbsp;</td>
-            <th scope="col">van</th>
-            <th scope="col">tot</th>
-          </tr>
-        </thead>
 
         <tbody>
           <tr>
@@ -264,12 +288,11 @@
         </tbody>
       </table>
     </div>
-    <div class="footer-contact"></div>
+
     <div class="social-media"></div>
     <div class="footer-copyright"></div>
+    <img width="200px" src="images/map-placeholder.svg" alt="">
   </footer>
-
-
 
 
 
