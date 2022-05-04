@@ -577,10 +577,13 @@ footer {
   }
 
   .footer-container {
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     margin-inline: var(--main-margin-width);
     width: unset;
+  }
+  .footer-logo {
+    order: 1;
   }
 
   .footer-map,
@@ -594,6 +597,7 @@ footer {
     justify-content: center;
     column-gap: 50px;
     flex: 1 1 100%;
+    order: 2;
   }
   .footer-social-links {
     text-align: left;
@@ -699,17 +703,7 @@ footer {
   .js-search-container.js-on .js-search-button {
     margin-right: 80px;
   }
-}
-
-/* Temporary */
-
-.icon-set {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.5rem;
-  color: dodgerblue;
-  margin-bottom: 25px;
-}
-.icon-set i {
-  padding-inline: 5px;
+  .footer-logo {
+    order: unset;
+  }
 }
