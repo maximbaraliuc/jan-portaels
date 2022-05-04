@@ -35,7 +35,9 @@ let activateMenuItem = function (e) {
 let clickExceptMenuItem = function () {
   menuItem.forEach((item) => item.classList.replace("js-on", "js-off"));
 };
+
 menuItem.forEach((item) => item.addEventListener("click", activateMenuItem));
+menuItem.forEach((item) => item.addEventListener("mouseleave", clickExceptMenuItem));
 document.addEventListener("click", clickExceptMenuItem);
 
 // Refers also to the searchbar
@@ -114,3 +116,29 @@ searchInput.addEventListener("input", searchbarActivate);
 
 // galleryImages.forEach(setTimeout(changeImageSize, 5000));
 // // setTimeout(changeImageSize, 5000);
+
+// ===========================================================================
+// UP Button
+// ===========================================================================
+
+let upButton = document.querySelector(".up-button");
+let rootElement = document.documentElement;
+
+let enableScrollUp = function () {
+  if (rootElement.scrollTop > 100) {
+    upButton.classList.replace("off", "on");
+  } else {
+    upButton.classList.replace("on", "off");
+  }
+};
+
+let scrollTop = function (e) {
+  e.stopPropagation();
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+window.addEventListener("scroll", enableScrollUp);
+upButton.addEventListener("click", scrollTop);
