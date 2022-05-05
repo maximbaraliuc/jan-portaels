@@ -380,6 +380,7 @@ h6 {
   display: flex;
   flex-flow: row wrap;
   gap: 1.5rem;
+  margin-block: 2rem;
 }
 .nieuws-card {
   display: flex;
@@ -387,7 +388,6 @@ h6 {
   flex: 1;
   min-width: 25ch;
   padding-inline: 1.5rem;
-  margin-block: 2rem;
   border: 1px solid var(--clr-menu-separator);
   border-radius: 5px;
   background-color: var(--clr-card-bg);
