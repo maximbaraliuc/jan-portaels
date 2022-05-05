@@ -416,8 +416,7 @@ h6 {
   color: var(--color-home);
   font-family: "Commissioner", sans-serif;
 }
-.nieuws-card p {
-}
+
 .card-button {
   display: block;
   padding: 1rem;
@@ -540,6 +539,7 @@ footer {
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
+  margin-bottom: 2rem;
 }
 .footer-social-links {
   text-align: right;
