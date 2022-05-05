@@ -586,6 +586,7 @@ footer {
   }
   .footer-logo {
     order: 1;
+    width: 130px;
   }
 
   .footer-map,
@@ -611,7 +612,7 @@ footer {
   .footer-admin-links img {
     margin-left: 0;
     margin-right: 10px;
-    width: 140px;
+    /* width: 140px; */
   }
 }
 
@@ -706,6 +707,6 @@ footer {
     margin-right: 80px;
   }
   .footer-logo {
-    order: unset;
+    /* order: unset; */
   }
 }
