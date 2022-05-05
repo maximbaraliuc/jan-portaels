@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* font-family: "Commissioner", sans-serif; */
+/* font-family: "Libre Baskerville", serif; */
+/* font-family: "Roboto", sans-serif; */
+:root {
+  --clr-card-header-font: hsl(0, 0%, 100%);
+  --clr-card-header-bg: hsl(204, 41%, 27%);
+  --clr-card-border: hsl(204, 50%, 33%);
+  --clr-card-font: hsl(0, 0%, 20%);
+  --clr-card-bg: hsl(0, 0%, 100%);
+  --clr-shadow: hsl(0, 0%, 20%);
+  --color-activiteiten: hsl(206, 70%, 45%);
+  --color-contact: hsl(299, 33%, 50%);
+  --color-inschrijven: hsl(1, 76%, 61%);
+}
+
+body {
+  width: 95vw;
+  margin: 50px auto 0 auto;
+  font-family: "Commissioner", sans-serif;
+  background-color: rgb(240, 240, 240);
+}
+
+article {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+.nieuws-card {
+  flex: 1;
+  border: 1px solid var(--clr-card-border);
+  border-radius: 5px;
+  background-color: var(--clr-card-bg);
+  color: var(--clr-card-font);
+  min-width: 20ch;
+  box-shadow: 0 5px 0 var(--clr-card-border);
+}
+.nieuws-card:hover {
+  /* box-shadow: 0 8px 0 var(--clr-card-border); */
+}
+.nieuws-card:nth-child(1) {
+}
+.nieuws-card:nth-child(1) {
+}
+.nieuws-card:nth-child(1) {
+}
+/*
+
+
+
+
+*/
+.nieuws-card i {
+  padding-right: 1rem;
+}
+.nieuws-card h3 {
+  /* background-color: var(--clr-card-header-bg); */
+  /* color: var(--clr-card-header-font); */
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
+  margin: 0 0.5rem;
+  border-bottom: 1px solid var(--clr-card-border);
+}
+
+.nieuws-card p {
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+}
+
+.card-button {
+  border: 1px solid var(--clr-card-border);
+  color: var(--clr-card-border);
+  text-align: center;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  cursor: pointer;
+}
