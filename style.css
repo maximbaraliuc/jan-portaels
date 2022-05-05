@@ -419,7 +419,7 @@ h6 {
 
 .card-button {
   display: block;
-  padding: 1rem;
+  padding: 0.8rem;
   margin-block: auto 1.5rem;
   border: 1px solid var(--color-home);
   border-radius: var(--search-bar-corner-rad);
@@ -777,6 +777,17 @@ footer {
   }
   .js-search-container.js-on .js-search-button {
     margin-right: 80px;
+  }
+  .nieuws-card-container {
+    gap: 1rem;
+    margin-block: 1rem;
+  }
+
+  .nieuws-card {
+    padding-inline: 1rem;
+  }
+  .card-button {
+    margin-bottom: 1rem;
   }
   .footer-logo {
     /* order: unset; */
