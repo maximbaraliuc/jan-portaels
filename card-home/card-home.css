@@ -4,15 +4,20 @@
 /* font-family: "Libre Baskerville", serif; */
 /* font-family: "Roboto", sans-serif; */
 :root {
+  --search-bar-corner-rad: 5px;
+  --clr-bg-main: hsl(0, 0%, 95%);
+  --clr-menu-separator: hsl(0, 0%, 80%);
+  --color-activiteiten: hsl(206, 70%, 45%);
+  --color-contact: hsl(299, 33%, 50%);
+  --color-inschrijven: hsl(1, 76%, 61%);
+  --color-home: hsl(0, 0%, 5%);
+
   --clr-card-header-font: hsl(0, 0%, 100%);
   --clr-card-header-bg: hsl(204, 41%, 27%);
   --clr-card-border: hsl(204, 50%, 33%);
   --clr-card-font: hsl(0, 0%, 20%);
   --clr-card-bg: hsl(0, 0%, 100%);
   --clr-shadow: hsl(0, 0%, 20%);
-  --color-activiteiten: hsl(206, 70%, 45%);
-  --color-contact: hsl(299, 33%, 50%);
-  --color-inschrijven: hsl(1, 76%, 61%);
 }
 
 body {
@@ -22,57 +27,59 @@ body {
   background-color: rgb(240, 240, 240);
 }
 
-article {
+.nieuws-card-container {
   display: flex;
   flex-flow: row wrap;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .nieuws-card {
+  display: flex;
+  flex-direction: column;
   flex: 1;
-  border: 1px solid var(--clr-card-border);
+  min-width: 25ch;
+  padding-inline: 1.5rem;
+  border: 1px solid var(--clr-menu-separator);
   border-radius: 5px;
   background-color: var(--clr-card-bg);
-  color: var(--clr-card-font);
-  min-width: 20ch;
-  box-shadow: 0 5px 0 var(--clr-card-border);
+  color: var(--color-home);
 }
 .nieuws-card:hover {
-  /* box-shadow: 0 8px 0 var(--clr-card-border); */
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 .nieuws-card:nth-child(1) {
+  border-top: 5px solid var(--color-activiteiten);
 }
-.nieuws-card:nth-child(1) {
+.nieuws-card:nth-child(2) {
+  border-top: 5px solid var(--color-contact);
 }
-.nieuws-card:nth-child(1) {
+.nieuws-card:nth-child(3) {
+  border-top: 5px solid var(--color-inschrijven);
 }
-/*
-
-
-
-
-*/
 .nieuws-card i {
   padding-right: 1rem;
 }
 .nieuws-card h3 {
-  /* background-color: var(--clr-card-header-bg); */
-  /* color: var(--clr-card-header-font); */
-  padding-inline: 1.5rem;
   padding-block: 1rem;
-  margin: 0 0.5rem;
-  border-bottom: 1px solid var(--clr-card-border);
+  margin: 0;
+  border-bottom: 1px solid var(--clr-menu-separator);
 }
-
 .nieuws-card p {
-  padding-inline: 1.5rem;
-  padding-block: 0.5rem;
 }
-
 .card-button {
-  border: 1px solid var(--clr-card-border);
-  color: var(--clr-card-border);
+  display: block;
+  padding: 1rem;
+  margin-block: auto 1.5rem;
+  border: 1px solid var(--color-home);
+  border-radius: var(--search-bar-corner-rad);
+  color: var(--color-home);
+  text-decoration: none;
+  font-weight: bold;
   text-align: center;
-  padding: 1rem 2rem;
-  margin: 1rem;
   cursor: pointer;
+}
+.card-button:hover {
+  background-color: var(--color-home);
+  color: var(--clr-bg-main);
+  transition: all 0.3s ease-in-out;
 }
