@@ -31,6 +31,9 @@
 
   --clr-bg-main: hsl(0, 0%, 95%);
 
+  --clr-card-bg: hsl(0, 0%, 100%);
+  --clr-shadow: hsl(0, 0%, 20%);
+
   --search-icon-color: hsl(0, 0%, 65%);
   --search-icon-color-focus: hsl(0, 0%, 100%);
   --search-main-color: hsl(0, 0%, 75%);
@@ -99,7 +102,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: dodgerblue;
+  /* color: dodgerblue; */
   /* color: var(--main-accent-color); */
   font-family: "Libre Baskerville", serif;
 }
@@ -369,6 +372,68 @@ h6 {
 .js-search-container.js-on .js-close-button {
   display: block;
   position: relative;
+}
+/* =========================================================== */
+/* NIEUWS CARDS */
+/* =========================================================== */
+.nieuws-card-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+}
+.nieuws-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 25ch;
+  padding-inline: 1.5rem;
+  margin-block: 2rem;
+  border: 1px solid var(--clr-menu-separator);
+  border-radius: 5px;
+  background-color: var(--clr-card-bg);
+  color: var(--color-home);
+}
+.nieuws-card:hover {
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.nieuws-card:nth-child(1) {
+  border-top: 5px solid var(--color-activiteiten);
+}
+.nieuws-card:nth-child(2) {
+  border-top: 5px solid var(--color-contact);
+}
+.nieuws-card:nth-child(3) {
+  border-top: 5px solid var(--color-inschrijven);
+}
+.nieuws-card i {
+  padding-right: 1rem;
+}
+.nieuws-card h3 {
+  padding-block: 1rem;
+  margin: 0;
+  border-bottom: 1px solid var(--clr-menu-separator);
+  color: var(--color-home);
+  font-family: "Commissioner", sans-serif;
+}
+.nieuws-card p {
+}
+.card-button {
+  display: block;
+  padding: 1rem;
+  margin-block: auto 1.5rem;
+  border: 1px solid var(--color-home);
+  border-radius: var(--search-bar-corner-rad);
+  color: var(--color-home);
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.card-button:hover {
+  background-color: var(--color-home);
+  color: var(--clr-bg-main);
+  transition: all 0.3s ease-in-out;
 }
 
 /* =========================================================== */

@@ -12,10 +12,6 @@
   --color-inschrijven: hsl(1, 76%, 61%);
   --color-home: hsl(0, 0%, 5%);
 
-  --clr-card-header-font: hsl(0, 0%, 100%);
-  --clr-card-header-bg: hsl(204, 41%, 27%);
-  --clr-card-border: hsl(204, 50%, 33%);
-  --clr-card-font: hsl(0, 0%, 20%);
   --clr-card-bg: hsl(0, 0%, 100%);
   --clr-shadow: hsl(0, 0%, 20%);
 }
