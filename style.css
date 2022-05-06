@@ -454,7 +454,7 @@ h6 {
   flex-flow: column wrap;
   row-gap: 5px;
 
-  top: 15px;
+  top: 20px;
   right: 20px;
   /* border: 1px dotted orange; */
   user-select: none;
