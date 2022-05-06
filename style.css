@@ -320,7 +320,7 @@ h6 {
 .js-close-button {
   display: none;
   position: absolute;
-  height: 100%;
+  height: var(--search-bar-height);
   aspect-ratio: 1 / 1;
   border: 1px solid var(--main-accent-color);
   border-top-right-radius: var(--search-bar-corner-rad);
@@ -348,6 +348,7 @@ h6 {
 }
 .js-search-container.js-on .js-search-button:hover {
   border-color: var(--main-accent-color);
+
   background-color: var(--search-accent-color);
   color: var(--search-icon-color-focus);
 }
@@ -363,7 +364,7 @@ h6 {
 .js-search-container.js-on .js-search-button {
   position: absolute;
   right: calc(var(--search-bar-height));
-  height: 95%;
+  height: calc(var(--search-bar-height) * 0.95);
   border: none;
   border-radius: 0px;
   background-color: transparent;
@@ -453,7 +454,6 @@ h6 {
   display: flex;
   flex-flow: column wrap;
   row-gap: 5px;
-
   top: 20px;
   right: 20px;
   /* border: 1px dotted orange; */
