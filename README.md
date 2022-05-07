@@ -2,3 +2,5 @@
 
 # Stedelijke academie voor beeldende kunsten Jan Portaels (Vilvoorde)
 Webdesigner course at CVO Brussel - the final project:  To design a website for an art school.
+
+[**Live preview**](https://jan-portaels.netlify.app/)
