@@ -612,7 +612,7 @@ footer {
 
 .footer-social-links a i:hover,
 .footer-address a:hover {
-  color: black;
+  color: grey;
 }
 .footer-admin-links img:hover {
   opacity: 0.5;
