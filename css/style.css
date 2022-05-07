@@ -188,31 +188,31 @@ h6 {
 }
 /* Logo on current page */
 .home-section .logo {
-  background-image: url("images/logo-home.png");
+  background-image: url("../images/logo-home.png");
   background-size: cover;
 }
 .activiteiten-section .logo {
-  background-image: url("images/logo-blue.png");
+  background-image: url("../images/logo-blue.png");
   background-size: cover;
 }
 .ateliers-section .logo {
-  background-image: url("images/logo-green.png");
+  background-image: url("../images/logo-green.png");
   background-size: cover;
 }
 .kunsttheorie-section .logo {
-  background-image: url("images/logo-orange.png");
+  background-image: url("../images/logo-orange.png");
   background-size: cover;
 }
 .info-section .logo {
-  background-image: url("images/logo-gold.png");
+  background-image: url("../images/logo-gold.png");
   background-size: cover;
 }
 .contact-section .logo {
-  background-image: url("images/logo-purple.png");
+  background-image: url("../images/logo-purple.png");
   background-size: cover;
 }
 .inschrijven-section .logo {
-  background-image: url("images/logo-red.png");
+  background-image: url("../images/logo-red.png");
   background-size: cover;
 }
 
