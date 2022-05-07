@@ -106,6 +106,9 @@ h6 {
   /* color: var(--main-accent-color); */
   font-family: "Libre Baskerville", serif;
 }
+h1 {
+  color: var(--main-accent-color);
+}
 
 /**
 * #.# Navigation Menu
