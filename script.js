@@ -49,24 +49,24 @@ document.addEventListener("click", clickExceptMenuItem);
 // Display some data about the screen width.
 // ===========================================================================
 
-let headerText = document.querySelector("h1");
-headerText.innerHTML = `Screen width is ${window.screen.width}px`;
-let widthHeader = function () {
-  if (window.screen.width >= 1366) {
-    headerText.innerHTML = "Screen width is >1366px";
-    console.log("Screen width is >1366px");
-  } else if (window.screen.width >= 1024) {
-    headerText.innerHTML = "Screen width is >1024px & <1366px";
-    console.log("Screen width is >1024px & <1366px");
-  } else if (window.screen.width < 1024 && window.screen.width >= 768) {
-    headerText.innerHTML = "Screen width is >768px & <1024px";
-    console.log("Screen width is >768px & <1024px");
-  } else {
-    headerText.innerHTML = "Screen width is <768px";
-    console.log("Screen width is <768px");
-  }
-};
-window.addEventListener("resize", widthHeader);
+// let headerText = document.querySelector("h1");
+// headerText.innerHTML = `Screen width is ${window.screen.width}px`;
+// let widthHeader = function () {
+//   if (window.screen.width >= 1366) {
+//     headerText.innerHTML = "Screen width is >1366px";
+//     console.log("Screen width is >1366px");
+//   } else if (window.screen.width >= 1024) {
+//     headerText.innerHTML = "Screen width is >1024px & <1366px";
+//     console.log("Screen width is >1024px & <1366px");
+//   } else if (window.screen.width < 1024 && window.screen.width >= 768) {
+//     headerText.innerHTML = "Screen width is >768px & <1024px";
+//     console.log("Screen width is >768px & <1024px");
+//   } else {
+//     headerText.innerHTML = "Screen width is <768px";
+//     console.log("Screen width is <768px");
+//   }
+// };
+// window.addEventListener("resize", widthHeader);
 
 // ===========================================================================
 // Searchbar
@@ -100,23 +100,6 @@ closeButton.addEventListener("click", searchbarClose);
 searchButton.addEventListener("click", searchbarActivate);
 searchInput.addEventListener("click", searchbarActivate);
 searchInput.addEventListener("input", searchbarActivate);
-
-// ===========================================================================
-// Gallery
-// ===========================================================================
-
-// let galleryImages = document.querySelectorAll(".landing-gallery img");
-
-// let changeImageSize = function (elem) {
-//   let imageIndex = Math.round(Math.random() * 30);
-//   console.log(imageIndex);
-//   galleryImages.forEach((item) => item.classList.remove("image-bigger"));
-//   elem.classList.add("image-bigger");
-//   // return imageIndex;
-// };
-
-// galleryImages.forEach(setTimeout(changeImageSize, 5000));
-// // setTimeout(changeImageSize, 5000);
 
 // ===========================================================================
 // UP Button
