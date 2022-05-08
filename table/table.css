@@ -1,11 +1,20 @@
 /* CSS FROM CONTACT */
+
+th,
+td {
+  border-right: 1px solid rgb(201, 201, 201);
+}
 table {
   border-collapse: collapse;
   /* width: minmax(100px, 2600px); */
   flex: 1;
   margin-bottom: 2rem;
+  border: 1px solid hsl(0, 0%, 80%);
+  /* box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5); */
+  border-radius: 10px;
 }
 table caption {
+  /* box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5); */
   background-color: hsl(0, 0%, 25%);
   color: white;
   /* border-block: 1px solid hsl(0, 0%, 80%); */
@@ -14,6 +23,7 @@ table caption {
   font-weight: bolder;
   font-size: 1.1rem;
   /* text-align: left; */
+  /* margin-bottom: 0.5rem; */
 }
 tbody > tr:nth-child(odd) {
   background-color: white;
@@ -22,17 +32,17 @@ tbody > tr:nth-child(odd) {
 td,
 th {
   padding-block: 0.8rem;
-  border-bottom: 1px solid hsl(0, 0%, 80%);
+  /* border-bottom: 1px solid hsl(0, 0%, 80%); */
 }
 th {
-  padding-inline: 1rem 3rem;
+  padding-inline: 1rem 2rem;
   text-align: left;
   white-space: nowrap;
 }
 
 thead th {
   box-sizing: border-box;
-  padding-inline: 3rem 1rem;
+  padding-inline: 1rem;
   text-align: right;
 }
 
