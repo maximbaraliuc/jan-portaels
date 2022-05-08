@@ -1,5 +1,7 @@
 table {
   border-collapse: collapse;
+  width: minmax(100px, 2600px);
+  flex: 1;
 }
 table caption {
   background-color: hsl(0, 0%, 25%);
