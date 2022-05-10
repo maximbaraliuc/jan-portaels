@@ -908,8 +908,8 @@ colgroup col:first-child {
   /* display: flex; */
   overflow-y: auto;
   width: 100%;
-  padding: 8px;
+  padding: 4px;
   margin-bottom: 1rem;
   border: 1px solid var(--clr-menu-separator);
-  border-radius: 5px;
+  border-radius: var(--search-bar-corner-rad);
 }
