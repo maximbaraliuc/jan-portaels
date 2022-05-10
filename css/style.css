@@ -91,7 +91,7 @@ header {
   z-index: 9;
 }
 main {
-  max-width: var(--width-main);
+  width: var(--width-main);
   flex: 1;
   /* border: 1px dotted dodgerblue; */
 }
@@ -672,6 +672,8 @@ footer {
   }
 
   main {
+    width: calc(100% - 2 * var(--main-margin-width));
+    max-width: var(--width-main);
     margin-inline: var(--main-margin-width);
   }
   .logo {
