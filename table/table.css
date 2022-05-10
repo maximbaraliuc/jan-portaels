@@ -11,7 +11,7 @@ td {
 table {
   border-collapse: collapse;
   /* width: minmax(100px, 2600px); */
-  flex: 1;
+  /* flex: 1; */
   margin-bottom: 2rem;
   border: 1px solid hsl(0, 0%, 80%);
   /* box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.5); */
@@ -88,6 +88,16 @@ colgroup col:first-child {
 td {
   white-space: nowrap;
   min-width: 5ch;
+}
+
+.table-container {
+  box-sizing: border-box;
+  display: flex;
+  overflow-y: scroll;
+  width: 100%;
+  /* width: 500px; */
+  border: 1px solid black;
+  margin-bottom: 1rem;
 }
 /*
 colgroup col:first-child {
