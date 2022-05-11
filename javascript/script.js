@@ -131,3 +131,27 @@ let scrollTop = function (e) {
 
 window.addEventListener("scroll", enableScrollUp);
 upButton.addEventListener("click", scrollTop);
+
+// ===========================================================================
+// Gallery Button
+// ===========================================================================
+
+let buttonGalleryLeft = document.querySelectorAll(".atelier-gallery-container .btn-left");
+let buttonGalleryRight = document.querySelectorAll(".atelier-gallery-container .btn-right");
+// let galleryAtelier = document.querySelector(".atelier-gallery");
+
+let swipeLeft = function (e) {
+  // e.stopPropagation();
+  e.srcElement.parentElement.lastElementChild.scrollBy({ left: -300, behavior: "smooth" });
+  console.log("scroll left");
+  console.log(e);
+};
+let swipeRight = function (e) {
+  // e.stopPropagation();
+  e.srcElement.parentElement.lastElementChild.scrollBy({ left: 300, behavior: "smooth" });
+  console.log("scroll right");
+  console.log(e.srcElement.parentElement.lastElementChild);
+};
+
+buttonGalleryLeft.forEach((item) => item.addEventListener("click", swipeLeft));
+buttonGalleryRight.forEach((item) => item.addEventListener("click", swipeRight));

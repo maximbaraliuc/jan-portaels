@@ -874,11 +874,11 @@ table {
   border-collapse: collapse;
 }
 table caption {
-  padding-block: 0.8rem;
+  padding: 0.8rem 1rem;
   border-radius: 5px 5px 0 0;
   background-color: var(--clr-font-footer);
   color: white;
-  font-size: 1.1rem;
+  text-align: left;
   font-weight: bolder;
 }
 th,
