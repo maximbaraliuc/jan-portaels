@@ -96,16 +96,13 @@ main {
   /* border: 1px dotted dodgerblue; */
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  /* color: dodgerblue; */
-  /* color: var(--main-accent-color); */
-  font-family: "Libre Baskerville", serif;
-}
+} */
 h1 {
   color: var(--main-accent-color);
 }
