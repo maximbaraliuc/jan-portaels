@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="nl"
+      class="ateliers-section">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+        href="css/style.css">
+  <link rel="stylesheet"
+        href="css/ateliers.css">
+  <link rel="shortcut icon"
+        href="images/favicon.png"
+        type="image/x-icon">
+  <script src="javascript/script.js"
+          defer></script>
+  <script src="https://kit.fontawesome.com/4e41c7d293.js"
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+  <meta property="og:title"
+        content="Academie voor beeldende kunsten Vilvoorde" />
+  <meta property="og:description"
+        content="Vrije tijd en vrijheid, daar is de academie voor. Wij bieden u de garantie van iets dat langer dan een leven lang meegaat.">
+  <meta property="og:image"
+        content="https://jan-portaels.netlify.app/images/og-image-1200x630.png" />
+  <meta property="og:url"
+        content="http://www.academiebeeldendekunstenvilvoorde.be/" />
+  <meta property="og:type"
+        content="website">
+  <meta property="og:locale"
+        content="nl_BE">
+  <title>Opleidingen en Ateliers</title>
+</head>
+
+<body>
+  <header>
+    <!-- Navigation menu: Logo + menu buttons/dropdown lists + searchbar -->
+    <nav class="navigation js-off">
+      <a href="index.html"
+         title="go to home page"><img class="logo"
+             src="images/logo-blank.png"
+             alt="logo in text form"></a>
+
+      <ul class="menu-container">
+        <li class="js-menu-item js-off">
+          <span class="menu-button activiteiten">Activiteiten</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="aankondigen.html">Aankondigen</a></li>
+            <li><a href="expos.html">Expos</a></li>
+            <li><a href="excursies.html">Excursies</a></li>
+            <li><a href="evenementen.html">Evenementen</a></li>
+            <li><a href="nieuws.html">Nieuws</a></li>
+            <li><a href="persartikels.html">Persartikels</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button ateliers">Ateliers</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="beeldatelier-voor-kinderen.html"
+                 class="dropdown-item">Beeldatelier voor kinderen</a>
+            </li>
+            <li><a href="beeldatelier-voor-jongeren.html"
+                 class="dropdown-item">Beeldatelier voor jongeren</a>
+            </li>
+            <li><a href="kunstatelier-volwassenen-graad-4.html"
+                 class="dropdown-item">Kunstatelier graad 4</a>
+            </li>
+            <li><a href="kunstatelier-volwassenen-specialisatie.html"
+                 class="dropdown-item">Kunstatelier
+                specialisatie</a>
+            </li>
+            <li><a href="opleidingen-ateliers.html"
+                 class="dropdown-item">Opleidingen Ateliers</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button kunsttheorie">Kunsttheorie</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="kunst-en-cultuurfilosofie.html">Vrije cursus kunst- en cultuurfilosofie</a></li>
+            <li><a href="beeldende-en-audiovisuale-cultuur.html">Beeldende en audiovisuele cultuur</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button info">Info</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="info.html">App</a></li>
+            <li><a href="info.html">Academiereglement</a></li>
+            <li><a href="info.html">Algemene informatie</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button inschrijven">Inschrijven</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="inschrijven.html">Lesroosters</a></li>
+            <li><a href="inschrijven.html">Inschrijftarieven</a></li>
+            <li><a href="inschrijven.html">Praktische info</a></li>
+            <li><a href="inschrijven.html">Schrijf in online</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button contact">Contact</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="contact.html">Adres en contactgegevens</a></li>
+            <li><a href="contact.html">Bereikbaarheid</a></li>
+            <li><a href="contact.html">Ligging</a></li>
+            <li><a href="contact.html">Openingsuren secretariaat</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form action="https://www.google.com/search"
+            class="searchform js-search-container js-off"
+            method="get"
+            name="searchform"
+            target="_blank">
+        <input name="sitesearch"
+               type="hidden"
+               value="www.academiebeeldendekunstenvilvoorde.be">
+        <input autocomplete="on"
+               required="required"
+               class="form-control js-search-input"
+               name="q"
+               placeholder="Zoeken..."
+               type="text">
+        <!-- Code removed from the above input:  required="required" -->
+        <button class="js-close-button material-icons"
+                type="button"> <i class="fa-solid fa-xmark"></i></button>
+        <button class="js-search-button material-icons"
+                type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </nav>
+  </header>
+
+  <!-- Burger menu (at wider screen size is hidden) -->
+  <div class="burger-menu js-off">
+    <span id="burger-first-line"></span>
+    <span id="burger-middle-line"></span>
+    <span id="burger-last-line"></span>
+  </div>
+
+  <main>
+    <h1>Opleidingen en Ateliers</h1>
+    <div class="goto-button"><a href="#">Ontdek onze ateliers</a></div>
+    <article class="atelier-block">
+      <h2>Beeldatelier voor Kinderen
+        <!-- (1ste en 2de graad) -->
+      </h2>
+      <div class="atelier-description-container">
+        <div class="atelier-description">
+          <p>Je leert over kunst en kunstenaars. Je mag vlekken maken. Van daaruit reizen we verder in onze fantasie.
+            Met
+            potloden, verf, schaar en lijm, klei en afvalmateriaal beleven we mooie avonturen op papier of in de ruimte.
+            We nemen de wereld waar vanuit ons tekenmateriaal. Elke week gaan we samen op ontdekking in het atelier!</p>
+          <p>Onder professionele begeleiding worden de kinderen uitgedaagd om hun creativiteit en fantasie verder te
+            ontwikkelen. Er is oog voor individuele begeleiding en respect voor de eigenheid van elk kind.</p>
+          <p>Een volledig pakket beeldende vorming voor jongeren van 6 tot 12 jaar om hen wegwijs te maken in de
+            beeldende
+            kunsten. Eveneens bedoeld als voorbereiding op verdere kunststudies. Tekenen, kleurstudie, vormgeving,
+            grafische technieken, hedendaagse media komen aan bod.</p>
+        </div>
+        <div class="atelier-image-block">
+          <img class="atelier-poster"
+               src="images/ateliers/kinderen/girls.jpg"
+               alt="">
+          <img class="atelier-logo"
+               src="images/sov-logo-light.png"
+               alt="school logo">
+        </div>
+      </div>
+
+
+      <h3>Rooster</h3>
+      <p>Kinderen 1ste graad (6-7 jaar) & 2de
+        graad (8-9-10-11-12 jaar) - <strong>onder voorbehoud van wijziging tot 30 september 2020</strong>
+      </p>
+      <div class="table-container">
+        <table>
+          <caption>Peutie</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th scope="col">wo</th>
+              <th scope="col">do</th>
+              <th scope="col">za</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">9.00 - 10.40</th>
+              <td>-</td>
+              <td>-</td>
+              <td>1ste en 2de graad</td>
+            </tr>
+            <tr>
+              <th scope="row">10.50 - 12.30</th>
+              <td>-</td>
+              <td>-</td>
+              <td>1ste en 2de graad</td>
+            </tr>
+          </tbody>
+
+          <tfoot></tfoot>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <caption>Spiegelstraat</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th scope="col">wo</th>
+              <th scope="col">do</th>
+              <th scope="col">za</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">9.00 - 10.40</th>
+              <td>-</td>
+              <td>-</td>
+              <td>1ste en 2de graad</td>
+            </tr>
+            <tr>
+              <th scope="row">10.50 - 12.30</th>
+              <td>-</td>
+              <td>-</td>
+              <td>1ste en 2de graad</td>
+            </tr>
+            <tr>
+              <th scope="row">13.30 - 15.10</th>
+              <td>1ste en 2de graad</td>
+              <td>-</td>
+              <td>1ste en 2de graad</td>
+            </tr>
+            <tr>
+              <th scope="row">15.20 - 17.00</th>
+              <td>1ste en 2de graad</td>
+              <td>-</td>
+              <td>1ste en 2de graad</td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <caption>Koningslo</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th scope="col">wo</th>
+              <th scope="col">do</th>
+              <th scope="col">za</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <th scope="row">13.30 - 15.10</th>
+              <td>1ste en 2de graad</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">15.20 - 17.00</th>
+              <td>1ste en 2de graad</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <caption>Faubourg (Kastanjelaar)</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th scope="col">wo</th>
+              <th scope="col">do</th>
+              <th scope="col">za</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">16.00 - 17.40</th>
+              <td>-</td>
+              <td>1ste en 2de graad</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+
+      <p><strong>Hoofdvestigingsplaats</strong> - <em>Spiegelstraat 62, 1800 Vilvoorde</em> </p>
+      <p><strong>Vestigingsplaats Koningslo</strong> - <em> Streekbaan 45 (oude kodaksite), 1800 Vilvoorde</em> </p>
+      <p><strong>Vestigingsplaats Peutie</strong> - <em>Aarschotsestraat 124, 1800 Peutie, Vilvoorde</em> </p>
+      <p><strong>Vestigingsplaats Faubourg - Stedelijke Basisschool De Kastanjelaar</strong> - <em> Perksestraat 125,
+          1800
+          Vilvoorde</em> </p>
+
+      <h3>Materiaallijst Lagere Graad</h3>
+      <ul>
+        <li>1 dikke + 1 dunne/fijne zwarte alcoholstift + 1 balpen</li>
+        <li>Potloden : 1HB + 2B</li>
+        <li>1 gewone gom</li>
+        <li>1 kneedgom</li>
+        <li>1 slijper (met potje)</li>
+        <li>1 schaar</li>
+        <li>3 ronde penselen: maat 2 + maat 6 + maat 12</li>
+        <li>3 platte penselen: maat 2 + maat 6 + maat 12</li>
+        <li>1 vloeibare knutsellijm</li>
+        <li>2 pritt lijmstiften</li>
+        <li>1 doosje pandakrijt</li>
+        <li>1 vod of handdoek</li>
+        <li>2 rollen papieren schilderstape</li>
+        <li>Kleurpotloden</li>
+      </ul>
+      <p>Te vinden bij: <strong>ATITA, Kruidvat, Makro, Dreamland, Lucas creativ, Schleiper</strong></p>
+      <p>Draag alstublieft kleding die <strong>vuil</strong> kan worden of
+        neem een schort mee.</p>
+
+      <h4>Een briefje van ouders nodig:</h4>
+      <ul>
+        <li>Als je alleen naar huis gaat</li>
+        <li>Bij afwezigheid <em>(eventueel doktersattest)</em> </li>
+      </ul>
+      <p>Gelieve kinderen op tijd op te halen!</p>
+      <p>Als er andere materialen nodig zijn voor een
+        bepaalde opdracht, deze is voorlopig gemaakt door de
+        leraar gecommuniceerd</p>
+    </article>
+
+    <h2>This is a gallery test:</h2>
+    <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+         class="fa-solid fa-chevron-right btn-right"></i>
+      <div class="atelier-gallery">
+        <img src="images/atelier-nathan-de-corte/atelier-nathan-de-corte-1.jpg"
+             alt=""><img src="images/atelier-nathan-de-corte/atelier-nathan-de-corte-2.jpg"
+             alt=""><img src="images/atelier-nathan-de-corte/atelier-nathan-de-corte-3.jpg"
+             alt=""><img src="images/atelier-nathan-de-corte/atelier-nathan-de-corte-4.jpg"
+             alt=""><img src="images/atelier-nathan-de-corte/atelier-nathan-de-corte-5.jpg"
+             alt=""><img src="images/atelier-nathan-de-corte/atelier-nathan-de-corte-6.jpg"
+             alt=""><img src="images/atelier-nathan-de-corte/atelier-nathan-de-corte-7.jpg"
+             alt="">
+      </div>
+    </div>
+
+
+
+
+
+    <h2>Beeldhouwen en ruimtelijke kunst</h2>
+    <p>Vanaf 18 jaar kan men bij ons terecht voor een diepgaande opleiding van 8 lestijden per week gedurende 5 jaar.
+      Nadien zijn nog 2 specialisatiejaren mogelijk van 8 uur per week.</p>
+    <p>docent: Johan Clocheret</p>
+    <p>Studenten 1ste jaar beeldhouwen & ruimtelijke kunst kiezen bij voorkeur 1 lesblok op maandag, tweede lesblok
+      vrij
+      te kiezen.</p>
+    <p>Vanaf het 3de jaar krijg je binnen het lestijdenpakket 4 uur per maand kunst- en cultuurfilosofie.
+      De Specialisatie krijgen binnen hun lestijdenpakket 4 uur per maand kunst- en cultuurfilosfie.</p>
+    <p><strong>4de graad en specialisatie (2 lesmomenten van 4 uur te kiezen)</strong></p>
+
+
+
+  </main>
+
+  <footer>
+    <!-- All information but copyrights block -->
+    <div class="footer-container">
+      <div class="footer-logo">
+        <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_wr530fwc.json"
+                       background="transparent"
+                       speed="1"
+                       loop
+                       autoplay></lottie-player>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-block-title"><i class="fa-solid fa-address-book"></i>
+          <strong>Contact</strong>
+        </div>
+        <address class="footer-address">
+          <i class="fa-solid fa-location-dot"></i>
+          <a href="https://www.google.com/maps/place/Spiegelstraat+62,+1800+Vilvoorde/">Spiegelstraat 62, 1800
+            Vilvoorde</a> <br>
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+3222515151">022 51 51 51</a><br>
+          <i class="fa-solid fa-at"></i>
+          <a href="mailto:directie.academiebeeldendekunsten@sovilvoorde.be">Directie</a> <br>
+          <i class="fa-solid fa-at"></i>
+          <a href="mailto:secretariaat.academiebeeldendekunsten@sovilvoorde.be">Secretariaat</a><br>
+        </address>
+      </div>
+
+      <div class="footer-map">
+        <div class="footer-block-title"><i class="fa-solid fa-map-location-dot"></i>
+          <strong>Locatie</strong>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.6322351379167!2d4.417528315848299!3d50.930519760537614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e800440761f1%3A0xe1b00c2673d8656c!2sSpiegelstraat%2062%2C%201800%20Vilvoorde!5e0!3m2!1snl!2sbe!4v1651680471386!5m2!1snl!2sbe"
+                width="200"
+                height="120"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-social-links">
+          <!-- <div class="footer-block-title"><i class="fa-solid fa-hashtag"></i>
+            <strong>Volg ons op</strong>
+          </div> -->
+          <a href="https://www.facebook.com/Stedelijke-Academie-voor-Beeldende-Kunsten-Jan-Portaels-397988950246649/">
+            <i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/academiejanportaels/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="footer-admin-links"><a
+             href="https://data-onderwijs.vlaanderen.be/onderwijsaanbod/instelling?sn=49312"><img
+                 src="images/vlaanderen-onderwijs.svg"
+                 alt="Vlaanderen logo"></a><a href="https://www.vilvoorde.be/kunstonderwijs"><img
+                 src="images/logo-vilvoorde-stem.svg"
+                 alt="Vilvoorde city logo"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>© 2022 Maxim Baraliuc</p>
+    </div>
+  </footer>
+
+  <div class="up-button off"><i class="fa-solid fa-circle-chevron-up"></i></div>
+
+</body>
+
+</html>

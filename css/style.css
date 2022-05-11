@@ -18,13 +18,13 @@
   --main-margin-width: 15px;
   --logo-margin-top: 5px;
 
-  --color-home: hsl(0, 0%, 5%);
-  --color-activiteiten: hsl(206, 70%, 45%);
-  --color-ateliers: hsl(107, 36%, 41%);
-  --color-kunsttheorie: hsl(31, 95%, 56%);
-  --color-info: hsl(43, 98%, 60%);
-  --color-contact: hsl(299, 33%, 50%);
-  --color-inschrijven: hsl(1, 76%, 61%);
+  --clr-font-dark: hsl(0, 0%, 5%);
+  --clr-activiteiten: hsl(206, 70%, 45%);
+  --clr-ateliers: hsl(107, 36%, 41%);
+  --clr-kunsttheorie: hsl(31, 95%, 56%);
+  --clr-info: hsl(43, 98%, 60%);
+  --clr-contact: hsl(299, 33%, 50%);
+  --clr-inschrijven: hsl(1, 76%, 61%);
   --clr-menu-separator: hsl(0, 0%, 80%);
   --clr-bg-footer: hsl(0, 0%, 100%);
   --clr-font-footer: hsl(0, 0%, 25%);
@@ -43,25 +43,25 @@
 
 /* Current page main color accent */
 .home-section {
-  --main-accent-color: var(--color-home);
+  --main-accent-color: var(--clr-font-dark);
 }
 .activiteiten-section {
-  --main-accent-color: var(--color-activiteiten);
+  --main-accent-color: var(--clr-activiteiten);
 }
 .ateliers-section {
-  --main-accent-color: var(--color-ateliers);
+  --main-accent-color: var(--clr-ateliers);
 }
 .kunsttheorie-section {
-  --main-accent-color: var(--color-kunsttheorie);
+  --main-accent-color: var(--clr-kunsttheorie);
 }
 .info-section {
-  --main-accent-color: var(--color-info);
+  --main-accent-color: var(--clr-info);
 }
 .contact-section {
-  --main-accent-color: var(--color-contact);
+  --main-accent-color: var(--clr-contact);
 }
 .inschrijven-section {
-  --main-accent-color: var(--color-inschrijven);
+  --main-accent-color: var(--clr-inschrijven);
 }
 
 body {
@@ -73,7 +73,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--clr-bg-main);
-  color: var(--color-home);
+  color: var(--clr-font-dark);
   font-family: "Commissioner", sans-serif;
 
   /* border: 1px solid rgb(255, 0, 234); */
@@ -96,16 +96,13 @@ main {
   /* border: 1px dotted dodgerblue; */
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  /* color: dodgerblue; */
-  /* color: var(--main-accent-color); */
-  font-family: "Libre Baskerville", serif;
-}
+} */
 h1 {
   color: var(--main-accent-color);
 }
@@ -150,7 +147,7 @@ h1 {
   height: var(--js-menu-button-height);
   padding-inline: var(--menu-button-padding-inline);
   white-space: nowrap;
-  color: var(--color-home);
+  color: var(--clr-font-dark);
   font-size: 1.2rem;
   font-weight: 600;
   /* text-decoration: none; */
@@ -167,27 +164,27 @@ h1 {
 /* Menu Items on hover and when the page is active and also logo settings. */
 .js-menu-item.js-on .activiteiten,
 .js-menu-item:hover .activiteiten {
-  color: var(--color-activiteiten);
+  color: var(--clr-activiteiten);
 }
 .js-menu-item.js-on .ateliers,
 .js-menu-item:hover .ateliers {
-  color: var(--color-ateliers);
+  color: var(--clr-ateliers);
 }
 .js-menu-item.js-on .kunsttheorie,
 .js-menu-item:hover .kunsttheorie {
-  color: var(--color-kunsttheorie);
+  color: var(--clr-kunsttheorie);
 }
 .js-menu-item.js-on .info,
 .js-menu-item:hover .info {
-  color: var(--color-info);
+  color: var(--clr-info);
 }
 .js-menu-item.js-on .contact,
 .js-menu-item:hover .contact {
-  color: var(--color-contact);
+  color: var(--clr-contact);
 }
 .js-menu-item.js-on .inschrijven,
 .js-menu-item:hover .inschrijven {
-  color: var(--color-inschrijven);
+  color: var(--clr-inschrijven);
 }
 /* Logo on current page */
 .home-section .logo {
@@ -245,7 +242,7 @@ h1 {
   padding-inline: 20px;
   padding-block: 15px;
   text-decoration: none;
-  color: var(--color-home);
+  color: var(--clr-font-dark);
   white-space: nowrap;
 }
 
@@ -378,6 +375,7 @@ h1 {
   display: block;
   position: relative;
 }
+
 /* =========================================================== */
 /* NIEUWS CARDS */
 /* =========================================================== */
@@ -396,20 +394,20 @@ h1 {
   border: 1px solid var(--clr-menu-separator);
   border-radius: 5px;
   background-color: var(--clr-card-bg);
-  color: var(--color-home);
+  color: var(--clr-font-dark);
 }
 .nieuws-card:hover {
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
 .nieuws-card:nth-child(1) {
-  border-top: 5px solid var(--color-activiteiten);
+  border-top: 5px solid var(--clr-activiteiten);
 }
 .nieuws-card:nth-child(2) {
-  border-top: 5px solid var(--color-contact);
+  border-top: 5px solid var(--clr-contact);
 }
 .nieuws-card:nth-child(3) {
-  border-top: 5px solid var(--color-inschrijven);
+  border-top: 5px solid var(--clr-inschrijven);
 }
 .nieuws-card i {
   padding-right: 1rem;
@@ -418,7 +416,7 @@ h1 {
   padding-block: 1rem;
   margin: 0;
   border-bottom: 1px solid var(--clr-menu-separator);
-  color: var(--color-home);
+  color: var(--clr-font-dark);
   font-family: "Commissioner", sans-serif;
 }
 
@@ -426,23 +424,21 @@ h1 {
   display: block;
   padding: 0.8rem;
   margin-block: auto 1.5rem;
-  border: 1px solid var(--color-home);
+  border: 1px solid var(--clr-font-dark);
   border-radius: var(--search-bar-corner-rad);
-  color: var(--color-home);
+  color: var(--clr-font-dark);
   text-decoration: none;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
 }
-.card-button:hover,
-.card-button:active {
-  background-color: var(--color-home);
+.card-button:hover {
+  background-color: var(--clr-font-dark);
   color: var(--clr-bg-main);
   transition: all 0.3s ease-in-out;
 }
-.card-button:hover,
 .card-button:active {
-  background-color: var(--color-home);
+  background-color: var(--clr-font-dark);
   color: var(--clr-bg-main);
   transition: all 0s;
 }
@@ -566,6 +562,8 @@ footer {
 
 .footer-address a {
   color: var(--clr-font-footer);
+  font-style: normal;
+  line-height: 150%;
 }
 .footer-address i {
   margin-right: 5px;
@@ -853,4 +851,61 @@ footer {
     grid-column: 1;
     grid-row: 3 / span 2;
   }
+}
+
+/* =========================================================== */
+/* TABLES */
+/* =========================================================== */
+
+.table-container {
+  box-sizing: border-box;
+  overflow-y: auto;
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--clr-menu-separator);
+  border-radius: var(--search-bar-corner-rad);
+}
+
+table {
+  flex: 1;
+  border: 1px solid var(--clr-menu-separator);
+  border-radius: 10px;
+  border-collapse: collapse;
+}
+table caption {
+  padding: 0.8rem 1rem;
+  border-radius: 5px 5px 0 0;
+  background-color: var(--clr-font-footer);
+  color: white;
+  text-align: left;
+  font-weight: bolder;
+}
+th,
+td {
+  border-right: 1px solid var(--clr-menu-separator);
+  padding-block: 0.8rem;
+}
+tbody > tr:nth-child(odd) {
+  background-color: white;
+}
+th {
+  padding-inline: 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+thead th {
+  /* box-sizing: border-box; */
+  padding-inline: 1rem;
+  text-align: center;
+}
+td {
+  padding-inline: 1rem;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 5ch;
+}
+colgroup col:first-child {
+  /* Push other cell on the row to the right */
+  width: 100%;
 }
