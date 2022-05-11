@@ -111,8 +111,8 @@
 .atelier-gallery-container i {
   position: absolute;
   top: calc(50% - 1rem);
-  border-radius: var(--search-bar-corner-rad);
   padding: 1rem;
+  border-radius: var(--search-bar-corner-rad);
   background-color: rgba(255, 255, 255, 0.6);
   color: black;
   cursor: pointer;
@@ -132,14 +132,15 @@
 }
 
 .atelier-gallery {
-  border-block: 1px solid var(--clr-menu-separator);
-  padding-block: 1rem;
   display: flex;
   align-items: center;
-  column-gap: 2rem;
+  column-gap: 1.5rem;
   height: 300px;
   width: 100%;
-  overflow: scroll;
+  border-block: 1px solid var(--clr-menu-separator);
+  padding-block: 1rem;
+  /* overflow-x: hidden; */
+  overflow: hidden;
   scroll-snap-type: both mandatory;
 }
 
@@ -149,5 +150,4 @@
   max-width: 590px;
   max-height: 100%;
   flex-shrink: 0;
-  scroll-behavior: smooth;
 }
