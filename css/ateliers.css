@@ -52,17 +52,17 @@
 }
 /* ================================================== */
 
-/* .atelier-block {
-  border-top: 1px solid var(--clr-menu-separator);
-} */
+.atelier-block {
+  /* border-bottom: 1px solid var(--clr-menu-separator); */
+  margin-bottom: 5rem;
+}
 .atelier-description-container {
   display: grid;
   grid-template-columns: 1fr 250px;
   gap: 1.5rem;
-  border-left: 1px solid var(--clr-menu-separator);
-  /* border-radius: 5px; */
+  border-left: 2px solid var(--clr-menu-separator);
   padding-left: 1rem;
-  /* background-color: rgb(226, 226, 226); */
+  margin-bottom: 3rem;
 }
 .atelier-container::after {
   content: "";
