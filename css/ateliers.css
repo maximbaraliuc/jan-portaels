@@ -24,6 +24,32 @@
   transition: all 0s;
 }
 
+/* ========================================== */
+
+.atelier-button {
+  margin-block: 1.5rem;
+}
+.atelier-button a {
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid var(--main-accent-color);
+  border-radius: var(--search-bar-corner-rad);
+
+  display: block;
+  padding: 0.8rem 2rem;
+  color: var(--main-accent-color);
+  text-decoration: none;
+}
+.atelier-button a:hover {
+  background-color: var(--main-accent-color);
+  color: var(--clr-bg-main);
+  transition: all 0.3s ease-in-out;
+}
+.atelier-button a:active {
+  background-color: var(--main-accent-color);
+  color: var(--clr-bg-main);
+  transition: all 0s;
+}
 /* ================================================== */
 
 /* .atelier-block {
@@ -33,7 +59,7 @@
   display: grid;
   grid-template-columns: 1fr 250px;
   gap: 1.5rem;
-  border-left: 2px solid var(--clr-menu-separator);
+  border-left: 1px solid var(--clr-menu-separator);
   /* border-radius: 5px; */
   padding-left: 1rem;
   /* background-color: rgb(226, 226, 226); */
@@ -46,8 +72,22 @@
 .atelier-description-container h2 {
   margin-top: 0;
 }
-/* .atelier-description {
-} */
+.atelier-description {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: start; */
+  /* justify-items: flex-start; */
+  flex: 1;
+}
+.atelier-description p {
+  margin-block: 0 1rem;
+}
+.atelier-description .atelier-button {
+  align-self: flex-start;
+  margin: 0;
+  margin-top: auto;
+}
+
 .atelier-description p:first-child {
   margin-top: 0;
 }
@@ -153,6 +193,7 @@
   /* The max-width is important for scrolling with JavaScript */
   max-width: 590px;
   max-height: 100%;
+  /* border-radius: var(--search-bar-corner-rad); */
   flex-shrink: 0;
 }
 .atelier-gallery {
