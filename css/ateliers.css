@@ -58,7 +58,7 @@
 }
 .atelier-description-container {
   display: grid;
-  grid-template-columns: 1fr 500px;
+  grid-template-columns: 2fr 1fr;
   gap: 1.5rem;
   border-left: 2px solid var(--clr-menu-separator);
   padding-left: 1rem;
