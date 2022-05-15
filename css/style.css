@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 /* @import url("https://fonts.googleapis.com/icon?family=Material+Icons"); */
 /* font-family: "Commissioner", sans-serif; */
 /* font-family: "Libre Baskerville", serif; */
 /* font-family: "Roboto", sans-serif; */
+/* font-family: 'Playfair Display', serif; */
 
 :root {
   --width-main: 1300px;
@@ -20,10 +23,16 @@
 
   --clr-font-dark: hsl(0, 0%, 5%);
   --clr-activiteiten: hsl(206, 70%, 45%);
+  --clr-activiteiten: hsl(206, 70%, 45%);
+  --clr-ateliers: hsl(107, 36%, 41%);
   --clr-ateliers: hsl(107, 36%, 41%);
   --clr-kunsttheorie: hsl(31, 95%, 56%);
+  --clr-kunsttheorie: hsl(31, 95%, 56%);
+  --clr-info: hsl(43, 98%, 60%);
   --clr-info: hsl(43, 98%, 60%);
   --clr-contact: hsl(299, 33%, 50%);
+  --clr-contact: hsl(299, 33%, 50%);
+  --clr-inschrijven: hsl(1, 76%, 61%);
   --clr-inschrijven: hsl(1, 76%, 61%);
   --clr-menu-separator: hsl(0, 0%, 80%);
   --clr-bg-footer: hsl(0, 0%, 100%);
@@ -104,6 +113,7 @@ h5,
 h6 {
 } */
 h1 {
+  font-size: 3rem;
   color: var(--main-accent-color);
 }
 
@@ -863,21 +873,27 @@ footer {
   width: 100%;
   padding: 4px;
   margin-bottom: 1rem;
-  border: 1px solid var(--clr-menu-separator);
-  border-radius: var(--search-bar-corner-rad);
+  /* justify-self: center; */
+  /* margin-inline: auto; */
+  /* border: 1px solid var(--clr-menu-separator); */
+  /* border-radius: var(--search-bar-corner-rad); */
+  display: flex;
 }
 
 table {
   flex: 1;
+
   border: 1px solid var(--clr-menu-separator);
-  border-radius: 10px;
+  /* border-radius: 10px; */
   border-collapse: collapse;
 }
 table caption {
   padding: 0.8rem 1rem;
-  border-radius: 5px 5px 0 0;
-  background-color: var(--clr-font-footer);
-  color: white;
+  border: 1px solid var(--clr-menu-separator);
+  border-bottom: unset;
+  /* border-radius: 5px 5px 0 0; */
+  background-color: white;
+  /* color: white; */
   text-align: left;
   font-weight: bolder;
 }
@@ -905,7 +921,17 @@ td {
   white-space: nowrap;
   min-width: 5ch;
 }
+
 colgroup col:first-child {
   /* Push other cell on the row to the right */
-  width: 100%;
+  width: 50%;
+}
+
+/* Screen size between: 0 - 768 */
+@media screen and (max-width: 767px) {
+  td,
+  th {
+    white-space: normal;
+    padding-inline: 0.7rem;
+  }
 }
