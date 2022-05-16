@@ -194,8 +194,9 @@
 }
 .atelier-card {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   flex-grow: 1;
+  /* max-width: 400px; */
   border: 1px solid var(--clr-menu-separator);
   border-right: 5px solid var(--clr-menu-separator);
   background-color: hsl(0, 0%, 100%);
@@ -210,14 +211,10 @@
 }
 .atelier-card span {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
   padding-inline: 1rem;
   color: black;
-
-  text-align: center;
+  text-align: right;
   font-weight: 700;
   white-space: nowrap;
   transition: all 0.3s;
@@ -234,7 +231,7 @@
   transition: all 0s;
 }
 
-.atelier-card span:hover {
+.atelier-card:hover span {
   color: var(--main-accent-color);
 }
 
@@ -280,7 +277,8 @@
   .video-wrap video {
     height: 100%;
   }
-  .atelier-card a {
+  .atelier-card span {
     white-space: unset;
+    text-align: right;
   }
 }
