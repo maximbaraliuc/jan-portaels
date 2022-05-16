@@ -10,7 +10,7 @@
 
 :root {
   --width-main: 1300px;
-  --height-nav: 100px;
+  --height-nav: 80px;
   --footer-height: 250px;
   --js-menu-button-height: 50px;
   --menu-button-padding-block: 15px;
@@ -22,10 +22,10 @@
   --logo-margin-top: 5px;
 
   --clr-font-dark: hsl(0, 0%, 5%);
-  --clr-activiteiten: hsl(206, 70%, 45%);
-  --clr-activiteiten: hsl(206, 70%, 45%);
-  --clr-ateliers: hsl(107, 36%, 41%);
-  --clr-ateliers: hsl(107, 36%, 41%);
+  --clr-ateliers: hsl(206, 70%, 45%);
+  --clr-ateliers: hsl(206, 70%, 45%);
+  --clr-activiteiten: hsl(107, 36%, 41%);
+  --clr-activiteiten: hsl(107, 36%, 41%);
   --clr-kunsttheorie: hsl(31, 95%, 56%);
   --clr-kunsttheorie: hsl(31, 95%, 56%);
   --clr-info: hsl(43, 98%, 60%);
@@ -72,7 +72,27 @@
 .inschrijven-section {
   --main-accent-color: var(--clr-inschrijven);
 }
-
+html {
+  scroll-behavior: smooth;
+}
+.activiteiten-section .menu-button.activiteiten {
+  color: var(--main-accent-color);
+}
+.ateliers-section .menu-button.ateliers {
+  color: var(--main-accent-color);
+}
+.kunsttheorie-section .menu-button.kunsttheorie {
+  color: var(--main-accent-color);
+}
+.info-section .menu-button.info {
+  color: var(--main-accent-color);
+}
+.contact-section .menu-button.contact {
+  color: var(--main-accent-color);
+}
+.inschrijven-section .menu-button.inschrijven {
+  color: var(--main-accent-color);
+}
 body {
   box-sizing: border-box;
   display: flex;
@@ -116,7 +136,9 @@ h1 {
   font-size: 2.5rem;
   color: var(--main-accent-color);
 }
-
+h2 {
+  font-size: 1.8rem;
+}
 /**
 * #.# Navigation Menu
 *
@@ -134,7 +156,7 @@ h1 {
   /* border: 1px dotted purple; */
 }
 .logo {
-  height: calc(var(--height-nav) - 30px);
+  height: calc(var(--height-nav) - 10px);
 }
 .menu-container {
   display: flex;
@@ -176,7 +198,7 @@ h1 {
 .js-menu-item:hover .activiteiten {
   color: var(--clr-activiteiten);
 }
-.js-menu-item.js-on .ateliers,
+.js-menu-item.js-on .s,
 .js-menu-item:hover .ateliers {
   color: var(--clr-ateliers);
 }
@@ -197,7 +219,7 @@ h1 {
   color: var(--clr-inschrijven);
 }
 /* Logo on current page */
-.home-section .logo {
+/* .home-section .logo {
   background-image: url("../images/logo-home.png");
   background-size: cover;
 }
@@ -224,7 +246,7 @@ h1 {
 .inschrijven-section .logo {
   background-image: url("../images/logo-red.png");
   background-size: cover;
-}
+} */
 
 /* Dropdown styling */
 .dropdown-list {
@@ -271,12 +293,12 @@ h1 {
 .js-menu-item.js-on .activiteiten + ul a:hover,
 .js-menu-item.js-on .activiteiten + ul a:active,
 .js-menu-item:hover .activiteiten + ul a:hover {
-  background-color: hsl(206, 70%, 85%);
+  background-color: hsl(107, 36%, 85%);
 }
 .js-menu-item.js-on .ateliers + ul a:hover,
 .js-menu-item.js-on .ateliers + ul a:active,
 .js-menu-item:hover .ateliers + ul a:hover {
-  background-color: hsl(107, 36%, 85%);
+  background-color: hsl(206, 70%, 85%);
 }
 .js-menu-item.js-on .kunsttheorie + ul a:hover,
 .js-menu-item.js-on .kunsttheorie + ul a:active,
@@ -411,7 +433,7 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 .nieuws-card:nth-child(1) {
-  border-top: 5px solid var(--clr-activiteiten);
+  border-top: 5px solid var(--clr-ateliers);
 }
 .nieuws-card:nth-child(2) {
   border-top: 5px solid var(--clr-contact);
@@ -646,6 +668,16 @@ footer {
   cursor: pointer;
   z-index: 10;
 }
+.up-button.on:hover {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.up-button.on:active {
+  transform: translateY(5px);
+  transition: all 0.1s;
+}
+
 .up-button.off {
   display: none;
 }
@@ -656,10 +688,17 @@ footer {
 @media screen and (max-width: 1365px) {
   :root {
     --width-main: 1000px;
-    --height-nav: 80px;
+    /* --height-nav: 80px; */
     /* --search-bar-width: 160px; */
     --search-bar-height: 40px;
     --menu-button-padding-inline: 10px;
+  }
+  .navigation {
+    justify-content: space-around;
+  }
+
+  .menu-container {
+    margin-inline: 0 1rem;
   }
   .menu-button {
     font-size: 1.1rem;
@@ -673,7 +712,7 @@ footer {
 @media screen and (max-width: 1023px) {
   :root {
     /* --width-main: 998px; */
-    --height-nav: 100px;
+    /* --height-nav: 100px; */
     --search-bar-width: 250px;
     --search-bar-height: 40px;
     --menu-button-padding-inline: 20px;
@@ -690,7 +729,7 @@ footer {
   .navigation {
     flex-wrap: wrap;
     width: auto;
-    height: auto;
+    /* height: auto; */
     margin-inline: var(--main-margin-width);
   }
   .menu-container {
@@ -871,7 +910,7 @@ footer {
   box-sizing: border-box;
   overflow-y: auto;
   width: 100%;
-  padding: 4px;
+  /* padding: 4px; */
   margin-bottom: 1rem;
   /* justify-self: center; */
   /* margin-inline: auto; */
@@ -935,3 +974,29 @@ colgroup col:first-child {
     padding-inline: 0.7rem;
   }
 }
+
+/*  */
+/* .goto-button {
+  margin-block: 1.5rem;
+}
+.goto-button a {
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid var(--main-accent-color);
+  border-radius: var(--search-bar-corner-rad);
+
+  display: block;
+  padding: 0.8rem;
+  color: var(--main-accent-color);
+  text-decoration: none;
+}
+.goto-button a:hover {
+  background-color: var(--main-accent-color);
+  color: var(--clr-bg-main);
+  transition: all 0.3s ease-in-out;
+}
+.goto-button a:active {
+  background-color: var(--main-accent-color);
+  color: var(--clr-bg-main);
+  transition: all 0s;
+} */
