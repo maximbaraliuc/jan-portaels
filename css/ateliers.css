@@ -1,33 +1,6 @@
-/*  */
-.goto-button {
-  margin-block: 1.5rem;
-}
-.goto-button a {
-  font-weight: bold;
-  text-align: center;
-  border: 1px solid var(--main-accent-color);
-  border-radius: var(--search-bar-corner-rad);
-
-  display: block;
-  padding: 0.8rem;
-  color: var(--main-accent-color);
-  text-decoration: none;
-}
-.goto-button a:hover {
-  background-color: var(--main-accent-color);
-  color: var(--clr-bg-main);
-  transition: all 0.3s ease-in-out;
-}
-.goto-button a:active {
-  background-color: var(--main-accent-color);
-  color: var(--clr-bg-main);
-  transition: all 0s;
-}
-
-/* ========================================== */
-
 .atelier-button {
   margin-block: 1.5rem;
+  scroll-behavior: smooth;
 }
 .atelier-button a {
   font-weight: bold;
@@ -113,46 +86,13 @@
   width: 50px;
 }
 
-/* MEDIA QUERY */
-
-/* Screen size between: 1024 - 1366 */
-@media screen and (max-width: 1365px) {
-  .atelier-description-container {
-    display: grid;
-    grid-template-columns: 1fr 250px;
-  }
-}
-
-/* Screen size between: 768 - 1024 */
-@media screen and (max-width: 1023px) {
-}
-
-/* Screen size between: 0 - 768 */
-@media screen and (max-width: 767px) {
-  .atelier-description-container {
-    display: flex;
-    flex-direction: column;
-    border: unset;
-    padding: unset;
-  }
-  .atelier-gallery-container i {
-    font-size: 5rem;
-  }
-  .atelier-image-block {
-    order: -1;
-    min-height: unset;
-    height: 200px;
-    overflow: hidden;
-  }
-  .atelier-gallery {
-    max-height: 250px;
-  }
-}
-
+/* ===================================================== */
+/* Gallery */
 /* ===================================================== */
 
 .atelier-gallery-container {
   position: relative;
+  margin-bottom: 4rem;
 }
 
 .atelier-gallery-container i {
@@ -211,4 +151,134 @@
 }
 .atelier-gallery::-webkit-scrollbar-thumb {
   background-color: hsl(0, 0%, 80%);
+}
+
+/* ===================================================== */
+/* Atelier 3D Iframe */
+/* ===================================================== */
+
+.atelier-3d {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.atelier-iframe-wrap {
+  width: 600px;
+}
+
+.atelier-iframe {
+  /* width: minmax(300px, auto); */
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* height: 100%; */
+}
+
+/* ===================================================== */
+/* VIDEO */
+/* ===================================================== */
+
+.video-wrap {
+  margin-bottom: 4rem;
+}
+
+/* ===================================================== */
+/* ATELIERS CARDS */
+/* ===================================================== */
+
+.atelier-card-wrap {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.atelier-card {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  /* max-width: 400px; */
+  border: 1px solid var(--clr-menu-separator);
+  border-right: 5px solid var(--clr-menu-separator);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: var(--search-bar-corner-rad);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.atelier-card img {
+  border-radius: var(--search-bar-corner-rad) 0px 0px var(--search-bar-corner-rad);
+  width: 60px;
+  height: 60px;
+}
+.atelier-card span {
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  color: black;
+  text-align: right;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: all 0.3s;
+}
+
+.atelier-card:hover {
+  border-color: var(--main-accent-color);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.atelier-card:active {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(5px);
+  transition: all 0s;
+}
+
+.atelier-card:hover span {
+  color: var(--main-accent-color);
+}
+
+/* ===================================================== */
+/* MEDIA QUERY */
+/* ===================================================== */
+
+/* Screen size between: 1024 - 1366 */
+@media screen and (max-width: 1365px) {
+  .atelier-description-container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+  }
+  .atelier-iframe-wrap {
+    width: 450px;
+  }
+}
+
+/* Screen size between: 768 - 1024 */
+@media screen and (max-width: 1023px) {
+  .atelier-3d {
+    justify-content: space-around;
+  }
+}
+
+/* Screen size between: 0 - 768 */
+@media screen and (max-width: 767px) {
+  .atelier-description-container {
+    display: flex;
+    flex-direction: column;
+    border: unset;
+    padding: unset;
+  }
+  .atelier-image-block {
+    order: -1;
+    min-height: unset;
+    height: 200px;
+    overflow: hidden;
+  }
+  .atelier-gallery {
+    max-height: 250px;
+  }
+  .video-wrap video {
+    height: 100%;
+  }
+  .atelier-card span {
+    white-space: unset;
+    text-align: right;
+  }
 }

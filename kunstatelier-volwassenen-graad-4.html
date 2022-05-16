@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="nl"
+      class="ateliers-section">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+        href="css/style.css">
+  <link rel="stylesheet"
+        href="css/ateliers.css">
+  <link rel="shortcut icon"
+        href="images/favicon.png"
+        type="image/x-icon">
+  <script src="javascript/script.js"
+          defer></script>
+  <script src="https://kit.fontawesome.com/4e41c7d293.js"
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+  <meta property="og:title"
+        content="Academie voor beeldende kunsten Vilvoorde" />
+  <meta property="og:description"
+        content="Vrije tijd en vrijheid, daar is de academie voor. Wij bieden u de garantie van iets dat langer dan een leven lang meegaat.">
+  <meta property="og:image"
+        content="https://jan-portaels.netlify.app/images/og-image-1200x630.png" />
+  <meta property="og:url"
+        content="http://www.academiebeeldendekunstenvilvoorde.be/" />
+  <meta property="og:type"
+        content="website">
+  <meta property="og:locale"
+        content="nl_BE">
+  <title>Kunstateliers Volwassenen Graad 4</title>
+</head>
+
+<body>
+  <header>
+    <!-- Navigation menu: Logo + menu buttons/dropdown lists + searchbar -->
+    <nav class="navigation js-off">
+      <a href="index.html"
+         title="go to home page"><img class="logo"
+             src="images/logo-home.png"
+             alt="logo in text form"></a>
+
+      <ul class="menu-container">
+        <li class="js-menu-item js-off">
+          <span class="menu-button activiteiten">Activiteiten</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="aankondigen.html">Aankondigen</a></li>
+            <li><a href="expos.html">Expos</a></li>
+            <li><a href="excursies.html">Excursies</a></li>
+            <li><a href="evenementen.html">Evenementen</a></li>
+            <li><a href="nieuws.html">Nieuws</a></li>
+            <li><a href="persartikels.html">Persartikels</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button ateliers">Ateliers</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="beeldatelier-voor-kinderen.html"
+                 class="dropdown-item">Beeldatelier voor kinderen</a>
+            </li>
+            <li><a href="beeldatelier-voor-jongeren.html"
+                 class="dropdown-item">Beeldatelier voor jongeren</a>
+            </li>
+            <li><a href="kunstatelier-volwassenen-graad-4.html"
+                 class="dropdown-item">Kunstatelier graad 4</a>
+            </li>
+            <li><a href="kunstatelier-volwassenen-specialisatie.html"
+                 class="dropdown-item">Kunstatelier
+                specialisatie</a>
+            </li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button kunsttheorie">Kunsttheorie</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="kunst-en-cultuurfilosofie.html">Vrije cursus kunst- en cultuurfilosofie</a></li>
+            <li><a href="beeldende-en-audiovisuale-cultuur.html">Beeldende en audiovisuele cultuur</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button info">Info</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="info.html">App</a></li>
+            <li><a href="info.html">Academiereglement</a></li>
+            <li><a href="info.html">Algemene informatie</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button inschrijven">Inschrijven</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="inschrijven.html">Lesroosters</a></li>
+            <li><a href="inschrijven.html">Inschrijftarieven</a></li>
+            <li><a href="inschrijven.html">Praktische info</a></li>
+            <li><a href="inschrijven.html">Schrijf in online</a></li>
+          </ul>
+        </li>
+        <li class="js-menu-item js-off">
+          <span class="menu-button contact">Contact</span>
+          <ul class="dropdown-list js-fade-off">
+            <li><a href="contact.html">Adres en contactgegevens</a></li>
+            <li><a href="contact.html">Bereikbaarheid</a></li>
+            <li><a href="contact.html">Ligging</a></li>
+            <li><a href="contact.html">Openingsuren secretariaat</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form action="https://www.google.com/search"
+            class="searchform js-search-container js-off"
+            method="get"
+            name="searchform"
+            target="_blank">
+        <input name="sitesearch"
+               type="hidden"
+               value="www.academiebeeldendekunstenvilvoorde.be">
+        <input autocomplete="on"
+               required="required"
+               class="form-control js-search-input"
+               name="q"
+               placeholder="Zoeken..."
+               type="text">
+        <!-- Code removed from the above input:  required="required" -->
+        <button class="js-close-button material-icons"
+                type="button"> <i class="fa-solid fa-xmark"></i></button>
+        <button class="js-search-button material-icons"
+                type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+    </nav>
+  </header>
+
+  <!-- Burger menu (at wider screen size is hidden) -->
+  <div class="burger-menu js-off">
+    <span id="burger-first-line"></span>
+    <span id="burger-middle-line"></span>
+    <span id="burger-last-line"></span>
+  </div>
+
+  <main>
+    <h1>Kunstateliers Volwassenen</h1>
+    <div class="atelier-card-wrap">
+      <a class="atelier-card"
+         href="#beeldhouwen">
+        <img src="images/atelier-beeldhouwen-en-ruimtelijke-kunst/atelier-johan-clocheret-6.jpg"
+             alt=""><span>Beeldhouwen en ruimtelijke kunst</span>
+      </a>
+      <a class="atelier-card"
+         href="#schilderkunst">
+        <img src="images/atelier-schilderkunst/atelier-schilderkunst.jpg"
+             alt=""> <span>Schilderkunst</span>
+      </a>
+      <a class="atelier-card"
+         href="#tekenkunst">
+        <img src="images/atelier-tekenkunst/atelier-tekenkunst.jpg"
+             alt=""> <span>Tekenkunst</span>
+      </a>
+      <a class="atelier-card"
+         href="#grafiekkunst">
+        <img src="images/atelier-grafiekkunst/atelier-nathan-de-corte.jpg"
+             alt=""> <span>Grafiekkunst</span>
+      </a>
+    </div>
+
+
+
+    <article class="atelier-block">
+      <h2 id="beeldhouwen">Beeldhouwen en ruimtelijke kunst</h2>
+      <div class="atelier-description-container">
+        <div class="atelier-description">
+          <p>Vanaf 18 jaar kan men bij ons terecht voor een diepgaande opleiding van 8 lestijden per week gedurende 5
+            jaar. Nadien zijn nog 2 specialisatiejaren mogelijk van 8 uur per week.</p>
+          <p>Studenten 1ste jaar beeldhouwen & ruimtelijke kunst kiezen bij voorkeur 1 lesblok op maandag, tweede
+            lesblok
+            vrij te kiezen.</p>
+          <p>Vanaf het 3de jaar krijg je binnen het lestijdenpakket 4 uur per maand kunst- en cultuurfilosofie.
+            De Specialisatie krijgen binnen hun lestijdenpakket 4 uur per maand kunst- en cultuurfilosfie.</p>
+          <p>docent: <strong>Johan Clocheret</strong></p>
+          <div class="atelier-button"><a href="#">Placeholder</a></div>
+        </div>
+        <div class="atelier-image-block">
+          <img class="atelier-poster"
+               src="images/atelier-beeldhouwen-en-ruimtelijke-kunst/atelier-johan-clocheret-6.jpg"
+               alt="">
+          <img class="atelier-logo"
+               src="images/sov-logo-original.png"
+               alt="school logo">
+        </div>
+      </div>
+      <h3>Rooster</h3>
+      <p><strong>4de graad en specialisatie (2 leesmomenten van 4 uur te kiezen)</strong></p>
+      <div class="table-container">
+        <table>
+          <caption>Beeldhouwen en ruimtelijke kunst - rooster</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th scope="col">ma</th>
+              <th scope="col">wo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">13:30 - 17:00</th>
+              <td>&#10004;</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">18:00 - 21:30</th>
+              <td>&#10004;</td>
+              <td>&#10004;</td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+      <h3>Atelier Johan Clocheret</h3>
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/atelier-beeldhouwen-en-ruimtelijke-kunst/atelier-johan-clocheret-1.jpg"
+               alt=""><img src="images/atelier-beeldhouwen-en-ruimtelijke-kunst/atelier-johan-clocheret-2.jpg"
+               alt=""><img src="images/atelier-beeldhouwen-en-ruimtelijke-kunst/atelier-johan-clocheret-3.jpg"
+               alt=""><img src="images/atelier-beeldhouwen-en-ruimtelijke-kunst/atelier-johan-clocheret-4.jpg"
+               alt=""><img src="images/atelier-beeldhouwen-en-ruimtelijke-kunst/atelier-johan-clocheret-5.jpg"
+               alt=""><img src="images/atelier-beeldhouwen-en-ruimtelijke-kunst/atelier-johan-clocheret-6.jpg"
+               alt="">
+        </div>
+      </div>
+    </article>
+
+    <article class="atelier-block">
+      <h2 id="schilderkunst">Schilderkunst</h2>
+      <div class="atelier-description-container">
+        <div class="atelier-description">
+          <p>Vanaf 18 jaar kan men bij ons terecht voor een diepgaande opleiding van 8 lestijden per week gedurende 5
+            jaar. Nadien zijn nog 2 specialisatiejaren mogelijk van 8 uur per week.</p>
+          <p>Vanaf het 3de jaar krijg je binnen het lestijdenpakket 4 uur per maand kunst- en cultuurfilosofie.</p>
+          <p>De Specialisatie krijgen binnen hun lestijdenpakket 4 uur per maand kunst- en cultuurfilosfie.</p>
+          <p>docenten: <strong>An Verbouwe, Gery De Smet</strong></p>
+          <div class="atelier-button"><a href="#">Placeholder</a></div>
+        </div>
+        <div class="atelier-image-block">
+          <img class="atelier-poster"
+               src="images/atelier-schilderkunst/atelier-schilderkunst.jpg"
+               alt="">
+          <img class="atelier-logo"
+               src="images/sov-logo-original.png"
+               alt="school logo">
+        </div>
+      </div>
+      <h3>Rooster</h3>
+      <p><strong>4de graad en specialisatie (2 leesmomenten van 4 uur te kiezen)</strong></p>
+      <div class="table-container">
+        <table>
+          <caption>Schilderkunst - rooster</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th scope="col">ma</th>
+              <th scope="col">di</th>
+              <th scope="col">wo</th>
+              <th scope="col">do</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">9:00 - 12:30</th>
+              <td>&#10004;</td>
+              <td>&#10004;</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">13:30 - 17:00</th>
+              <td>&#10004;</td>
+              <td>&#10004;</td>
+              <td>-</td>
+              <td>&#10004;</td>
+            </tr>
+            <tr>
+              <th scope="row"> 18:00 - 21:30</th>
+              <td>&#10004;</td>
+              <td>-</td>
+              <td>&#10004;</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+
+      <h3>Atelier An Verbouwe</h3>
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/atelier-schilderkunst/atelier-an-verbouwe/atelier-an-verbouwe-1.jpg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-an-verbouwe/atelier-an-verbouwe-6.jpg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-an-verbouwe/atelier-an-verbouwe-7.jpg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-an-verbouwe/atelier-an-verbouwe-8.jpg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-an-verbouwe/atelier-an-verbouwe-9.jpg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-an-verbouwe/atelier-an-verbouwe-10.jpg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-an-verbouwe/atelier-an-verbouwe-5.jpg"
+               alt="">
+        </div>
+      </div>
+
+      <h3>Atelier Gery De Smet</h3>
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/atelier-schilderkunst/atelier-gery-de-smet/atelier-gery-de-smet-1.jpeg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-gery-de-smet/atelier-gery-de-smet-2.jpg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-gery-de-smet/atelier-gery-de-smet-3.jpg"
+               alt=""><img src="images/atelier-schilderkunst/atelier-gery-de-smet/atelier-gery-de-smet-4.jpg"
+               alt="">
+        </div>
+      </div>
+    </article>
+
+    <article class="atelier-block">
+      <h2 id="tekenkunst">Tekenkunst</h2>
+      <div class="atelier-description-container">
+        <div class="atelier-description">
+          <p>Vanaf 18 jaar kan men bij ons terecht voor een diepgaande opleiding van 8 lestijden per week gedurende 5
+            jaar. Nadien zijn nog 2 specialisatiejaren mogelijk van 8 uur per week.</p>
+          <p>Vanaf het 3de jaar krijg je binnen het lestijdenpakket 4 uur per maand kunst- en cultuurfilosofie.</p>
+          <p>De Specialisatie krijgen binnen hun lestijdenpakket 4 uur per maand kunst- en cultuurfilosfie.</p>
+          <p>4 docenten: <strong>Rainier Boidin, Natacha Dimovska, Gery De Smet, Johan Clocheret</strong></p>
+          <div class="atelier-button"><a href="#">Placeholder</a></div>
+        </div>
+        <div class="atelier-image-block">
+          <img class="atelier-poster"
+               src="images/atelier-tekenkunst/atelier-tekenkunst.jpg"
+               alt="">
+          <img class="atelier-logo"
+               src="images/sov-logo-original.png"
+               alt="school logo">
+        </div>
+      </div>
+      <h3>Rooster</h3>
+      <div class="table-container">
+        <table>
+          <caption>Tekenkunst - rooster</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th scope="col">ma</th>
+              <th scope="col">di</th>
+              <th scope="col">do</th>
+              <th scope="col">za</th>
+              <th scope="col">zo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">9:00 - 12:30</th>
+              <td>&#10004;</td>
+              <td>&#10004;</td>
+              <td>-</td>
+              <td>&#10004;</td>
+              <td>&#10004;</td>
+            </tr>
+            <tr>
+              <th scope="row">13:30 - 17:00</th>
+              <td>&#10004;</td>
+              <td>&#10004;</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row"> 18:00 - 21:30</th>
+              <td>-</td>
+              <td>&#10004;</td>
+              <td>&#10004;</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+
+      <h3>Atelier Rainier Boidin</h3>
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/atelier-tekenkunst/atelier-rainier-boidin/atelier-rainier-boidin-6.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-rainier-boidin/atelier-rainier-boidin-2.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-rainier-boidin/atelier-rainier-boidin-3.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-rainier-boidin/atelier-rainier-boidin-4.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-rainier-boidin/atelier-rainier-boidin-5.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-rainier-boidin/atelier-rainier-boidin-1.jpg"
+               alt="">
+        </div>
+      </div>
+
+      <h3>Atelier Natacha Dimovska</h3>
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/atelier-tekenkunst/atelier-natacha-dimovska/atelier-natacha-dimovska-1.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-natacha-dimovska/atelier-natacha-dimovska-2.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-natacha-dimovska/atelier-natacha-dimovska-3.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-natacha-dimovska/atelier-natacha-dimovska-4.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-natacha-dimovska/atelier-natacha-dimovska-5.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-natacha-dimovska/atelier-natacha-dimovska-6.jpg"
+               alt="">
+        </div>
+      </div>
+
+      <h3>Atelier Gery De Smet</h3>
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/atelier-tekenkunst/atelier-gery-de-smet/atelier-gery-de-smet-1.jpeg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-gery-de-smet/atelier-gery-de-smet-1.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-gery-de-smet/atelier-gery-de-smet-2.jpeg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-gery-de-smet/atelier-gery-de-smet-2.jpg"
+               alt="">
+        </div>
+      </div>
+
+      <h3>Atelier Johan Clocheret</h3>
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/atelier-tekenkunst/atelier-johan-clocheret/atelier-johan-clocheret-1.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-johan-clocheret/atelier-johan-clocheret-2.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-johan-clocheret/atelier-johan-clocheret-3.jpg"
+               alt=""><img src="images/atelier-tekenkunst/atelier-johan-clocheret/atelier-johan-clocheret-5.jpg"
+               alt="">
+        </div>
+      </div>
+    </article>
+
+
+    <article class="atelier-block">
+      <h2 id="grafiekkunst">Grafiekkunst</h2>
+      <div class="atelier-description-container">
+        <div class="atelier-description">
+          <p>Vanaf 18 jaar kan men bij ons terecht voor een diepgaande opleiding van 8 lestijden per week gedurende 5
+            jaar. Nadien zijn nog 2 specialisatiejaren mogelijk van 8 uur per week.</p>
+          <p>Vanaf het 3de jaar krijg je binnen het lestijdenpakket 4 uur per maand kunst- en cultuurfilosofie.</p>
+          <p>De Specialisatie krijgen binnen hun lestijdenpakket 4 uur per maand kunst- en cultuurfilosofie.</p>
+          <p>docent: <strong>Nathan De Corte</strong></p>
+          <div class="atelier-button"><a href="#">Placeholder</a></div>
+        </div>
+        <div class="atelier-image-block">
+          <img class="atelier-poster"
+               src="images/atelier-grafiekkunst/atelier-nathan-de-corte.jpg"
+               alt="">
+          <img class="atelier-logo"
+               src="images/sov-logo-original.png"
+               alt="school logo">
+        </div>
+      </div>
+      <h3>Rooster</h3>
+      <div class="table-container">
+        <table>
+          <caption>Grafiekkunst - rooster</caption>
+          <colgroup>
+            <col>
+            <col>
+            <col>
+          </colgroup>
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <th scope="col">ma</th>
+              <th scope="col">wo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">18:00 - 21:30</th>
+              <td>&#10004;</td>
+              <td>&#10004;</td>
+            </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
+      </div>
+
+      <h3>Atelier Nathan De Corte</h3>
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/atelier-grafiekkunst/atelier-nathan-de-corte-1.jpg"
+               alt=""><img src="images/atelier-grafiekkunst/atelier-nathan-de-corte-2.jpg"
+               alt=""><img src="images/atelier-grafiekkunst/atelier-nathan-de-corte-3.jpg"
+               alt=""><img src="images/atelier-grafiekkunst/atelier-nathan-de-corte-4.jpg"
+               alt=""><img src="images/atelier-grafiekkunst/atelier-nathan-de-corte-5.jpg"
+               alt=""><img src="images/atelier-grafiekkunst/atelier-nathan-de-corte-6.jpg"
+               alt=""><img src="images/atelier-grafiekkunst/atelier-nathan-de-corte-7.jpg"
+               alt="">
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <!-- All information but copyrights block -->
+    <div class="footer-container">
+      <div class="footer-logo">
+        <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_wr530fwc.json"
+                       background="transparent"
+                       speed="1"
+                       loop
+                       autoplay></lottie-player>
+      </div>
+      <div class="footer-contact">
+        <div class="footer-block-title"><i class="fa-solid fa-address-book"></i>
+          <strong>Contact</strong>
+        </div>
+        <address class="footer-address">
+          <i class="fa-solid fa-location-dot"></i>
+          <a href="https://www.google.com/maps/place/Spiegelstraat+62,+1800+Vilvoorde/">Spiegelstraat 62, 1800
+            Vilvoorde</a> <br>
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+3222515151">022 51 51 51</a><br>
+          <i class="fa-solid fa-at"></i>
+          <a href="mailto:directie.academiebeeldendekunsten@sovilvoorde.be">Directie</a> <br>
+          <i class="fa-solid fa-at"></i>
+          <a href="mailto:secretariaat.academiebeeldendekunsten@sovilvoorde.be">Secretariaat</a><br>
+        </address>
+      </div>
+
+      <div class="footer-map">
+        <div class="footer-block-title"><i class="fa-solid fa-map-location-dot"></i>
+          <strong>Locatie</strong>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.6322351379167!2d4.417528315848299!3d50.930519760537614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3e800440761f1%3A0xe1b00c2673d8656c!2sSpiegelstraat%2062%2C%201800%20Vilvoorde!5e0!3m2!1snl!2sbe!4v1651680471386!5m2!1snl!2sbe"
+                width="200"
+                height="120"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-social-links">
+          <!-- <div class="footer-block-title"><i class="fa-solid fa-hashtag"></i>
+            <strong>Volg ons op</strong>
+          </div> -->
+          <a href="https://www.facebook.com/Stedelijke-Academie-voor-Beeldende-Kunsten-Jan-Portaels-397988950246649/">
+            <i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/academiejanportaels/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="footer-admin-links"><a
+             href="https://data-onderwijs.vlaanderen.be/onderwijsaanbod/instelling?sn=49312"><img
+                 src="images/vlaanderen-onderwijs.svg"
+                 alt="Vlaanderen logo"></a><a href="https://www.vilvoorde.be/kunstonderwijs"><img
+                 src="images/logo-vilvoorde-stem.svg"
+                 alt="Vilvoorde city logo"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>© 2022 Maxim Baraliuc</p>
+    </div>
+  </footer>
+
+  <div class="up-button off"><i class="fa-solid fa-circle-chevron-up"></i></div>
+
+</body>
+
+</html>
