@@ -23,17 +23,17 @@
 
   --clr-font-dark: hsl(0, 0%, 5%);
   --clr-ateliers: hsl(206, 70%, 45%);
-  --clr-ateliers: hsl(206, 70%, 45%);
+  --clr-ateliers-light: hsl(206, 70%, 85%);
   --clr-activiteiten: hsl(107, 36%, 41%);
-  --clr-activiteiten: hsl(107, 36%, 41%);
+  --clr-activiteiten-light: hsl(107, 36%, 81%);
   --clr-kunsttheorie: hsl(31, 95%, 56%);
-  --clr-kunsttheorie: hsl(31, 95%, 56%);
+  --clr-kunsttheorie-light: hsl(31, 95%, 86%);
   --clr-info: hsl(43, 98%, 60%);
-  --clr-info: hsl(43, 98%, 60%);
+  --clr-info-light: hsl(43, 98%, 80%);
   --clr-contact: hsl(299, 33%, 50%);
-  --clr-contact: hsl(299, 33%, 50%);
+  --clr-contact-light: hsl(299, 33%, 80%);
   --clr-inschrijven: hsl(1, 76%, 61%);
-  --clr-inschrijven: hsl(1, 76%, 61%);
+  --clr-inschrijven-light: hsl(1, 76%, 81%);
   --clr-menu-separator: hsl(0, 0%, 80%);
   --clr-bg-footer: hsl(0, 0%, 100%);
   --clr-font-footer: hsl(0, 0%, 25%);
@@ -120,11 +120,18 @@ header {
   z-index: 9;
 }
 main {
-  width: var(--width-main);
   flex: 1;
-  /* border: 1px dotted dodgerblue; */
-}
 
+  /* border: 1px dotted dodgerblue; */
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+main > * {
+  box-sizing: border-box;
+  width: var(--width-main);
+}
 /* h1,
 h2,
 h3,
@@ -198,7 +205,7 @@ h2 {
 .js-menu-item:hover .activiteiten {
   color: var(--clr-activiteiten);
 }
-.js-menu-item.js-on .s,
+.js-menu-item.js-on .ateliers,
 .js-menu-item:hover .ateliers {
   color: var(--clr-ateliers);
 }
@@ -717,11 +724,12 @@ footer {
     --search-bar-height: 40px;
     --menu-button-padding-inline: 20px;
   }
-
   main {
-    width: calc(100% - 2 * var(--main-margin-width));
-    max-width: var(--width-main);
-    margin-inline: var(--main-margin-width);
+    width: 100%;
+  }
+  main > * {
+    width: 100%;
+    padding-inline: 1.2rem;
   }
   .logo {
     margin-top: var(--logo-margin-top);
@@ -911,7 +919,7 @@ footer {
   overflow-y: auto;
   width: 100%;
   /* padding: 4px; */
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   /* justify-self: center; */
   /* margin-inline: auto; */
   /* border: 1px solid var(--clr-menu-separator); */
