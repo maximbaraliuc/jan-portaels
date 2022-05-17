@@ -1,0 +1,50 @@
+/* Details element is working like a container */
+
+details {
+  box-sizing: border-box;
+  border: 1px solid var(--clr-menu-separator);
+}
+
+/* summary::-webkit-details-marker {
+  display: none;
+} */
+details summary {
+  background-color: aquamarine;
+  border: 2px solid blueviolet;
+  padding: 1rem;
+  /* list-style: none; */
+}
+
+/* details summary::before {
+  content: "+";
+  padding-right: 1rem;
+  font-weight: 600;
+}
+details[open] summary::before {
+  content: "-";
+  padding-right: 1rem;
+  font-weight: 600;
+} */
+
+.details-content {
+  background-color: rgb(191, 253, 191);
+  border: 2px solid crimson;
+  padding: 1rem;
+}
+
+/* details:not([open])  {
+  transform: scaleY(0);
+} */
+details[open] .details-content {
+  animation: show-details-content 0.3s;
+}
+
+@keyframes show-details-content {
+  0% {
+    transform-origin: 50% 0%;
+    transform: scaleY(0%);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
