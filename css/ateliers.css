@@ -93,7 +93,7 @@
 .atelier-gallery-container {
   display: flex;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid var(--clr-menu-separator);
 }
@@ -281,7 +281,7 @@
   }
   .atelier-gallery-container i {
     font-size: 1rem;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
   }
   .atelier-gallery {
     max-height: 250px;
