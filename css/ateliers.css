@@ -110,12 +110,12 @@
 }
 .fa-chevron-left {
   left: 0;
-  border-right: 1px solid var(--clr-menu-separator);
+  /* border-right: 1px solid var(--clr-menu-separator); */
 }
 .fa-chevron-right {
   order: 1;
   right: 0;
-  border-left: 1px solid var(--clr-menu-separator);
+  /* border-left: 1px solid var(--clr-menu-separator); */
 }
 .atelier-gallery-container i:hover {
   background-color: hsla(0, 0%, 80%);
@@ -278,6 +278,10 @@
     min-height: unset;
     height: 200px;
     overflow: hidden;
+  }
+  .atelier-gallery-container i {
+    font-size: 1rem;
+    padding: 0.5rem;
   }
   .atelier-gallery {
     max-height: 250px;
