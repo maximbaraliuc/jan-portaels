@@ -91,32 +91,40 @@
 /* ===================================================== */
 
 .atelier-gallery-container {
-  position: relative;
+  display: flex;
+  align-items: center;
   margin-bottom: 4rem;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid var(--clr-menu-separator);
 }
-
 .atelier-gallery-container i {
-  position: absolute;
-  top: calc(50% - 1rem);
-  padding: 1rem;
-  border-radius: var(--search-bar-corner-rad);
-  background-color: rgba(255, 255, 255, 0.6);
-  color: black;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  color: grey;
   font-size: 1.5rem;
+  padding: 0.8rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+.fa-chevron-left {
+  left: 0;
+  border-right: 1px solid var(--clr-menu-separator);
+}
+.fa-chevron-right {
+  order: 1;
+  right: 0;
+  border-left: 1px solid var(--clr-menu-separator);
 }
 .atelier-gallery-container i:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: hsla(0, 0%, 80%);
+  color: white;
 }
 .atelier-gallery-container i:active {
   background-color: rgb(30, 30, 30);
   color: white;
-}
-.fa-chevron-left {
-  left: 0.5rem;
-}
-.fa-chevron-right {
-  right: 0.5rem;
+  transition: all 0s;
 }
 
 .atelier-gallery {
@@ -125,7 +133,7 @@
   column-gap: 1.5rem;
   height: 300px;
   width: 100%;
-  border-block: 1px solid var(--clr-menu-separator);
+
   padding-block: 1rem;
   overflow-y: hidden;
   overflow-x: scroll;
