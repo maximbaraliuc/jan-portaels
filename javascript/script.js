@@ -155,3 +155,8 @@ let swipeRight = function (e) {
 
 buttonGalleryLeft.forEach((item) => item.addEventListener("click", swipeLeft));
 buttonGalleryRight.forEach((item) => item.addEventListener("click", swipeRight));
+
+// ===========================================================================
+// Details
+// ===========================================================================
+let detailsELement;
