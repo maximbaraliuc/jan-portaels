@@ -689,7 +689,21 @@ footer {
   display: none;
 }
 
+/* ========================================================================= */
+/* ABOUT DESCRIPTION */
+/* ========================================================================= */
+
+.about-description p {
+  text-align: center;
+  width: 65ch;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem auto;
+}
+
+/* ========================================================================= */
 /* MEDIA QUERY */
+/* ========================================================================= */
 
 /* Screen size between: 1024 - 1366 */
 @media screen and (max-width: 1365px) {
@@ -712,6 +726,11 @@ footer {
   }
   .footer-admin-links img {
     width: 115px;
+  }
+  .about-description p {
+    width: 65ch;
+    font-size: 1.3rem;
+    margin: 1rem auto;
   }
 }
 
@@ -789,6 +808,11 @@ footer {
     margin-left: 0;
     margin-right: 10px;
     /* width: 140px; */
+  }
+  .about-description p {
+    width: 90%;
+    font-size: 1.2rem;
+    margin: 1rem auto;
   }
 }
 
