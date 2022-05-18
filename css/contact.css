@@ -20,7 +20,6 @@
 
 /* GOOGLE MAP ON PAGE */
 .google-map {
-  width: 100%;
-  height: 300px;
-  align-self: stretch;
+  height: 400px;
+  margin-bottom: 1rem;
 }

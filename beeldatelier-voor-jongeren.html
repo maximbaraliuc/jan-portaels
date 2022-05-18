@@ -45,12 +45,11 @@
          title="go to home page"><img class="logo"
              src="images/logo-home.png"
              alt="logo in text form"></a>
-
       <ul class="menu-container">
         <li class="js-menu-item js-off">
           <span class="menu-button activiteiten">Activiteiten</span>
           <ul class="dropdown-list js-fade-off">
-            <li><a href="aankondigen.html">Aankondigen</a></li>
+            <li><a href="aankondigingen.html">Aankondigingen</a></li>
             <li><a href="expos.html">Expos</a></li>
             <li><a href="excursies.html">Excursies</a></li>
             <li><a href="evenementen.html">Evenementen</a></li>
@@ -72,8 +71,7 @@
             </li>
             <li><a href="kunstatelier-volwassenen-specialisatie.html"
                  class="dropdown-item">Kunstatelier
-                specialisatie</a>
-            </li>
+                specialisatie</a></li>
           </ul>
         </li>
         <li class="js-menu-item js-off">
@@ -97,16 +95,15 @@
             <li><a href="inschrijven.html">Lesroosters</a></li>
             <li><a href="inschrijven.html">Inschrijftarieven</a></li>
             <li><a href="inschrijven.html">Praktische info</a></li>
-            <li><a href="inschrijven.html">Schrijf in online</a></li>
+            <li><a href="inschrijven.html">Online inschrijven</a></li>
           </ul>
         </li>
         <li class="js-menu-item js-off">
           <span class="menu-button contact">Contact</span>
           <ul class="dropdown-list js-fade-off">
-            <li><a href="contact.html">Adres en contactgegevens</a></li>
-            <li><a href="contact.html">Bereikbaarheid</a></li>
-            <li><a href="contact.html">Ligging</a></li>
-            <li><a href="contact.html">Openingsuren secretariaat</a></li>
+            <li><a href="contact.html#contact-adres">Adres</a></li>
+            <li><a href="contact.html#contact-openingsuren">Openingsuren</a></li>
+            <li><a href="contact.html#contact-plaats">Plaats</a></li>
           </ul>
         </li>
       </ul>
@@ -142,13 +139,12 @@
   </div>
 
   <main>
-    <h1>Beeldatelier voor Jongeren
+    <h1>Beeldatelier voor jongeren
       <!-- (3de graad) -->
     </h1>
     <div class="video-wrap">
       <video src="video/beeldatelier-3de-graad-academie-beeldende-kunsten-vilvoorde.mp4"
              controls
-             width="100%"
              height="400"
              loop
              muted
@@ -156,7 +152,7 @@
     </div>
 
     <article class="atelier-block">
-      <h3>* 3de graad </h3>
+      <h3>3de graad </h3>
       <div class="atelier-description-container">
         <div class="atelier-description">
           <p>Een volledig pakket beeldende vorming voor jongeren van 12 tot 18 jaar om hen wegwijs te maken in de
@@ -173,42 +169,61 @@
                alt="school logo">
         </div>
       </div>
-      <h3>Rooster</h3>
-      <div class="table-container">
-        <table>
-          <caption>Jongeren 3de graad (12-18 jaar), (1ste tot 6de middelbaar)</caption>
-          <colgroup>
-            <col>
-            <col>
-            <col>
-          </colgroup>
-          <thead>
-            <tr>
-              <td>&nbsp;</td>
-              <th scope="col">di</th>
-              <th scope="col">za</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">9.00 - 12.30</th>
-              <td>-</td>
-              <td>3de graad, 1ste tot 4de middelbaar</td>
-            </tr>
-            <tr>
-              <th scope="row">13.30 - 17.00</th>
-              <td>-</td>
-              <td>3de graad, 1ste tot 4de middelbaar</td>
-            </tr>
-            <tr>
-              <th scope="row">18.00 - 21.30</th>
-              <td>3de graad, 4de tot 6de middelbaar</td>
-              <td>-</td>
-            </tr>
-          </tbody>
-          <tfoot></tfoot>
-        </table>
+      <details>
+        <summary>Uurrooster</summary>
+        <div class="details-content">
+          <div class="table-container">
+            <table>
+              <caption>Jongeren 3de graad (12-18 jaar), (1ste tot 6de middelbaar)</caption>
+              <colgroup>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <td>&nbsp;</td>
+                  <th scope="col">di</th>
+                  <th scope="col">za</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">9.00 - 12.30</th>
+                  <td>-</td>
+                  <td>3de graad, 1ste tot 4de middelbaar</td>
+                </tr>
+                <tr>
+                  <th scope="row">13.30 - 17.00</th>
+                  <td>-</td>
+                  <td>3de graad, 1ste tot 4de middelbaar</td>
+                </tr>
+                <tr>
+                  <th scope="row">18.00 - 21.30</th>
+                  <td>3de graad, 4de tot 6de middelbaar</td>
+                  <td>-</td>
+                </tr>
+              </tbody>
+              <tfoot></tfoot>
+            </table>
+          </div>
+        </div>
+      </details>
+
+      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
+           class="fa-solid fa-chevron-right btn-right"></i>
+        <div class="atelier-gallery">
+          <img src="images/image-placeholder-horizontal.png"
+               alt=""><img src="images/image-placeholder-horizontal.png"
+               alt=""><img src="images/image-placeholder-horizontal.png"
+               alt=""><img src="images/image-placeholder-horizontal.png"
+               alt=""><img src="images/image-placeholder-horizontal.png"
+               alt=""><img src="images/image-placeholder-horizontal.png"
+               alt=""><img src="images/image-placeholder-horizontal.png"
+               alt="">
+        </div>
       </div>
+
       <p><strong>Hoofdvestigingsplaats</strong> - <em>Spiegelstraat 62, 1800 Vilvoorde</em> </p>
       <h4>Materiaallijst Middelbare Graad</h4>
       <ul>
@@ -241,20 +256,6 @@
         <li>Bij afwezigheid <em>(eventueel doktersattest)</em> </li>
       </ul>
       <p>Jongeren graag tijdig afhalen!</p>
-
-      <div class="atelier-gallery-container"> <i class="fa-solid fa-chevron-left btn-left"></i><i
-           class="fa-solid fa-chevron-right btn-right"></i>
-        <div class="atelier-gallery">
-          <img src="images/image-placeholder-horizontal.png"
-               alt=""><img src="images/image-placeholder-horizontal.png"
-               alt=""><img src="images/image-placeholder-horizontal.png"
-               alt=""><img src="images/image-placeholder-horizontal.png"
-               alt=""><img src="images/image-placeholder-horizontal.png"
-               alt=""><img src="images/image-placeholder-horizontal.png"
-               alt=""><img src="images/image-placeholder-horizontal.png"
-               alt="">
-        </div>
-      </div>
 
     </article>
 
