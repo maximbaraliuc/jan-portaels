@@ -156,9 +156,11 @@ let swipeRight = function (e) {
 buttonGalleryLeft.forEach((item) => item.addEventListener("click", swipeLeft));
 buttonGalleryRight.forEach((item) => item.addEventListener("click", swipeRight));
 
-// ===========================================================================
+// ==============================================================================================================
 // Details Accordion
-// ===========================================================================
+// ==============================================================================================================
+// the code is taken from the tutorial on https://css-tricks.com/how-to-animate-the-details-element-using-waapi/
+// ==============================================================================================================
 
 class Accordion {
   constructor(el) {

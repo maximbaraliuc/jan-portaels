@@ -188,7 +188,11 @@
 /* ===================================================== */
 
 .video-wrap {
-  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  /* margin-inline: auto; */
+  /* border-inline: 1px solid var(--clr-menu-separator); */
 }
 
 /* ===================================================== */
@@ -287,7 +291,8 @@
     max-height: 250px;
   }
   .video-wrap video {
-    height: 100%;
+    width: 100%;
+    height: unset;
   }
   .atelier-card span {
     white-space: unset;
