@@ -871,13 +871,15 @@ footer {
     width: 100%;
     border: unset;
     box-shadow: none;
-    transform: scaleY(0.5);
+    opacity: 0;
+    transform: scaleY(0);
     /* transition: all 0s ease-in; */
   }
   .js-menu-item.js-on .dropdown-list {
     position: relative;
     top: 0;
     left: 0;
+    opacity: 1;
     transform: scaleY(1);
     transition: all 0.3s ease-in;
   }
