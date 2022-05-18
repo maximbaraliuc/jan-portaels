@@ -1,60 +1,38 @@
-/* Details element is working like a container */
-
+/* Details element is working like a container  */
 details {
   box-sizing: border-box;
   border: 1px solid var(--clr-menu-separator);
+  overflow: hidden;
 }
 
 /* summary::-webkit-details-marker {
   display: none;
 } */
 details summary {
+  box-sizing: border-box;
+  height: 3.5rem;
   background-color: aquamarine;
   border: 2px solid blueviolet;
   padding: 1rem;
-  /* list-style: none; */
+  list-style: none;
+  user-select: none;
 }
 
-/* details summary::before {
-  content: "+";
+details summary::before {
+  content: "\0002B";
   padding-right: 1rem;
   font-weight: 600;
 }
 details[open] summary::before {
-  content: "-";
+  content: "\02212";
   padding-right: 1rem;
   font-weight: 600;
-} */
+}
 
 .details-content {
   background-color: rgb(191, 253, 191);
   border: 2px solid crimson;
   padding: 1rem;
-  animation: hide-details-content 0.3s ease-in-out;
-}
-
-/* details:not([open])  {
-  transform: scaleY(0);
-} */
-details[open] .details-content {
-  animation: show-details-content 0.3s ease-in-out;
-}
-
-@keyframes show-details-content {
-  0% {
-    transform-origin: 50% 0%;
-    transform: scaleY(30%);
-  }
-  100% {
-    transform: scaleY(100%);
-  }
-}
-@keyframes hide-details-content {
-  0% {
-    transform: scaleY(100%);
-  }
-  100% {
-    transform-origin: 50% 0%;
-    transform: scaleY(30%);
-  }
+  /* transform-origin: top left; */
+  overflow: hidden;
 }

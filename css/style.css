@@ -848,7 +848,7 @@ footer {
     border: unset;
     box-shadow: none;
     transform: scaleY(0.5);
-    transition: all 0s ease-in;
+    /* transition: all 0s ease-in; */
   }
   .js-menu-item.js-on .dropdown-list {
     position: relative;
@@ -1008,3 +1008,55 @@ colgroup col:first-child {
   color: var(--clr-bg-main);
   transition: all 0s;
 } */
+
+/* ========================================================================= */
+/* Details element is working like a container  */
+/* ========================================================================= */
+
+details {
+  box-sizing: border-box;
+  border: 1px solid var(--clr-menu-separator);
+  overflow: hidden;
+  margin-block: 2rem;
+}
+/* summary::-webkit-details-marker {
+  display: none;
+} */
+details summary {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  min-height: 3rem;
+  padding-left: 1.5rem;
+  background-color: var(--clr-bg-footer);
+  font-size: 1.2rem;
+  font-weight: 700;
+  list-style: none;
+  user-select: none;
+}
+details summary:hover {
+  color: var(--main-accent-color);
+}
+details:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+details[open] summary {
+  border-bottom: 1px solid var(--clr-menu-separator);
+}
+
+details summary::before {
+  content: "\0002B";
+  padding-right: 1rem;
+  font-weight: 600;
+}
+details[open] summary::before {
+  content: "\02212";
+  padding-right: 1rem;
+  font-weight: 600;
+}
+
+.content {
+  padding: 0.3rem;
+  /* transform-origin: top left; */
+  /* overflow: hidden; */
+}
