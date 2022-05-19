@@ -55,6 +55,9 @@
 .atelier-description p {
   margin-block: 0 1rem;
 }
+.atelier-description h3 {
+  margin-top: 0;
+}
 .atelier-description .atelier-button {
   align-self: flex-start;
   margin: 0;
@@ -84,6 +87,33 @@
   top: 8px;
   right: 8px;
   width: 50px;
+}
+/* ===================================================== */
+
+.kunsttheorie-image-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10rem;
+  margin-bottom: 4rem;
+
+  /* border: 1px solid black; */
+}
+.kunsttheorie-image-block div {
+  position: relative;
+  /* border: 1px solid rgb(204, 31, 31); */
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.kunsttheorie-image-block img {
+  width: 100%;
+}
+.kunsttheorie-image-block span {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: white;
+  text-shadow: 1px 1px 3px black;
 }
 
 /* ===================================================== */
@@ -260,6 +290,10 @@
   .atelier-iframe-wrap {
     width: 450px;
   }
+  .kunsttheorie-image-block {
+    column-gap: 5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Screen size between: 768 - 1024 */
@@ -297,5 +331,8 @@
   .atelier-card span {
     white-space: unset;
     text-align: right;
+  }
+  .kunsttheorie-image-block {
+    display: none;
   }
 }
