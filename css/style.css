@@ -28,8 +28,8 @@
   --clr-activiteiten-light: hsl(107, 36%, 81%);
   --clr-kunsttheorie: hsl(31, 95%, 56%);
   --clr-kunsttheorie-light: hsl(31, 95%, 86%);
-  --clr-info: hsl(43, 98%, 60%);
-  --clr-info-light: hsl(43, 98%, 80%);
+  --clr-info: hsl(155, 69%, 39%);
+  --clr-info-light: hsl(155, 69%, 80%);
   --clr-contact: hsl(299, 33%, 50%);
   --clr-contact-light: hsl(299, 33%, 80%);
   --clr-inschrijven: hsl(1, 76%, 61%);
@@ -300,32 +300,32 @@ h2 {
 .js-menu-item.js-on .activiteiten + ul a:hover,
 .js-menu-item.js-on .activiteiten + ul a:active,
 .js-menu-item:hover .activiteiten + ul a:hover {
-  background-color: hsl(107, 36%, 85%);
+  background-color: var(--clr-activiteiten-light);
 }
 .js-menu-item.js-on .ateliers + ul a:hover,
 .js-menu-item.js-on .ateliers + ul a:active,
 .js-menu-item:hover .ateliers + ul a:hover {
-  background-color: hsl(206, 70%, 85%);
+  background-color: var(--clr-ateliers-light);
 }
 .js-menu-item.js-on .kunsttheorie + ul a:hover,
 .js-menu-item.js-on .kunsttheorie + ul a:active,
 .js-menu-item:hover .kunsttheorie + ul a:hover {
-  background-color: hsl(31, 95%, 85%);
+  background-color: var(--clr-kunsttheorie-light);
 }
 .js-menu-item.js-on .info + ul a:hover,
 .js-menu-item.js-on .info + ul a:active,
 .js-menu-item:hover .info + ul a:hover {
-  background-color: hsl(43, 98%, 85%);
+  background-color: var(--clr-info-light);
 }
 .js-menu-item.js-on .contact + ul a:hover,
 .js-menu-item.js-on .contact + ul a:active,
 .js-menu-item:hover .contact + ul a:hover {
-  background-color: hsl(299, 33%, 85%);
+  background-color: var(--clr-contact-light);
 }
 .js-menu-item.js-on .inschrijven + ul a:hover,
 .js-menu-item.js-on .inschrijven + ul a:active,
 .js-menu-item:hover .inschrijven + ul a:hover {
-  background-color: hsl(1, 76%, 85%);
+  background-color: var(--clr-inschrijven-light);
 }
 
 /**
@@ -1066,6 +1066,7 @@ details summary {
 }
 details:hover summary {
   color: var(--main-accent-color);
+  cursor: pointer;
 }
 details:hover {
   border: 1px solid var(--main-accent-color);
@@ -1091,7 +1092,11 @@ details[open] summary::before {
 }
 
 .details-content {
-  padding: 0.3rem;
+  padding: 5px;
   /* transform-origin: top left; */
   /* overflow: hidden; */
+}
+
+.details-content > *:not(.table-container) {
+  padding-inline: 1rem;
 }
