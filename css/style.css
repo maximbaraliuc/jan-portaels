@@ -28,8 +28,8 @@
   --clr-activiteiten-light: hsl(107, 36%, 81%);
   --clr-kunsttheorie: hsl(31, 95%, 56%);
   --clr-kunsttheorie-light: hsl(31, 95%, 86%);
-  --clr-info: hsl(43, 98%, 60%);
-  --clr-info-light: hsl(43, 98%, 80%);
+  --clr-info: hsl(155, 69%, 39%);
+  --clr-info-light: hsl(155, 69%, 80%);
   --clr-contact: hsl(299, 33%, 50%);
   --clr-contact-light: hsl(299, 33%, 80%);
   --clr-inschrijven: hsl(1, 76%, 61%);
@@ -300,32 +300,32 @@ h2 {
 .js-menu-item.js-on .activiteiten + ul a:hover,
 .js-menu-item.js-on .activiteiten + ul a:active,
 .js-menu-item:hover .activiteiten + ul a:hover {
-  background-color: hsl(107, 36%, 85%);
+  background-color: var(--clr-activiteiten-light);
 }
 .js-menu-item.js-on .ateliers + ul a:hover,
 .js-menu-item.js-on .ateliers + ul a:active,
 .js-menu-item:hover .ateliers + ul a:hover {
-  background-color: hsl(206, 70%, 85%);
+  background-color: var(--clr-ateliers-light);
 }
 .js-menu-item.js-on .kunsttheorie + ul a:hover,
 .js-menu-item.js-on .kunsttheorie + ul a:active,
 .js-menu-item:hover .kunsttheorie + ul a:hover {
-  background-color: hsl(31, 95%, 85%);
+  background-color: var(--clr-kunsttheorie-light);
 }
 .js-menu-item.js-on .info + ul a:hover,
 .js-menu-item.js-on .info + ul a:active,
 .js-menu-item:hover .info + ul a:hover {
-  background-color: hsl(43, 98%, 85%);
+  background-color: var(--clr-info-light);
 }
 .js-menu-item.js-on .contact + ul a:hover,
 .js-menu-item.js-on .contact + ul a:active,
 .js-menu-item:hover .contact + ul a:hover {
-  background-color: hsl(299, 33%, 85%);
+  background-color: var(--clr-contact-light);
 }
 .js-menu-item.js-on .inschrijven + ul a:hover,
 .js-menu-item.js-on .inschrijven + ul a:active,
 .js-menu-item:hover .inschrijven + ul a:hover {
-  background-color: hsl(1, 76%, 85%);
+  background-color: var(--clr-inschrijven-light);
 }
 
 /**
@@ -434,10 +434,10 @@ h2 {
   border-radius: 5px;
   background-color: var(--clr-card-bg);
   color: var(--clr-font-dark);
+  transition: all 0.3s ease-in-out;
 }
 .nieuws-card:hover {
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
 }
 .nieuws-card:nth-child(1) {
   border-top: 5px solid var(--clr-ateliers);
@@ -470,11 +470,11 @@ h2 {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .card-button:hover {
   background-color: var(--clr-font-dark);
   color: var(--clr-bg-main);
-  transition: all 0.3s ease-in-out;
 }
 .card-button:active {
   background-color: var(--clr-font-dark);
@@ -689,7 +689,21 @@ footer {
   display: none;
 }
 
+/* ========================================================================= */
+/* ABOUT DESCRIPTION */
+/* ========================================================================= */
+
+.about-description p {
+  text-align: center;
+  width: 65ch;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem auto;
+}
+
+/* ========================================================================= */
 /* MEDIA QUERY */
+/* ========================================================================= */
 
 /* Screen size between: 1024 - 1366 */
 @media screen and (max-width: 1365px) {
@@ -712,6 +726,11 @@ footer {
   }
   .footer-admin-links img {
     width: 115px;
+  }
+  .about-description p {
+    width: 65ch;
+    font-size: 1.3rem;
+    margin: 1rem auto;
   }
 }
 
@@ -790,6 +809,11 @@ footer {
     margin-right: 10px;
     /* width: 140px; */
   }
+  .about-description p {
+    width: 90%;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+  }
 }
 
 /* Screen size between: 0 - 768 */
@@ -847,13 +871,15 @@ footer {
     width: 100%;
     border: unset;
     box-shadow: none;
-    transform: scaleY(0.5);
+    opacity: 0;
+    transform: scaleY(0);
     /* transition: all 0s ease-in; */
   }
   .js-menu-item.js-on .dropdown-list {
     position: relative;
     top: 0;
     left: 0;
+    opacity: 1;
     transform: scaleY(1);
     transition: all 0.3s ease-in;
   }
@@ -1022,9 +1048,9 @@ details {
   margin-block: 2rem;
   transition: all 0.3s ease-out;
 }
-/* summary::-webkit-details-marker {
+summary::-webkit-details-marker {
   display: none;
-} */
+}
 details summary {
   /* box-sizing: border-box; */
   display: flex;
@@ -1040,6 +1066,7 @@ details summary {
 }
 details:hover summary {
   color: var(--main-accent-color);
+  cursor: pointer;
 }
 details:hover {
   border: 1px solid var(--main-accent-color);
@@ -1065,7 +1092,11 @@ details[open] summary::before {
 }
 
 .details-content {
-  padding: 0.3rem;
+  padding: 5px;
   /* transform-origin: top left; */
   /* overflow: hidden; */
+}
+
+.details-content > *:not(.table-container) {
+  padding-inline: 1rem;
 }
