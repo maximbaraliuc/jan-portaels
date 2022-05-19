@@ -434,10 +434,10 @@ h2 {
   border-radius: 5px;
   background-color: var(--clr-card-bg);
   color: var(--clr-font-dark);
+  transition: all 0.3s ease-in-out;
 }
 .nieuws-card:hover {
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
 }
 .nieuws-card:nth-child(1) {
   border-top: 5px solid var(--clr-ateliers);
@@ -470,11 +470,11 @@ h2 {
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .card-button:hover {
   background-color: var(--clr-font-dark);
   color: var(--clr-bg-main);
-  transition: all 0.3s ease-in-out;
 }
 .card-button:active {
   background-color: var(--clr-font-dark);
@@ -1048,9 +1048,9 @@ details {
   margin-block: 2rem;
   transition: all 0.3s ease-out;
 }
-/* summary::-webkit-details-marker {
+summary::-webkit-details-marker {
   display: none;
-} */
+}
 details summary {
   /* box-sizing: border-box; */
   display: flex;

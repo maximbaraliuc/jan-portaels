@@ -12,11 +12,11 @@
   padding: 0.8rem 2rem;
   color: var(--main-accent-color);
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 .atelier-button a:hover {
   background-color: var(--main-accent-color);
   color: var(--clr-bg-main);
-  transition: all 0.3s ease-in-out;
 }
 .atelier-button a:active {
   background-color: var(--main-accent-color);
