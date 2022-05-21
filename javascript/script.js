@@ -8,13 +8,8 @@ let navigationBar = document.querySelector(".navigation");
 let burgerMenu = document.querySelector(".burger-menu");
 
 let toggleBurgerState = function () {
-  if (burgerMenu.classList.contains("js-off")) {
-    burgerMenu.classList.replace("js-off", "js-on");
-    navigationBar.classList.replace("js-off", "js-on");
-  } else {
-    burgerMenu.classList.replace("js-on", "js-off");
-    navigationBar.classList.replace("js-on", "js-off");
-  }
+  burgerMenu.classList.toggle("js-on");
+  navigationBar.classList.toggle("js-on");
 };
 
 burgerMenu.addEventListener("click", toggleBurgerState);
@@ -46,32 +41,8 @@ document.addEventListener("click", clickExceptMenuItem);
 // console.log("click viewport");
 
 // ===========================================================================
-// Display some data about the screen width.
-// ===========================================================================
-
-// let headerText = document.querySelector("h1");
-// headerText.innerHTML = `Screen width is ${window.screen.width}px`;
-// let widthHeader = function () {
-//   if (window.screen.width >= 1366) {
-//     headerText.innerHTML = "Screen width is >1366px";
-//     console.log("Screen width is >1366px");
-//   } else if (window.screen.width >= 1024) {
-//     headerText.innerHTML = "Screen width is >1024px & <1366px";
-//     console.log("Screen width is >1024px & <1366px");
-//   } else if (window.screen.width < 1024 && window.screen.width >= 768) {
-//     headerText.innerHTML = "Screen width is >768px & <1024px";
-//     console.log("Screen width is >768px & <1024px");
-//   } else {
-//     headerText.innerHTML = "Screen width is <768px";
-//     console.log("Screen width is <768px");
-//   }
-// };
-// window.addEventListener("resize", widthHeader);
-
-// ===========================================================================
 // Searchbar
 // ===========================================================================
-
 let searchForm = document.querySelector(".js-search-container");
 let closeButton = document.querySelector(".js-close-button");
 let searchButton = document.querySelector(".js-search-button");
@@ -79,18 +50,21 @@ let searchInput = document.querySelector(".js-search-input");
 
 let searchbarActivate = function (e) {
   e.stopPropagation();
+  // If the bar is not active prevent the search button to submit
   if (searchForm.classList.contains("js-off")) {
+    e.preventDefault();
     searchForm.classList.replace("js-off", "js-on");
-    console.log("search active");
   }
+};
+let stopPropagation = function (e) {
+  e.stopPropagation();
 };
 let searchbarClose = function (e) {
   e.stopPropagation();
   if (searchInput.value !== "") {
     searchInput.value = "";
     console.log("input is cleared");
-  }
-  if (searchForm.classList.contains("js-on")) {
+  } else {
     searchForm.classList.replace("js-on", "js-off");
     console.log("search inactive");
   }
@@ -98,8 +72,10 @@ let searchbarClose = function (e) {
 
 closeButton.addEventListener("click", searchbarClose);
 searchButton.addEventListener("click", searchbarActivate);
-searchInput.addEventListener("click", searchbarActivate);
-searchInput.addEventListener("input", searchbarActivate);
+// Close the search bar when clicked anywhere on page also clears the input
+// SearchForm listeners serves as a propagation stopper
+searchForm.addEventListener("click", stopPropagation);
+document.addEventListener("click", searchbarClose);
 
 // ===========================================================================
 // UP Button
@@ -284,3 +260,26 @@ class Accordion {
 document.querySelectorAll("details").forEach((el) => {
   new Accordion(el);
 });
+
+// ===========================================================================
+// Display some data about the screen width.
+// ===========================================================================
+
+// let headerText = document.querySelector("h1");
+// headerText.innerHTML = `Screen width is ${window.screen.width}px`;
+// let widthHeader = function () {
+//   if (window.screen.width >= 1366) {
+//     headerText.innerHTML = "Screen width is >1366px";
+//     console.log("Screen width is >1366px");
+//   } else if (window.screen.width >= 1024) {
+//     headerText.innerHTML = "Screen width is >1024px & <1366px";
+//     console.log("Screen width is >1024px & <1366px");
+//   } else if (window.screen.width < 1024 && window.screen.width >= 768) {
+//     headerText.innerHTML = "Screen width is >768px & <1024px";
+//     console.log("Screen width is >768px & <1024px");
+//   } else {
+//     headerText.innerHTML = "Screen width is <768px";
+//     console.log("Screen width is <768px");
+//   }
+// };
+// window.addEventListener("resize", widthHeader);
