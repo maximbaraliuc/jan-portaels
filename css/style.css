@@ -367,9 +367,6 @@ h2 {
   opacity: 1;
   transition: all 0.1s;
 }
-.js-search-input:focus {
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
-}
 
 /* ======================================================= */
 
@@ -1017,6 +1014,9 @@ thead th {
   padding-inline: 1rem;
   text-align: center;
 }
+.light-th {
+  font-weight: unset;
+}
 td {
   padding-inline: 1rem;
   text-align: center;
@@ -1129,3 +1129,36 @@ details[open] summary::before {
 .details-content > *:not(.table-container) {
   padding-inline: 1rem;
 }
+.details-content ul {
+  margin-inline: 2rem;
+}
+
+/* ========================================================================== */
+/* OPENINGSUREN - START */
+.openingsuren-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+.openingsuren-container table {
+  margin-bottom: 1rem;
+}
+
+.contact-address {
+  line-height: 160%;
+}
+
+.contact-address a {
+  display: inline-block;
+  font-style: normal;
+  padding-left: 0.8rem;
+  color: var(--color-home);
+}
+
+/* GOOGLE MAP ON PAGE */
+.google-map {
+  height: 400px;
+  margin-bottom: 1rem;
+}
+/* OPENINGSUREN - END */
+/* ========================================================================== */

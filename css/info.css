@@ -2,6 +2,7 @@
   margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--clr-menu-separator);
+  list-style: none;
 }
 /* ======================================================================= */
 
@@ -34,4 +35,8 @@
 
 .info-button i {
   padding-left: 0.5rem;
+}
+
+.details-content ul {
+  margin-inline: unset;
 }
