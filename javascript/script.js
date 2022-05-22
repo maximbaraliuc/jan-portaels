@@ -56,9 +56,11 @@ let searchbarActivate = function (e) {
     searchForm.classList.replace("js-off", "js-on");
   }
 };
+
 let stopPropagation = function (e) {
   e.stopPropagation();
 };
+
 let searchbarClose = function (e) {
   e.stopPropagation();
   if (searchInput.value !== "") {
@@ -70,12 +72,16 @@ let searchbarClose = function (e) {
   }
 };
 
+let searchbarFullClose = function (e) {
+  searchForm.classList.replace("js-on", "js-off");
+};
+
 closeButton.addEventListener("click", searchbarClose);
 searchButton.addEventListener("click", searchbarActivate);
 // Close the search bar when clicked anywhere on page also clears the input
 // SearchForm listeners serves as a propagation stopper
 searchForm.addEventListener("click", stopPropagation);
-document.addEventListener("click", searchbarClose);
+document.addEventListener("click", searchbarFullClose);
 
 // ===========================================================================
 // UP Button
