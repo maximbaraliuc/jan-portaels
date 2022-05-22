@@ -1,9 +1,5 @@
 # TODO
 
-Responsive Design
-SEO Ruleset
-Social Media Setup
-Custom variables
-Aware of SVG dimensions
-
-Check the main width (width; max-width; min-width;) behavior in responsive mode
+SEO Ruleset - to read and inform first
+Social Media Setup META DATA
+Custom variables - correct the names and add in code where cariables should be used
