@@ -628,6 +628,9 @@ footer {
   align-self: stretch;
   margin-bottom: 2rem;
 }
+.footer-links * {
+  transition: all 0.3s ease-in-out;
+}
 .footer-social-links {
   text-align: right;
 }
