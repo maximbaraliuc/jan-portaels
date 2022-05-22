@@ -367,9 +367,6 @@ h2 {
   opacity: 1;
   transition: all 0.1s;
 }
-.js-search-input:focus {
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
-}
 
 /* ======================================================= */
 
@@ -1017,6 +1014,9 @@ thead th {
   padding-inline: 1rem;
   text-align: center;
 }
+.light-th {
+  font-weight: unset;
+}
 td {
   padding-inline: 1rem;
   text-align: center;
@@ -1128,6 +1128,9 @@ details[open] summary::before {
 
 .details-content > *:not(.table-container) {
   padding-inline: 1rem;
+}
+.details-content ul {
+  margin-inline: 2rem;
 }
 
 /* ========================================================================== */

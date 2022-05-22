@@ -36,3 +36,7 @@
 .info-button i {
   padding-left: 0.5rem;
 }
+
+.details-content ul {
+  margin-inline: unset;
+}
