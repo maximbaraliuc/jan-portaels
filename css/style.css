@@ -612,6 +612,13 @@ footer {
 .footer-map {
   filter: grayscale(1);
 }
+.footer-map img:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.footer-map img {
+  width: 200px;
+  transition: all 0.3s;
+}
 
 .footer-links {
   display: flex;
