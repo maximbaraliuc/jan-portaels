@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl"
-      class="home-section">
+      class="activiteiten-section">
 
 <head>
   <meta charset="UTF-8">
@@ -32,13 +32,13 @@
         content="website">
   <meta property="og:locale"
         content="nl_BE">
-  <title>Academie beeldende kunsten</title>
+  <title>Exposities</title>
 </head>
 
 <body>
   <header>
     <!-- Navigation menu: Logo + menu buttons/dropdown lists + searchbar -->
-    <nav class="navigation">
+    <nav class="navigation js-off">
       <a class="logo-text"
          href="index.html"
          title="go to home page"><img class="logo"
@@ -49,13 +49,16 @@
          title="go to home page"><img class="logo"
              src="images/logo-home-notext.png"
              alt="logo in text form"></a>
+
       <ul class="menu-container">
         <li class="js-menu-item js-off">
           <span class="menu-button activiteiten">Activiteiten</span>
+
           <ul class="dropdown-list js-fade-off">
             <li><a href="nieuws.html">Nieuws</a></li>
             <li><a href="exposities.html">Exposities</a></li>
           </ul>
+
         </li>
         <li class="js-menu-item js-off">
           <span class="menu-button ateliers">Ateliers</span>
@@ -90,29 +93,15 @@
             <li><a href="info.html#lesverplaatsing">Lesverplaatsing</a></li>
             <li><a href="info.html#pedagogisch-project">Artistiek Pedagogisch Project</a></li>
           </ul>
-
-          <!-- <ul class="dropdown-list js-fade-off">
-            <li><a href="info.html">App</a></li>
-            <li><a href="info.html">Academiereglement</a></li>
-            <li><a href="info.html">Algemene informatie</a></li>
-          </ul> -->
         </li>
         <li class="js-menu-item js-off">
           <span class="menu-button inschrijven">Inschrijven</span>
-
           <ul class="dropdown-list js-fade-off">
             <li><a href="inschrijven.html">Inschrijfmomenten</a></li>
             <li><a href="inschrijven.html#tarieven">Inschrijftarieven</a></li>
             <li><a href="inschrijven.html#lessenrooster">Lessenrooster</a></li>
             <li><a href="inschrijven.html#praktische-info">Praktische info</a></li>
           </ul>
-
-          <!-- <uul class="dropdown-list js-fade-off">
-            <li><a href="inschrijven.html">Lesroosters</a></li>
-            <li><a href="inschrijven.html">Inschrijftarieven</a></li>
-            <li><a href="inschrijven.html">Praktische info</a></li>
-            <li><a href="inschrijven.html">Online inschrijven</a></li>
-          </ul> -->
         </li>
         <li class="js-menu-item js-off">
           <span class="menu-button contact">Contact</span>
@@ -138,6 +127,7 @@
                name="q"
                placeholder="Zoeken..."
                type="text">
+        <!-- Code removed from the above input:  required="required" -->
         <button class="js-close-button material-icons"
                 type="button"> <i class="fa-solid fa-xmark"></i></button>
         <button class="js-search-button material-icons"
@@ -147,65 +137,10 @@
   </header>
 
   <main>
-    <!-- <h1>Header </h1> -->
-    <span style="color: hsl(0, 0%, 70%); position: absolute;"><strong>pages that work: </strong>contactpagina / all
-      ateliers pages / kunsttheorie pages ||
-      <strong>work in
-        progress: </strong>
-      inschrijven / info / activiteiten</span>
-
-    <!-- Simple image gallery (done with basic css grid) -->
-    <div class="image-gallery-container">
-      <div class="image-gallery"><img src="../images/fotos-resized/fotos-original-3.jpg"
-             alt=""></div>
-      <div class="image-gallery"><img src="../images/fotos-resized/fotos-original-4.jpg"
-             alt=""></div>
-      <!-- Size in gallery - bigger, vertical span -->
-      <div class="image-gallery"><img src="../images/fotos-resized/fotos-original-5.jpg"
-             alt=""></div>
-      <!-- Size in gallery - bigger, horizontal span -->
-      <div class="image-gallery"><img src="../images/fotos-resized/fotos-original-6.jpg"
-             alt=""></div>
-      <div class="image-gallery"><img src="../images/fotos-resized/fotos-small-4.jpg"
-             alt=""></div>
-      <div class="image-gallery"><img src="../images/fotos-resized/fotos-original-1.jpg"
-             alt=""></div>
-    </div>
-    <div class="about-description">
-      <p>Kunst zit soms in een klein hoekje. Onze academie biedt u veel vrijheid en een onuitputtelijke drang naar meer
-        en beter. U krijgt iets dat langer dan een leven meegaat.</p>
-    </div>
-
-    <!-- Latest news or notifications cards -->
-    <article class="nieuws-card-container">
-      <div class="nieuws-card">
-        <h3><i class="fa-solid fa-feather"></i>Laatste nieuws</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum asperiores similique, ex perferendis quod
-          eon.
-          Unde asperiores odit tempora ducimus aliquam eveniet doloribus.
-        </p>
-        <a href="#"
-           class="card-button">Lees verder</a>
-      </div>
-      <div class="nieuws-card">
-        <h3><i class="fa-solid fa-highlighter"></i>Corona maatregelen</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel velit beatae officiis, quas temporibus error.
-        </p>
-        <a href="#"
-           class="card-button">Lees verder</a>
-      </div>
-      <div class="nieuws-card">
-        <h3><i class="fa-solid fa-circle-question"></i>Inschrijven</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde asperiores odit tempora aspernatur accusantium
-          nulla voluptatum iusto.</p>
-        <a href="#"
-           class="card-button">Inschrijven</a>
-      </div>
-    </article>
+    <h1>Exposities</h1>
   </main>
 
   <footer>
-    <!-- All information but copyrights block -->
     <div class="footer-container">
       <div class="footer-logo">
         <lottie-player src="https://assets8.lottiefiles.com/private_files/lf30_wr530fwc.json"
@@ -242,9 +177,7 @@
 
       <div class="footer-links">
         <div class="footer-social-links">
-          <!-- <div class="footer-block-title"><i class="fa-solid fa-hashtag"></i>
-            <strong>Volg ons op</strong>
-          </div> -->
+
           <a href="https://www.facebook.com/Stedelijke-Academie-voor-Beeldende-Kunsten-Jan-Portaels-397988950246649/">
             <i class="fa-brands fa-facebook"></i></a>
           <a href="https://www.instagram.com/academiejanportaels/?hl=en"><i class="fa-brands fa-instagram"></i></a>
@@ -265,7 +198,7 @@
   </footer>
 
   <!-- Burger menu (at wider screen size is hidden) -->
-  <div class="burger-menu">
+  <div class="burger-menu js-off">
     <span id="burger-first-line"></span>
     <span id="burger-middle-line"></span>
     <span id="burger-last-line"></span>
